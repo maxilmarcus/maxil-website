@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>SwoLifts — Lifting Logo · Font Study</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@900&family=Space+Grotesk:wght@700&family=Anton&family=Bebas+Neue&family=Sora:wght@800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ee;
+    --tile: #fbf9f4;
+    --ink: #2986cc;
+    --muted: #6b6359;
+    --rule: #e7e1d6;
+    --dark: #1c1815;
+    --cream: #f1ddc6;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 56px 24px 80px;
+  }
+  .canvas { max-width: 1320px; margin: 0 auto; }
+  .header {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 22px;
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .header h1 {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .header .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  .intro {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 760px;
+    margin-bottom: 36px;
+  }
+  .intro b { color: #1a1a1a; font-weight: 500; }
+
+  .section-title {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 36px 0 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-title::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  .lockup-card {
+    background: var(--tile);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 56px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    min-height: 260px;
+    position: relative;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .lockup-card > svg { flex: 0 0 120px; width: 120px; height: 120px; }
+  .lockup-card .word { max-width: 100%; }
+  .lockup-card.dark { background: var(--dark); border-color: var(--dark); }
+  .lockup-card .meta {
+    position: absolute; top: 14px; left: 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; color: var(--muted); letter-spacing: 0.05em;
+  }
+  .lockup-card.dark .meta { color: #8a8278; }
+  .lockup-card .caption {
+    position: absolute; bottom: 12px; left: 18px; right: 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px; color: var(--muted); letter-spacing: 0.04em; text-align: center;
+  }
+
+  .word { color: var(--ink); line-height: 0.9; }
+  .word.cream { color: var(--cream); }
+
+  /* Font candidates */
+  .word-archivo  { font-family: "Archivo Black", sans-serif; font-weight: 400; letter-spacing: -0.02em; font-size: 60px; }
+  .word-inter    { font-family: "Inter", sans-serif; font-weight: 900; letter-spacing: -0.04em; font-size: 60px; }
+  .word-grotesk  { font-family: "Space Grotesk", sans-serif; font-weight: 700; letter-spacing: -0.03em; font-size: 60px; }
+  .word-anton    { font-family: "Anton", sans-serif; font-weight: 400; letter-spacing: 0.005em; font-size: 84px; }
+  .word-bebas    { font-family: "Bebas Neue", sans-serif; font-weight: 400; letter-spacing: 0.08em; font-size: 52px; text-transform: uppercase; }
+  .word-helv     { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; letter-spacing: -0.03em; font-size: 60px; }
+  .word-sora     { font-family: "Sora", sans-serif; font-weight: 800; letter-spacing: -0.04em; font-size: 56px; }
+
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 760px) { .row { grid-template-columns: 1fr; } }
+
+  .notes {
+    margin-top: 40px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.7;
+    border-top: 1px solid var(--rule);
+    padding-top: 18px;
+  }
+  .notes b { color: #1a1a1a; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="canvas">
+
+  <div class="header">
+    <h1>SwoLifts — Lifting logo · font study</h1>
+    <div class="meta">7 type candidates · same mark</div>
+  </div>
+
+  <div class="intro">
+    Same Lifting mark — clenched teeth, furrowed brows — paired with the wordmark <b>SwoLifts</b> in
+    seven different display faces. The mark has personality, so the type can lean expressive.
+    My pick is annotated below.
+  </div>
+
+  <!-- Reusable mark via SVG symbol -->
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="lifting-mark" viewBox="0 0 400 400">
+      <circle cx="200" cy="200" r="160" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round"/>
+      <path d="M 116 148 L 176 172" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 166 172 L 166 196" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 224 172 L 284 148" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 234 172 L 234 196" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+      <path d="M 98 278 C 108 248, 122 244, 135 250 C 150 258, 172 270, 200 270 C 228 270, 250 258, 265 250 C 278 244, 292 248, 302 278 C 292 308, 278 312, 265 310 C 250 302, 228 290, 200 290 C 172 290, 150 302, 135 310 C 122 312, 108 308, 98 278 Z"
+            fill="none" stroke="currentColor" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M 104 274 C 112 260, 122 252, 135 254 C 155 260, 172 268, 200 272 C 228 268, 245 260, 265 254 C 278 252, 288 260, 296 274 M 104 282 C 112 296, 122 304, 135 302 C 155 296, 172 288, 200 288 C 228 288, 245 296, 265 302 C 278 304, 288 296, 296 282 M 102 280 L 298 280 M 144 260 L 144 298 M 172 269 L 172 290 M 200 275 L 200 285 M 228 269 L 228 290 M 256 260 L 256 298"
+            fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
+  <div class="section-title">My pick · Anton (Title Case)</div>
+  <div class="lockup-card">
+    <div class="meta">RECOMMENDED · ANTON · TITLE CASE</div>
+    <svg width="140" height="140" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+    <div class="word word-anton">SwoLifts</div>
+    <div class="caption">Tall condensed sans · mixed case · the &ldquo;woL&rdquo; bridge reads cleanly · brand-like</div>
+  </div>
+
+  <div class="section-title">All candidates · same mark, same scale</div>
+
+  <div class="row">
+
+    <div class="lockup-card">
+      <div class="meta">A · ARCHIVO BLACK</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+      <div class="word word-archivo">SwoLifts</div>
+      <div class="caption">Geometric ultra-bold · clean, modern, athletic</div>
+    </div>
+
+    <div class="lockup-card">
+      <div class="meta">B · INTER BLACK 900</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+      <div class="word word-inter">SwoLifts</div>
+      <div class="caption">Tight tracking · tech / SaaS · most "neutral modern"</div>
+    </div>
+
+    <div class="lockup-card">
+      <div class="meta">C · SPACE GROTESK BOLD</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+      <div class="word word-grotesk">SwoLifts</div>
+      <div class="caption">Humanist quirk · indie / friendly · softens the mark</div>
+    </div>
+
+    <div class="lockup-card">
+      <div class="meta">D · ANTON</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+      <div class="word word-anton">SwoLifts</div>
+      <div class="caption">Condensed display · mixed case</div>
+    </div>
+
+    <div class="lockup-card">
+      <div class="meta">E · BEBAS NEUE</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+      <div class="word word-bebas">SwoLifts</div>
+      <div class="caption">Tall condensed all-caps · sports / streetwear staple</div>
+    </div>
+
+    <div class="lockup-card">
+      <div class="meta">F · HELVETICA NEUE BOLD (current)</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+      <div class="word word-helv">SwoLifts</div>
+      <div class="caption">Neutral · safe · for reference</div>
+    </div>
+
+    <div class="lockup-card">
+      <div class="meta">G · SORA EXTRABOLD 800</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:#2986cc;"><use href="#lifting-mark"/></svg>
+      <div class="word word-sora">SwoLifts</div>
+      <div class="caption">Geometric humanist · modern app/wellness feel · softer corners than Inter</div>
+    </div>
+
+  </div>
+
+  <div class="section-title">Top picks · dark variant</div>
+  <div class="row">
+    <div class="lockup-card dark">
+      <div class="meta">ANTON · DARK</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:var(--cream);"><use href="#lifting-mark"/></svg>
+      <div class="word word-anton cream">SwoLifts</div>
+    </div>
+    <div class="lockup-card dark">
+      <div class="meta">ARCHIVO BLACK · DARK</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:var(--cream);"><use href="#lifting-mark"/></svg>
+      <div class="word word-archivo cream">SwoLifts</div>
+    </div>
+    <div class="lockup-card dark">
+      <div class="meta">SORA EXTRABOLD · DARK</div>
+      <svg width="120" height="120" viewBox="0 0 400 400" style="color:var(--cream);"><use href="#lifting-mark"/></svg>
+      <div class="word word-sora cream">SwoLifts</div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <b>My ranking for SwoLifts + Lifting mark:</b><br>
+    1. <b>Bebas Neue</b> — all-caps SWOLIFTS reads as one strong block, very &ldquo;swole.&rdquo; Strongest fit for the gym energy.<br>
+    2. <b>Anton</b> — condensed mixed-case keeps the camel hump (the capital L) which is part of the name's identity.<br>
+    3. <b>Sora ExtraBold</b> — if you want a modern fitness-app vibe rather than a gym poster. Geometric humanist, slightly softer than Inter, more refined than Archivo Black. Pairs well with the rounded face mark.<br>
+    4. <b>Archivo Black</b> — most contemporary if you want a tech/app feel.<br>
+    Skip Inter (too neutral) and Space Grotesk (too friendly).
+    The longer wordmark also means we may want to <b>stack</b> the lockup (mark above word) for compact uses — happy to mock that next.
+    Tell me which to lock in and I'll finalize size/weight/spacing.
+  </div>
+
+</div>
+
+</body>
+</html>

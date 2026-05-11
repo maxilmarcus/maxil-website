@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Maxil Logo Comparison</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #f6f3ee;
+    --tile: #fbf9f4;
+    --ink: #1565c0;
+    --ink-bright: #2986cc;
+    --text: #181818;
+    --muted: #6c655b;
+    --rule: #e6dfd3;
+    --dark: #171717;
+    --cream: #f1ddc6;
+    --green: #2e7d32;
+  }
+
+  * { box-sizing: border-box; }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 52px 24px 80px;
+  }
+
+  .canvas {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .header {
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding-bottom: 22px;
+    margin-bottom: 34px;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .intro {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 760px;
+    margin: 0 0 28px;
+  }
+
+  .comparison {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .option {
+    background: var(--tile);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .option-head {
+    min-height: 56px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 18px;
+  }
+
+  .option-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .tag {
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .lockup {
+    min-height: 276px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 44px 28px;
+  }
+
+  .mark {
+    width: 116px;
+    height: 116px;
+    color: var(--ink);
+    flex: 0 0 auto;
+  }
+
+  .wordmark {
+    color: var(--ink);
+    font-size: 66px;
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    line-height: 0.92;
+  }
+
+  .detail-grid {
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail {
+    min-height: 170px;
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .detail + .detail {
+    border-left: 1px solid var(--rule);
+  }
+
+  .detail.dark {
+    background: var(--dark);
+  }
+
+  .detail.dark .mark,
+  .detail.dark .wordmark,
+  .detail.dark .icon-label {
+    color: var(--cream);
+  }
+
+  .detail .mark {
+    width: 76px;
+    height: 76px;
+  }
+
+  .detail .wordmark {
+    font-size: 36px;
+    letter-spacing: -0.045em;
+  }
+
+  .icon-stack {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .app-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 18px;
+    background: var(--ink);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 12px 24px rgba(21, 101, 192, 0.18);
+  }
+
+  .app-icon.alt {
+    background: linear-gradient(145deg, var(--ink), var(--green));
+  }
+
+  .app-icon .mark {
+    width: 52px;
+    height: 52px;
+    color: currentColor;
+  }
+
+  .icon-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .notes {
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+    padding: 18px 22px 22px;
+  }
+
+  .notes b {
+    color: var(--text);
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .comparison {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    body {
+      padding: 32px 14px 56px;
+    }
+
+    .header,
+    .option-head {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .lockup {
+      min-height: 236px;
+      flex-direction: column;
+      gap: 14px;
+      padding: 36px 22px;
+    }
+
+    .wordmark {
+      font-size: 52px;
+    }
+
+    .detail-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .detail + .detail {
+      border-left: 0;
+      border-top: 1px solid var(--rule);
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="canvas">
+    <header class="header">
+      <h1>Maxil Logo Comparison</h1>
+      <div class="meta">Option 1 vs Option 2</div>
+    </header>
+
+    <p class="intro">
+      Both directions use a custom M mark with the Maxil wordmark set in Helvetica Neue Bold.
+      Option 1 is the cleaner parent-company mark. Option 2 adds a progress/chart cue while staying broad enough for future apps.
+    </p>
+
+    <section class="comparison" aria-label="Maxil logo comparison">
+      <article class="option">
+        <div class="option-head">
+          <div class="option-title">1. Minimal Tech M</div>
+          <div class="tag">Calmer / Broader</div>
+        </div>
+
+        <div class="lockup">
+          <svg class="mark" viewBox="0 0 240 240" aria-hidden="true">
+            <path d="M42 176V64L120 142L198 64V176"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="26"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+            <path d="M42 64H72M168 64H198"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="26"
+                  stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark">Maxil</div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail">
+            <svg class="mark" viewBox="0 0 240 240" aria-hidden="true">
+              <path d="M42 176V64L120 142L198 64V176"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="26"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+              <path d="M42 64H72M168 64H198"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="26"
+                    stroke-linecap="round"/>
+            </svg>
+            <div class="wordmark">Maxil</div>
+          </div>
+          <div class="detail dark">
+            <div class="icon-stack">
+              <div class="app-icon">
+                <svg class="mark" viewBox="0 0 240 240" aria-hidden="true">
+                  <path d="M42 176V64L120 142L198 64V176"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="26"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M42 64H72M168 64H198"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="26"
+                        stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="icon-label">Icon test</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="notes">
+          <b>Read:</b> most neutral and timeless. This is the safer parent-company identity, but it has less built-in meaning.
+        </div>
+      </article>
+
+      <article class="option">
+        <div class="option-head">
+          <div class="option-title">2. Progress M</div>
+          <div class="tag">My Pick</div>
+        </div>
+
+        <div class="lockup">
+          <svg class="mark" viewBox="0 0 240 240" aria-hidden="true">
+            <path d="M40 178V122L84 82L120 142L156 82L200 54V178"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="26"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+            <path d="M200 54V88H166"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="18"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+          </svg>
+          <div class="wordmark">Maxil</div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail">
+            <svg class="mark" viewBox="0 0 240 240" aria-hidden="true">
+              <path d="M40 178V122L84 82L120 142L156 82L200 54V178"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="26"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+              <path d="M200 54V88H166"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="18"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+            <div class="wordmark">Maxil</div>
+          </div>
+          <div class="detail dark">
+            <div class="icon-stack">
+              <div class="app-icon alt">
+                <svg class="mark" viewBox="0 0 240 240" aria-hidden="true">
+                  <path d="M40 178V122L84 82L120 142L156 82L200 54V178"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="26"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                  <path d="M200 54V88H166"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="18"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="icon-label">Icon test</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="notes">
+          <b>Read:</b> still simple, but the rising right stroke suggests progress, records, and improvement without becoming a fitness-only logo.
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
