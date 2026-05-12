@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maxil - Fitness Technology</title>
   <meta name="description" content="Maxil builds smart tools for fitness enthusiasts. SwoLifts is our workout tracking app for Android.">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+        if (theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+        }
+      } catch (error) {}
+    }());
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,6 +51,10 @@
   <section class="hero">
     <div class="container">
       <h1>Smarter Lifts.<br><span>Heavier Records.</span></h1>
+      <div class="swolifts-lockup hero-lockup" aria-label="SwoLifts">
+        <img src="assets/swolifts-lifting-logo.svg" alt="" aria-hidden="true">
+        <span class="swolifts-wordmark">SwoLifts</span>
+      </div>
       <p>Maxil creates smart, simple tools for people who take their fitness seriously. Starting with SwoLifts — your personal workout tracker.</p>
       <div class="hero-cta">
         <a href="#product" class="btn btn-primary">Explore SwoLifts</a>
@@ -50,7 +67,10 @@
     <div class="container">
       <div class="product-header">
         <div class="badge">Featured Product</div>
-        <h2>SwoLifts</h2>
+        <div class="swolifts-lockup section-lockup" aria-label="SwoLifts">
+          <img src="assets/swolifts-lifting-logo.svg" alt="" aria-hidden="true">
+          <h2 class="swolifts-wordmark">SwoLifts</h2>
+        </div>
         <p>A powerful, offline-first workout tracker for Android. Log sets, track progress, and crush your goals — no account required.</p>
       </div>
 

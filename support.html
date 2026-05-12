@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Support - Maxil</title>
   <meta name="description" content="Get help with SwoLifts and other Maxil products.">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+        if (theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+        }
+      } catch (error) {}
+    }());
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -122,6 +135,16 @@
           </button>
           <div class="faq-answer">
             <p>Please email us at support@maxil.app with a description of the issue, your device model, and Android version. Screenshots are helpful if possible. We appreciate your help in making SwoLifts better.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I send feedback or feature ideas?
+            <span class="arrow">&#9660;</span>
+          </button>
+          <div class="faq-answer">
+            <p>Please send feedback to <a href="mailto:support@maxil.app?subject=SwoLifts%20feedback">support@maxil.app</a>. Use "SwoLifts feedback" in the subject if you want to help us route it quickly.</p>
           </div>
         </div>
 

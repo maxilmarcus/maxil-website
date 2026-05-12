@@ -3,18 +3,26 @@ const themeToggle = document.getElementById('themeToggle');
 
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
+  try {
+    localStorage.setItem('theme', theme);
+  } catch (error) {}
   if (themeToggle) {
     themeToggle.innerHTML = theme === 'dark' ? '&#9728;' : '&#9790;';
   }
 }
 
 // Load saved theme or respect system preference
-const savedTheme = localStorage.getItem('theme');
+let savedTheme = null;
+try {
+  savedTheme = localStorage.getItem('theme');
+} catch (error) {}
+
 if (savedTheme) {
   setTheme(savedTheme);
 } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   setTheme('dark');
+} else if (themeToggle) {
+  themeToggle.innerHTML = '&#9790;';
 }
 
 if (themeToggle) {
