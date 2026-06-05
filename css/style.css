@@ -162,7 +162,7 @@ section {
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   list-style: none;
 }
 
@@ -722,6 +722,33 @@ section {
   margin-bottom: 16px;
 }
 
+.guide-content {
+  max-width: 860px;
+}
+
+.guide-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0 8px;
+}
+
+.guide-list article {
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+}
+
+.guide-list h3 {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.guide-list p {
+  margin-bottom: 0;
+}
+
 /* ===== Support Page ===== */
 .support-grid {
   display: grid;
@@ -861,6 +888,10 @@ section {
   }
 
   .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-list {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Logging Guide | Maxil</title>
+  <meta name="description" content="Learn how SwoLifts logs exercise load types, timestamps, volume, and exported workout data.">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+        if (theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+        }
+      } catch (error) {}
+    }());
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Maxil</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="index.html#product">SwoLifts</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="logging-guide.html">Guide</a></li>
+        <li><a href="index.html#download">Download</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy-policy.html">Privacy</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:12px;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9790;</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Workout Logging Guide</h1>
+      <p>How SwoLifts records load, timestamps, volume, and exported workout data.</p>
+    </div>
+  </section>
+
+  <section class="content-page">
+    <div class="container guide-content">
+      <h2>Exercise Load Types</h2>
+      <p>SwoLifts uses load types to understand what the weight field means for each exercise.</p>
+
+      <div class="guide-list">
+        <article>
+          <h3>External Weight</h3>
+          <p>The entered load is the exercise weight. Examples: bench press, squat, deadlift, dumbbell curl, machine row, and cable stack movements.</p>
+        </article>
+        <article>
+          <h3>Bodyweight</h3>
+          <p>The load is your bodyweight. Examples: push-ups, bodyweight squats, and unweighted pull-ups.</p>
+        </article>
+        <article>
+          <h3>Weighted Bodyweight</h3>
+          <p>The load is your bodyweight plus added weight. Examples: weighted dips, weighted pull-ups, or weighted chin-ups.</p>
+        </article>
+        <article>
+          <h3>Assisted Bodyweight</h3>
+          <p>The load is your bodyweight minus assistance. Examples: assisted pull-ups, assisted chin-ups, and assisted dips.</p>
+        </article>
+      </div>
+
+      <h2>When Set Timestamps Are Captured</h2>
+      <p>A set timestamp is captured when the set becomes complete. Empty fields do not count as zero. Enter <strong>0</strong> when you intentionally mean zero.</p>
+      <ul>
+        <li>External weight exercises require weight and reps.</li>
+        <li>Weighted bodyweight exercises require added weight and reps.</li>
+        <li>Assisted bodyweight exercises require assistance and reps.</li>
+        <li>Bodyweight-only exercises require reps.</li>
+        <li>Duration exercises require duration; distance-based cardio requires duration and distance.</li>
+      </ul>
+
+      <h2>How Volume Is Calculated</h2>
+      <ul>
+        <li>External weight: entered weight multiplied by reps.</li>
+        <li>Bodyweight: bodyweight multiplied by reps.</li>
+        <li>Weighted bodyweight: bodyweight plus added weight, multiplied by reps.</li>
+        <li>Assisted bodyweight: bodyweight minus assistance, multiplied by reps.</li>
+      </ul>
+
+      <h2>Import and Export Notes</h2>
+      <p>Exports include workout timestamps, exercise load types, assistance weight, and template assistance targets when those fields are present. Imports preserve those fields when restoring or merging a SwoLifts backup.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Maxil</div>
+          <p class="footer-desc">Building smart, simple tools for fitness enthusiasts.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="logging-guide.html">Guide</a></li>
+            <li><a href="index.html#download">Download</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="support.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Maxil. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
