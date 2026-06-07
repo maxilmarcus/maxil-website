@@ -331,6 +331,22 @@ section {
   overflow: hidden;
 }
 
+.screenshot-screen {
+  height: 560px;
+  min-height: 0;
+  padding: 0;
+  background: #0B0F1A;
+}
+
+.app-screenshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .app-topbar {
   display: flex;
   align-items: center;
@@ -1223,5 +1239,10 @@ section {
 
   .phone-screen {
     min-height: 470px;
+  }
+
+  .screenshot-screen {
+    height: 520px;
+    min-height: 0;
   }
 }
