@@ -799,9 +799,9 @@ section {
 .guide-kicker {
   display: block;
   color: var(--primary);
-  font-size: 0.82rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
