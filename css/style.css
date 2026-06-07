@@ -727,7 +727,7 @@ section {
 }
 
 .guide-intro {
-  margin-bottom: 48px;
+  margin-bottom: 16px;
 }
 
 .guide-intro p {
@@ -735,15 +735,25 @@ section {
 }
 
 .guide-tab-links {
+  position: sticky;
+  top: 64px;
+  z-index: 900;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
-  margin-top: 20px;
+  overflow-x: auto;
+  margin: 0 0 48px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  scrollbar-width: thin;
 }
 
 .guide-tab-links a {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 40px;
   padding: 8px 14px;
   border: 1px solid var(--border);
@@ -760,6 +770,7 @@ section {
 }
 
 .guide-section {
+  scroll-margin-top: 144px;
   padding: 56px 0;
   border-top: 1px solid var(--border);
 }
@@ -1159,6 +1170,7 @@ section {
   }
 
   .guide-section {
+    scroll-margin-top: 132px;
     padding: 44px 0;
   }
 
@@ -1169,8 +1181,7 @@ section {
   }
 
   .guide-tab-links a {
-    flex: 1 1 calc(50% - 10px);
-    justify-content: center;
+    min-width: 104px;
   }
 
   .guide-callout {
