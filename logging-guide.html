@@ -50,55 +50,279 @@
 
   <section class="page-header">
     <div class="container">
-      <h1>Workout Logging Guide</h1>
-      <p>How SwoLifts records load, timestamps, volume, and exported workout data.</p>
+      <h1>SwoLifts Guide</h1>
+      <p>Follow the app by tab, with metric details where they matter.</p>
     </div>
   </section>
 
   <section class="content-page">
     <div class="container guide-content">
-      <h2>Exercise Load Types</h2>
-      <p>SwoLifts uses load types to understand what the weight field means for each exercise.</p>
-
-      <div class="guide-list">
-        <article>
-          <h3>External Weight</h3>
-          <p>The entered load is the exercise weight. Examples: bench press, squat, deadlift, dumbbell curl, machine row, and cable stack movements.</p>
-        </article>
-        <article>
-          <h3>Bodyweight</h3>
-          <p>The load is your bodyweight. Examples: push-ups, bodyweight squats, and unweighted pull-ups.</p>
-        </article>
-        <article>
-          <h3>Weighted Bodyweight</h3>
-          <p>The load is your bodyweight plus added weight. Examples: weighted dips, weighted pull-ups, or weighted chin-ups.</p>
-        </article>
-        <article>
-          <h3>Assisted Bodyweight</h3>
-          <p>The load is your bodyweight minus assistance. Examples: assisted pull-ups, assisted chin-ups, and assisted dips.</p>
-        </article>
+      <div class="guide-intro">
+        <p>Use the main SwoLifts tabs as your path through the app. Each section explains what to do first, then shows how SwoLifts tracks the data behind the screen.</p>
+        <div class="guide-tab-links" aria-label="Guide sections">
+          <a href="#workout-tab">Workout</a>
+          <a href="#exercises-tab">Exercises</a>
+          <a href="#history-tab">History</a>
+          <a href="#progress-tab">Progress</a>
+          <a href="#settings">Settings</a>
+        </div>
       </div>
 
-      <h2>When Set Timestamps Are Captured</h2>
-      <p>A set timestamp is captured when the set becomes complete. Empty fields do not count as zero. Enter <strong>0</strong> when you intentionally mean zero.</p>
-      <ul>
-        <li>External weight exercises require weight and reps.</li>
-        <li>Weighted bodyweight exercises require added weight and reps.</li>
-        <li>Assisted bodyweight exercises require assistance and reps.</li>
-        <li>Bodyweight-only exercises require reps.</li>
-        <li>Duration exercises require duration; distance-based cardio requires duration and distance.</li>
-      </ul>
+      <section class="guide-section" id="workout-tab">
+        <div class="guide-section-header">
+          <div>
+            <span class="guide-kicker">Workout tab</span>
+            <h2>Start and Log a Workout</h2>
+          </div>
+          <p>The Workout tab is where you start from scratch, continue an active workout, or build from a saved template.</p>
+        </div>
 
-      <h2>How Volume Is Calculated</h2>
-      <ul>
-        <li>External weight: entered weight multiplied by reps.</li>
-        <li>Bodyweight: bodyweight multiplied by reps.</li>
-        <li>Weighted bodyweight: bodyweight plus added weight, multiplied by reps.</li>
-        <li>Assisted bodyweight: bodyweight minus assistance, multiplied by reps.</li>
-      </ul>
+        <div class="guide-grid">
+          <div>
+            <h3>What you do</h3>
+            <ol>
+              <li>Open the <strong>Workout</strong> tab.</li>
+              <li>Start an empty workout or choose a saved template.</li>
+              <li>Add exercises, then enter reps, weight, duration, distance, or assistance depending on the exercise.</li>
+              <li>Use the rest timer between sets if it helps your pacing.</li>
+              <li>Tap <strong>Finish Workout</strong> when the session is complete.</li>
+            </ol>
+          </div>
 
-      <h2>Import and Export Notes</h2>
-      <p>Exports include workout timestamps, exercise load types, assistance weight, and template assistance targets when those fields are present. Imports preserve those fields when restoring or merging a SwoLifts backup.</p>
+          <figure class="guide-visual">
+            <!-- Replace this mock with a real screenshot, for example:
+            <img src="assets/guide/workout-tab.png" alt="SwoLifts Workout tab showing start workout and template options">
+            -->
+            <div class="guide-phone-preview" aria-label="Workout tab preview">
+              <div class="mock-topbar">Workout</div>
+              <div class="mock-action">Start Empty Workout</div>
+              <div class="mock-action secondary">Start from Template</div>
+              <div class="mock-card">
+                <span>Push Day</span>
+                <strong>Bench Press · OHP · Triceps</strong>
+              </div>
+              <div class="mock-nav">
+                <span>Exercises</span><span class="active">Workout</span><span>History</span><span>Progress</span>
+              </div>
+            </div>
+            <figcaption>Workout tab: start, resume, or build from templates.</figcaption>
+          </figure>
+        </div>
+
+        <div class="guide-callout">
+          <h3>How SwoLifts tracks it</h3>
+          <p>Set data auto-saves while you type. A set timestamp is captured when the set becomes complete, which lets SwoLifts build workout duration, history, and progress metrics without a separate save step.</p>
+          <ul>
+            <li>Weight and reps exercises need both values before the set counts as complete.</li>
+            <li>Bodyweight-only exercises need reps.</li>
+            <li>Duration exercises need duration; distance-based cardio needs duration and distance.</li>
+            <li>Empty fields do not count as zero. Enter <strong>0</strong> only when you intentionally mean zero.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="guide-section" id="exercises-tab">
+        <div class="guide-section-header">
+          <div>
+            <span class="guide-kicker">Exercises tab</span>
+            <h2>Find, Filter, and Create Exercises</h2>
+          </div>
+          <p>The Exercises tab is the library behind your workouts. Search by name, muscle group, equipment, category, load type, or custom exercises.</p>
+        </div>
+
+        <div class="guide-grid">
+          <div>
+            <h3>What you do</h3>
+            <ol>
+              <li>Open the <strong>Exercises</strong> tab.</li>
+              <li>Search or filter until you find the movement you need.</li>
+              <li>Use the add button to create a custom exercise when the library does not have the exact movement.</li>
+              <li>Choose the correct load type so workout volume and progress charts are calculated correctly.</li>
+            </ol>
+          </div>
+
+          <figure class="guide-visual">
+            <!-- Replace this mock with a real screenshot, for example:
+            <img src="assets/guide/exercises-tab.png" alt="SwoLifts Exercises tab showing search, filters, and exercise list">
+            -->
+            <div class="guide-phone-preview" aria-label="Exercises tab preview">
+              <div class="mock-topbar">Exercises</div>
+              <div class="mock-search">Search exercises</div>
+              <div class="mock-chips"><span>Chest</span><span>Barbell</span><span>Custom</span></div>
+              <div class="mock-list-row"><strong>Bench Press</strong><span>Barbell · External Weight</span></div>
+              <div class="mock-list-row"><strong>Pull-Up</strong><span>Bodyweight</span></div>
+              <div class="mock-nav">
+                <span class="active">Exercises</span><span>Workout</span><span>History</span><span>Progress</span>
+              </div>
+            </div>
+            <figcaption>Exercises tab: search, filter, and manage custom exercises.</figcaption>
+          </figure>
+        </div>
+
+        <h3>Exercise Load Types</h3>
+        <p>SwoLifts uses load types to understand what the weight field means for each exercise.</p>
+        <div class="guide-list">
+          <article>
+            <h4>External Weight</h4>
+            <p>The entered load is the exercise weight. Examples: bench press, squat, deadlift, dumbbell curl, machine row, and cable stack movements.</p>
+          </article>
+          <article>
+            <h4>Bodyweight</h4>
+            <p>The load is your bodyweight. Examples: push-ups, bodyweight squats, and unweighted pull-ups.</p>
+          </article>
+          <article>
+            <h4>Weighted Bodyweight</h4>
+            <p>The load is your bodyweight plus added weight. Examples: weighted dips, weighted pull-ups, and weighted chin-ups.</p>
+          </article>
+          <article>
+            <h4>Assisted Bodyweight</h4>
+            <p>The load is your bodyweight minus assistance. Examples: assisted pull-ups, assisted chin-ups, and assisted dips.</p>
+          </article>
+        </div>
+
+        <div class="guide-callout">
+          <h3>How SwoLifts calculates volume</h3>
+          <ul>
+            <li>External weight: entered weight multiplied by reps.</li>
+            <li>Bodyweight: bodyweight multiplied by reps.</li>
+            <li>Weighted bodyweight: bodyweight plus added weight, multiplied by reps.</li>
+            <li>Assisted bodyweight: bodyweight minus assistance, multiplied by reps.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="guide-section" id="history-tab">
+        <div class="guide-section-header">
+          <div>
+            <span class="guide-kicker">History tab</span>
+            <h2>Review and Edit Past Workouts</h2>
+          </div>
+          <p>The History tab shows completed workouts in list and calendar views. Open any session to review or correct it.</p>
+        </div>
+
+        <div class="guide-grid">
+          <div>
+            <h3>What you do</h3>
+            <ol>
+              <li>Open the <strong>History</strong> tab.</li>
+              <li>Switch between list and calendar views depending on how you want to browse.</li>
+              <li>Tap a workout to review exercises, sets, start time, end time, and bodyweight snapshot.</li>
+              <li>Edit past sessions when you need to fix a missed set, wrong weight, or incorrect time.</li>
+            </ol>
+          </div>
+
+          <figure class="guide-visual">
+            <!-- Replace this mock with a real screenshot, for example:
+            <img src="assets/guide/history-tab.png" alt="SwoLifts History tab showing completed workouts and calendar option">
+            -->
+            <div class="guide-phone-preview" aria-label="History tab preview">
+              <div class="mock-topbar">History</div>
+              <div class="mock-card"><span>Today</span><strong>Push Day · 58 min</strong></div>
+              <div class="mock-card"><span>Jun 4</span><strong>Leg Day · 1 hr 12 min</strong></div>
+              <div class="mock-card"><span>Jun 2</span><strong>Pull Day · 49 min</strong></div>
+              <div class="mock-nav">
+                <span>Exercises</span><span>Workout</span><span class="active">History</span><span>Progress</span>
+              </div>
+            </div>
+            <figcaption>History tab: browse completed sessions and open details.</figcaption>
+          </figure>
+        </div>
+
+        <div class="guide-callout">
+          <h3>How SwoLifts uses history data</h3>
+          <p>Completed workouts power the Progress tab. Edits to past sessions update charts, PRs, bodyweight trends, and volume totals automatically.</p>
+        </div>
+      </section>
+
+      <section class="guide-section" id="progress-tab">
+        <div class="guide-section-header">
+          <div>
+            <span class="guide-kicker">Progress tab</span>
+            <h2>Understand Your Charts and Records</h2>
+          </div>
+          <p>The Progress tab turns completed workout data into trends, personal records, and summary stats.</p>
+        </div>
+
+        <div class="guide-grid">
+          <div>
+            <h3>What you do</h3>
+            <ol>
+              <li>Open the <strong>Progress</strong> tab.</li>
+              <li>Review your workout totals, streak, and weekly activity.</li>
+              <li>Select an exercise to view chart modes such as max weight, volume, and estimated 1RM.</li>
+              <li>Use time ranges to focus on recent training or long-term progress.</li>
+            </ol>
+          </div>
+
+          <figure class="guide-visual">
+            <!-- Replace this mock with a real screenshot, for example:
+            <img src="assets/guide/progress-tab.png" alt="SwoLifts Progress tab showing stats, PRs, and exercise chart">
+            -->
+            <div class="guide-phone-preview" aria-label="Progress tab preview">
+              <div class="mock-topbar">Progress</div>
+              <div class="mock-stats"><span>42<br>Workouts</span><span>5<br>Streak</span><span>3<br>This Week</span></div>
+              <div class="mock-chart"><span style="height:38%"></span><span style="height:54%"></span><span style="height:47%"></span><span style="height:78%"></span><span style="height:86%"></span></div>
+              <div class="mock-list-row"><strong>Bench Press PR</strong><span>225 lb x 3</span></div>
+              <div class="mock-nav">
+                <span>Exercises</span><span>Workout</span><span>History</span><span class="active">Progress</span>
+              </div>
+            </div>
+            <figcaption>Progress tab: charts, records, and training trends.</figcaption>
+          </figure>
+        </div>
+
+        <div class="guide-callout">
+          <h3>Metric meanings</h3>
+          <ul>
+            <li><strong>Max Weight</strong> shows the heaviest completed set for the selected exercise over time.</li>
+            <li><strong>Volume</strong> totals load multiplied by reps, using each exercise's load type.</li>
+            <li><strong>Estimated 1RM</strong> estimates one-rep max from completed sets and can use RIR when effort tracking is enabled.</li>
+            <li><strong>Personal Records</strong> come from completed workout history, not unfinished workouts.</li>
+            <li><strong>Bodyweight</strong> uses the bodyweight snapshot saved with each workout.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="guide-section" id="settings">
+        <div class="guide-section-header">
+          <div>
+            <span class="guide-kicker">Settings</span>
+            <h2>Set Units, Effort Tracking, and Backups</h2>
+          </div>
+          <p>Settings are available from the gear icon. These choices affect how workouts are logged, displayed, and exported.</p>
+        </div>
+
+        <div class="guide-grid">
+          <div>
+            <h3>What you do</h3>
+            <ol>
+              <li>Choose your preferred weight unit.</li>
+              <li>Save your bodyweight if you want bodyweight and assisted movements to calculate volume more accurately.</li>
+              <li>Turn on RIR tracking if you want to record reps in reserve for strength estimates.</li>
+              <li>Export or import your workout data when backing up or moving devices.</li>
+            </ol>
+          </div>
+
+          <figure class="guide-visual">
+            <!-- Replace this mock with a real screenshot, for example:
+            <img src="assets/guide/settings.png" alt="SwoLifts Settings screen showing units, RIR, notifications, and export options">
+            -->
+            <div class="guide-phone-preview" aria-label="Settings preview">
+              <div class="mock-topbar">Settings</div>
+              <div class="mock-list-row"><strong>Weight Unit</strong><span>lb</span></div>
+              <div class="mock-list-row"><strong>Bodyweight</strong><span>185 lb</span></div>
+              <div class="mock-list-row"><strong>Track Effort (RIR)</strong><span>On</span></div>
+              <div class="mock-list-row"><strong>Export Workout Data</strong><span>ZIP</span></div>
+            </div>
+            <figcaption>Settings: units, bodyweight, RIR, notifications, and data tools.</figcaption>
+          </figure>
+        </div>
+
+        <div class="guide-callout">
+          <h3>Import and export notes</h3>
+          <p>Exports include workout timestamps, exercise load types, assistance weight, and template assistance targets when those fields are present. Imports preserve those fields when restoring or merging a SwoLifts backup.</p>
+        </div>
+      </section>
     </div>
   </section>
 
