@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=6">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
   <svg class="icon-sprite" aria-hidden="true">
@@ -62,6 +62,34 @@
       <path d="M21 10v4"/>
       <path d="M6 12h12"/>
     </symbol>
+    <symbol id="icon-calculator" viewBox="0 0 24 24">
+      <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+      <path d="M8 7h8"/>
+      <path d="M8 11h2"/>
+      <path d="M12 11h2"/>
+      <path d="M16 11h.01"/>
+      <path d="M8 15h2"/>
+      <path d="M12 15h2"/>
+      <path d="M16 15h.01"/>
+    </symbol>
+    <symbol id="icon-effort" viewBox="0 0 24 24">
+      <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/>
+      <path d="M12 12l4-4"/>
+      <path d="M8 16h8"/>
+      <path d="M7 12h2"/>
+      <path d="M15 12h2"/>
+    </symbol>
+    <symbol id="icon-load" viewBox="0 0 24 24">
+      <path d="M5 19h14"/>
+      <path d="M7 19l2-11h6l2 11"/>
+      <path d="M9 8l3-5 3 5"/>
+      <path d="M10 13h4"/>
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <path d="M7 11V8a5 5 0 0 1 10 0v3"/>
+      <path d="M6 11h12v9H6z"/>
+      <path d="M12 15v2"/>
+    </symbol>
   </svg>
 
   <!-- Navigation -->
@@ -70,7 +98,7 @@
       <a href="index.html" class="navbar-brand">Maxil</a>
       <ul class="navbar-links" id="navLinks">
         <li><a href="#product">SwoLifts</a></li>
-        <li><a href="#features">Features</a></li>
+        <li><a href="#product">Features</a></li>
         <li><a href="logging-guide.html">Guide</a></li>
         <li><a href="#download">Download</a></li>
         <li><a href="#about">About</a></li>
@@ -120,36 +148,51 @@
       </div>
 
       <!-- Features Grid -->
-      <div class="features-grid" id="features">
+      <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon blue"><svg><use href="#icon-chart"></use></svg></div>
           <h3>Progress Charts</h3>
-          <p>Visualize your strength gains with detailed charts for weight trends, weekly volume, estimated 1RM, and personal records.</p>
+          <p>Track strength trends with personal records, exercise charts, weekly volume, muscle volume, bodyweight, and estimated 1RM.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon green"><svg><use href="#icon-log"></use></svg></div>
           <h3>Smart Logging</h3>
-          <p>Log reps, weight, duration, and distance with automatic saving. Rest timers trigger automatically between sets so you stay focused.</p>
+          <p>Log reps, weight, duration, and distance with automatic saving, set timestamps, and rest timers that keep workouts moving.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon amber"><svg><use href="#icon-calculator"></use></svg></div>
+          <h3>Plate Calculator</h3>
+          <p>Calculate exactly which plates to load for your target weight, bar weight, and available plates before the next set.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green"><svg><use href="#icon-template"></use></svg></div>
+          <h3>Workout Templates</h3>
+          <p>Save favorite routines and start workouts with a single tap, including preloaded exercises and target set details.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon blue"><svg><use href="#icon-effort"></use></svg></div>
+          <h3>Effort Tracking</h3>
+          <p>Record reps in reserve when you want deeper context for hard sets and more useful estimated strength trends.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon amber"><svg><use href="#icon-lift"></use></svg></div>
+          <h3>Exercise Library</h3>
+          <p>Comes preloaded with over 315 exercises across all muscle groups. Add your own custom exercises anytime.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green"><svg><use href="#icon-load"></use></svg></div>
+          <h3>Accurate Load Types</h3>
+          <p>Handle external weight, bodyweight, weighted bodyweight, and assisted bodyweight so volume reflects the movement.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon amber"><svg><use href="#icon-calendar"></use></svg></div>
           <h3>Workout History</h3>
-          <p>Browse your complete workout history with a calendar view. Edit past sessions, review stats, and track consistency over time.</p>
+          <p>Browse workouts in list and calendar views. Edit past sessions, review stats, and track consistency over time.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon green"><svg><use href="#icon-template"></use></svg></div>
-          <h3>Templates</h3>
-          <p>Save your favorite routines as templates and start workouts with a single tap. Preloaded exercises make logging fast.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon blue"><svg><use href="#icon-backup"></use></svg></div>
-          <h3>Export & Backup</h3>
-          <p>Your data is yours. Export everything as a ZIP file and import it back anytime. No cloud dependency, no lock in.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon amber"><svg><use href="#icon-lift"></use></svg></div>
-          <h3>315+ Exercises</h3>
-          <p>Comes preloaded with over 315 exercises across all muscle groups. Add your own custom exercises anytime.</p>
+          <div class="feature-icon blue"><svg><use href="#icon-lock"></use></svg></div>
+          <h3>Offline Data Ownership</h3>
+          <p>No account or cloud dependency. Export and import your workouts, exercises, templates, timestamps, and settings anytime.</p>
         </div>
       </div>
     </div>
@@ -206,7 +249,7 @@
         <div>
           <h4>Product</h4>
           <ul>
-            <li><a href="#features">Features</a></li>
+            <li><a href="#product">Features</a></li>
             <li><a href="logging-guide.html">Guide</a></li>
             <li><a href="#download">Download</a></li>
             <li><a href="support.html">Support</a></li>
@@ -226,6 +269,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
