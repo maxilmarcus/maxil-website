@@ -179,6 +179,54 @@ section {
   color: var(--primary);
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  min-width: 280px;
+  transform: translate(-50%, 8px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 8px;
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text);
+}
+
+.nav-dropdown-menu a:hover {
+  background: var(--bg);
+}
+
+.nav-dropdown-menu span {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
 .mobile-toggle {
   display: none;
   background: none;
@@ -234,6 +282,22 @@ section {
 
 .hero h1 span {
   color: var(--primary);
+}
+
+.company-hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+
+.company-kicker {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 .swolifts-lockup {
@@ -492,6 +556,51 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+.product-directory {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.product-card-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+  gap: 32px;
+  align-items: center;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.product-lockup {
+  justify-content: flex-start;
+  margin: 0 0 18px;
+}
+
+.product-copy h2 {
+  margin-bottom: 12px;
+}
+
+.product-copy p {
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+}
+
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.product-preview {
+  height: 420px;
+  border-radius: 28px;
+  padding: 10px;
+  background: #111827;
+  overflow: hidden;
 }
 
 .feature-card {
@@ -1042,6 +1151,73 @@ section {
   color: #60A5FA;
 }
 
+/* ===== Release History ===== */
+.release-section {
+  background: var(--bg);
+}
+
+.release-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.release-card {
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  min-width: 0;
+}
+
+.release-card-primary {
+  border-color: rgba(96, 165, 250, 0.45);
+}
+
+.release-version {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.release-card h2 {
+  margin-bottom: 12px;
+}
+
+.release-card p,
+.release-card li {
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.release-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.release-columns > div {
+  min-width: 0;
+}
+
+.release-columns h3 {
+  margin-bottom: 10px;
+}
+
+.release-list,
+.release-columns ul {
+  padding-left: 18px;
+}
+
+.release-list li,
+.release-columns li {
+  margin-bottom: 8px;
+}
+
 /* ===== Support Page ===== */
 .support-grid {
   display: grid;
@@ -1162,12 +1338,36 @@ section {
     display: flex;
   }
 
+  .nav-dropdown-menu {
+    position: static;
+    min-width: 0;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    box-shadow: none;
+    margin-top: 8px;
+  }
+
   .mobile-toggle {
     display: block;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .product-card-featured,
+  .release-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-featured {
+    padding: 24px;
+  }
+
+  .product-preview {
+    height: 360px;
   }
 
   .about-content {
