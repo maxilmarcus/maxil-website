@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwoLifts by Maxil | Workout Tracker</title>
+  <meta name="description" content="SwoLifts by Maxil is an offline first workout tracker for Android lifters. Log sets, track progress, and own your training data.">
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        }
+        if (theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+        }
+      } catch (error) {}
+    }());
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=8">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-chart" viewBox="0 0 24 24">
+      <path d="M4 19V5"/>
+      <path d="M4 19h16"/>
+      <path d="M7 15l3-4 3 2 4-7"/>
+    </symbol>
+    <symbol id="icon-log" viewBox="0 0 24 24">
+      <path d="M7 4h10a2 2 0 0 1 2 2v14H5V6a2 2 0 0 1 2-2z"/>
+      <path d="M9 9h6"/>
+      <path d="M9 13h6"/>
+      <path d="M9 17h3"/>
+    </symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24">
+      <path d="M5 6h14v14H5z"/>
+      <path d="M8 4v4"/>
+      <path d="M16 4v4"/>
+      <path d="M5 10h14"/>
+      <path d="M8 14h2"/>
+      <path d="M14 14h2"/>
+    </symbol>
+    <symbol id="icon-template" viewBox="0 0 24 24">
+      <path d="M6 5h12v14H6z"/>
+      <path d="M9 8h6"/>
+      <path d="M9 12h6"/>
+      <path d="M9 16h4"/>
+    </symbol>
+    <symbol id="icon-backup" viewBox="0 0 24 24">
+      <path d="M12 4v10"/>
+      <path d="M8 10l4 4 4-4"/>
+      <path d="M5 16v3h14v-3"/>
+    </symbol>
+    <symbol id="icon-lift" viewBox="0 0 24 24">
+      <path d="M3 10v4"/>
+      <path d="M6 8v8"/>
+      <path d="M18 8v8"/>
+      <path d="M21 10v4"/>
+      <path d="M6 12h12"/>
+    </symbol>
+    <symbol id="icon-calculator" viewBox="0 0 24 24">
+      <path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
+      <path d="M8 7h8"/>
+      <path d="M8 11h2"/>
+      <path d="M12 11h2"/>
+      <path d="M16 11h.01"/>
+      <path d="M8 15h2"/>
+      <path d="M12 15h2"/>
+      <path d="M16 15h.01"/>
+    </symbol>
+    <symbol id="icon-effort" viewBox="0 0 24 24">
+      <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/>
+      <path d="M12 12l4-4"/>
+      <path d="M8 16h8"/>
+      <path d="M7 12h2"/>
+      <path d="M15 12h2"/>
+    </symbol>
+    <symbol id="icon-load" viewBox="0 0 24 24">
+      <path d="M5 19h14"/>
+      <path d="M7 19l2-11h6l2 11"/>
+      <path d="M9 8l3-5 3 5"/>
+      <path d="M10 13h4"/>
+    </symbol>
+    <symbol id="icon-lock" viewBox="0 0 24 24">
+      <path d="M7 11V8a5 5 0 0 1 10 0v3"/>
+      <path d="M6 11h12v9H6z"/>
+      <path d="M12 15v2"/>
+    </symbol>
+  </svg>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Maxil</a>
+      <ul class="navbar-links" id="navLinks">
+        <li><a href="swolifts.html">SwoLifts</a></li>
+        <li><a href="#product">Features</a></li>
+        <li><a href="logging-guide.html">Guide</a></li>
+        <li><a href="swolifts-release-history.html">Release History</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy-policy.html">Privacy</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:12px;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">&#9790;</button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="swolifts-lockup hero-lockup" aria-label="SwoLifts">
+        <img src="assets/swolifts-lifting-logo.svg" alt="" aria-hidden="true">
+        <span class="swolifts-wordmark">SwoLifts</span>
+      </div>
+      <h1>Smarter Sets.<br><span>Heavier Reps.</span></h1>
+      <p>Offline workout tracking for lifters who want fast logging, useful progress charts, and full control of their training data.</p>
+      <div class="hero-cta">
+        <a href="#product" class="btn btn-primary">Explore SwoLifts</a>
+        <a href="#download" class="btn btn-outline">Download</a>
+      </div>
+      <div class="phone-showcase" aria-label="SwoLifts app preview">
+        <div class="phone-frame">
+          <div class="phone-screen screenshot-screen">
+            <img class="app-screenshot" src="assets/swolifts-workout-screen.png?v=2" alt="SwoLifts active workout screen">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section class="product-section" id="product">
+    <div class="container">
+      <div class="product-header">
+        <div class="badge">Featured Product</div>
+        <p>A powerful, offline first workout tracker for Android. Log sets, track progress, and crush your goals with no account required.</p>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon blue"><svg><use href="#icon-chart"></use></svg></div>
+          <h3>Progress Charts</h3>
+          <p>Track strength trends with personal records, exercise charts, weekly volume, muscle volume, bodyweight, and estimated 1RM.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green"><svg><use href="#icon-log"></use></svg></div>
+          <h3>Smart Logging</h3>
+          <p>Log reps, weight, duration, and distance with automatic saving, set timestamps, and rest timers that keep workouts moving.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon amber"><svg><use href="#icon-calculator"></use></svg></div>
+          <h3>Plate Calculator</h3>
+          <p>Calculate exactly which plates to load for your target weight, bar weight, and available plates before the next set.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green"><svg><use href="#icon-template"></use></svg></div>
+          <h3>Workout Templates</h3>
+          <p>Save favorite routines and start workouts with a single tap, including preloaded exercises and target set details.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon blue"><svg><use href="#icon-effort"></use></svg></div>
+          <h3>Effort Tracking</h3>
+          <p>Record reps in reserve when you want deeper context for hard sets and more useful estimated strength trends.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon amber"><svg><use href="#icon-lift"></use></svg></div>
+          <h3>Exercise Library</h3>
+          <p>Comes preloaded with over 315 exercises across all muscle groups. Add your own custom exercises anytime.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green"><svg><use href="#icon-load"></use></svg></div>
+          <h3>Accurate Load Types</h3>
+          <p>Handle external weight, bodyweight, weighted bodyweight, and assisted bodyweight so volume reflects the movement.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon amber"><svg><use href="#icon-calendar"></use></svg></div>
+          <h3>Workout History</h3>
+          <p>Browse workouts in list and calendar views. Edit past sessions, review stats, and track consistency over time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon blue"><svg><use href="#icon-lock"></use></svg></div>
+          <h3>Offline Data Ownership</h3>
+          <p>No account or cloud dependency. Export and import your workouts, exercises, templates, timestamps, and settings anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Maxil</h2>
+          <p>Maxil is a software company focused on building thoughtful, well crafted tools for fitness enthusiasts.</p>
+          <p>We believe the best apps are the ones that get out of your way and let you focus on what matters: your training.</p>
+          <ul class="about-values">
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>Privacy first</strong> Your workout data stays on your device. No accounts, no tracking.</span>
+            </li>
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>Offline by default</strong> Works everywhere, no internet needed.</span>
+            </li>
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>Built for lifters</strong> Designed by someone who actually uses it in the gym.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="about-visual">
+          <h3>Your Data, Your Way</h3>
+          <p>SwoLifts stores everything locally on your device. Export your data as a portable ZIP anytime. We do not collect, store, or sell your information.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" id="download">
+    <div class="container">
+      <h2>Ready to track smarter?</h2>
+      <p>SwoLifts is coming soon to the Google Play Store.</p>
+      <a href="support.html" class="btn btn-primary">Get Launch Updates</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Maxil</div>
+          <p class="footer-desc">Building smart, simple tools for fitness enthusiasts.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="swolifts.html#product">Features</a></li>
+            <li><a href="logging-guide.html">Guide</a></li>
+            <li><a href="swolifts-release-history.html">Release History</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="support.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Maxil. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>
