@@ -183,9 +183,18 @@ section {
   position: relative;
 }
 
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -16px;
+  right: -16px;
+  height: 16px;
+}
+
 .nav-dropdown-menu {
   position: absolute;
-  top: calc(100% + 16px);
+  top: calc(100% + 8px);
   left: 50%;
   min-width: 280px;
   transform: translate(-50%, 8px);
