@@ -86,6 +86,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   transition: background-color var(--transition), color var(--transition);
+  overflow-x: hidden;
 }
 
 .icon-sprite {
@@ -129,6 +130,7 @@ h3 { font-size: 1.25rem; }
 
 section {
   padding: 80px 0;
+  scroll-margin-top: 88px;
 }
 
 /* ===== Navigation ===== */
@@ -457,6 +459,7 @@ section {
 /* ===== Product Section ===== */
 .product-section {
   background: var(--surface);
+  scroll-margin-top: 88px;
 }
 
 .product-header {
@@ -1214,6 +1217,21 @@ section {
 
   .hero p {
     font-size: 1.05rem;
+    max-width: 100%;
+  }
+
+  .hero-cta {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+    text-align: center;
   }
 
   .hero-lockup {
@@ -1231,6 +1249,16 @@ section {
     transform: none;
     width: 72px;
     height: 72px;
+  }
+
+  .feature-card {
+    min-width: 0;
+  }
+
+  .feature-card h3,
+  .feature-card p,
+  .product-header p {
+    overflow-wrap: anywhere;
   }
 
   .phone-frame {
