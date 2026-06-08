@@ -1,0 +1,4 @@
+name,primaryMuscleGroup,category,equipment,loggingType,loadType,source,sourceId,sourceLicense,sourceUrl,isDeleted
+Trap Bar Deadlift,Back,Strength,Trap Bar,reps_weight,external_weight,user,,user_generated,,false
+Weighted Plank,Abs,Strength,Bodyweight,duration_only,external_weight,user,,user_generated,,false
+Outdoor Trail Run,Full Body,Cardio,None,duration_distance,external_weight,user,,user_generated,,false

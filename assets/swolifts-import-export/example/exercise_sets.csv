@@ -1,0 +1,8 @@
+sessionId,exerciseName,setNumber,reps,weightLbs,assistanceWeightLbs,durationSeconds,distanceMeters,rir,completedAt,notes
+s-0001,Barbell Bench Press,1,8,185.0,,,,3,2026-04-17T14:35:00Z,
+s-0001,Barbell Bench Press,2,8,185.0,,,,2,2026-04-17T14:38:00Z,
+s-0001,Barbell Bench Press,3,7,185.0,,,,0,2026-04-17T14:42:00Z,last rep was grinder
+s-0001,Plank,1,,,,60,,,2026-04-17T15:30:00Z,
+s-0002,Barbell Back Squat,1,5,225.0,,,,2,2026-04-19T09:15:00Z,
+s-0002,Barbell Back Squat,2,5,225.0,,,,1,2026-04-19T09:19:00Z,
+s-0002,Conventional Deadlift,1,5,275.0,,,,1,2026-04-19T09:45:00Z,
