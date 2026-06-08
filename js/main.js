@@ -49,6 +49,17 @@ if (mobileToggle && navLinks) {
   });
 }
 
+// Release history version selector
+const releaseVersionSelect = document.getElementById('releaseVersionSelect');
+
+if (releaseVersionSelect) {
+  releaseVersionSelect.addEventListener('change', () => {
+    document.querySelectorAll('.release-panel').forEach(panel => {
+      panel.classList.toggle('is-active', panel.id === releaseVersionSelect.value);
+    });
+  });
+}
+
 // FAQ accordion
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
