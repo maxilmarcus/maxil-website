@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwoLifts — Mouth Iterations</title>
+  <style>
+    :root {
+      --blue: #1976D2;
+      --bg: #F7FAFC;
+      --surface: #FFFFFF;
+      --text: #111827;
+      --muted: #4B5563;
+      --border: #D8E0EA;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 48px 24px 80px;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    h1 { font-size: 1.8rem; margin-bottom: 8px; }
+    .sub { color: var(--muted); margin-bottom: 40px; max-width: 760px; line-height: 1.6; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+    .card h2 { font-size: 1.15rem; margin-bottom: 4px; }
+    .card .note { color: var(--muted); font-size: 0.92rem; margin-bottom: 20px; line-height: 1.55; }
+    .sizes { display: flex; align-items: flex-end; gap: 40px; flex-wrap: wrap; }
+    .size { text-align: center; }
+    .size span { display: block; margin-top: 8px; color: var(--muted); font-size: 0.78rem; }
+    .dark-strip {
+      margin-top: 20px; padding: 18px 24px; border-radius: 10px;
+      background: #0B1120; display: flex; align-items: center; gap: 40px;
+    }
+    .dark-strip svg * { stroke: #60A5FA; }
+    .dark-strip .lbl { color: rgba(255,255,255,0.6); font-size: 0.78rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>SwoLifts — Mouth Iterations</h1>
+    <p class="sub">
+      Goal: keep the gritted-teeth-as-barbell concept but make the clench fiercer and legible at app-icon sizes.
+      Current mouth uses soft S-curves and 6px detail strokes that blur below ~64px. Variants below use straighter
+      bar geometry, fewer/bolder teeth dividers, and (B/D) a downward snarl bow. Each is shown at 200 / 64 / 32px,
+      plus on dark.
+    </p>
+
+    <!-- ================= CURRENT ================= -->
+    <div class="card">
+      <h2>Current</h2>
+      <p class="note">Soft wavy mouth band, 6px inner detail. Reads slightly "braces / mustache"; teeth lines vanish at 32px.</p>
+      <div class="sizes">
+        <div class="size">
+          <svg width="200" height="200" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <path d="M 98 278 C 108 248, 122 244, 135 250 C 150 258, 172 270, 200 270 C 228 270, 250 258, 265 250 C 278 244, 292 248, 302 278 C 292 308, 278 312, 265 310 C 250 302, 228 290, 200 290 C 172 290, 150 302, 135 310 C 122 312, 108 308, 98 278 Z" stroke-width="11" stroke-linejoin="round"/>
+            <path d="M 104 274 C 112 260, 122 252, 135 254 C 155 260, 172 268, 200 272 C 228 268, 245 260, 265 254 C 278 252, 288 260, 296 274 M 104 282 C 112 296, 122 304, 135 302 C 155 296, 172 288, 200 288 C 228 288, 245 296, 265 302 C 278 304, 288 296, 296 282 M 102 280 L 298 280 M 144 260 L 144 298 M 172 269 L 172 290 M 200 275 L 200 285 M 228 269 L 228 290 M 256 260 L 256 298" stroke-width="6"/>
+          </svg>
+          <span>200px</span>
+        </div>
+        <div class="size">
+          <svg width="64" height="64" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <path d="M 98 278 C 108 248, 122 244, 135 250 C 150 258, 172 270, 200 270 C 228 270, 250 258, 265 250 C 278 244, 292 248, 302 278 C 292 308, 278 312, 265 310 C 250 302, 228 290, 200 290 C 172 290, 150 302, 135 310 C 122 312, 108 308, 98 278 Z" stroke-width="11" stroke-linejoin="round"/>
+            <path d="M 104 274 C 112 260, 122 252, 135 254 C 155 260, 172 268, 200 272 C 228 268, 245 260, 265 254 C 278 252, 288 260, 296 274 M 104 282 C 112 296, 122 304, 135 302 C 155 296, 172 288, 200 288 C 228 288, 245 296, 265 302 C 278 304, 288 296, 296 282 M 102 280 L 298 280 M 144 260 L 144 298 M 172 269 L 172 290 M 200 275 L 200 285 M 228 269 L 228 290 M 256 260 L 256 298" stroke-width="6"/>
+          </svg>
+          <span>64px</span>
+        </div>
+        <div class="size">
+          <svg width="32" height="32" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <path d="M 98 278 C 108 248, 122 244, 135 250 C 150 258, 172 270, 200 270 C 228 270, 250 258, 265 250 C 278 244, 292 248, 302 278 C 292 308, 278 312, 265 310 C 250 302, 228 290, 200 290 C 172 290, 150 302, 135 310 C 122 312, 108 308, 98 278 Z" stroke-width="11" stroke-linejoin="round"/>
+            <path d="M 104 274 C 112 260, 122 252, 135 254 C 155 260, 172 268, 200 272 C 228 268, 245 260, 265 254 C 278 252, 288 260, 296 274 M 104 282 C 112 296, 122 304, 135 302 C 155 296, 172 288, 200 288 C 228 288, 245 296, 265 302 C 278 304, 288 296, 296 282 M 102 280 L 298 280 M 144 260 L 144 298 M 172 269 L 172 290 M 200 275 L 200 285 M 228 269 L 228 290 M 256 260 L 256 298" stroke-width="6"/>
+          </svg>
+          <span>32px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= A ================= -->
+    <div class="card">
+      <h2>A — Hard Clench (straight barbell)</h2>
+      <p class="note">Mouth squared into a straight bar with end plates. Teeth are bold 8px dividers plus a horizontal clench line — reads "gritted" immediately, survives 32px better.</p>
+      <div class="sizes">
+        <div class="size">
+          <svg width="200" height="200" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="128" y="258" width="144" height="44" rx="10" stroke-width="11"/>
+            <path d="M 152 258 V 302 M 176 258 V 302 M 200 258 V 302 M 224 258 V 302 M 248 258 V 302 M 128 280 H 272" stroke-width="8"/>
+          </svg>
+          <span>200px</span>
+        </div>
+        <div class="size">
+          <svg width="64" height="64" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="128" y="258" width="144" height="44" rx="10" stroke-width="11"/>
+            <path d="M 152 258 V 302 M 176 258 V 302 M 200 258 V 302 M 224 258 V 302 M 248 258 V 302 M 128 280 H 272" stroke-width="8"/>
+          </svg>
+          <span>64px</span>
+        </div>
+        <div class="size">
+          <svg width="32" height="32" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="128" y="258" width="144" height="44" rx="10" stroke-width="11"/>
+            <path d="M 152 258 V 302 M 176 258 V 302 M 200 258 V 302 M 224 258 V 302 M 248 258 V 302 M 128 280 H 272" stroke-width="8"/>
+          </svg>
+          <span>32px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= B ================= -->
+    <div class="card">
+      <h2>B — Snarl Bow</h2>
+      <p class="note">Same barbell mouth but the whole band bows downward at the center — the classic "grrr" snarl. Slightly more aggressive and organic than A.</p>
+      <div class="sizes">
+        <div class="size">
+          <svg width="200" height="200" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+            <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+          </svg>
+          <span>200px</span>
+        </div>
+        <div class="size">
+          <svg width="64" height="64" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+            <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+          </svg>
+          <span>64px</span>
+        </div>
+        <div class="size">
+          <svg width="32" height="32" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+            <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+          </svg>
+          <span>32px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= C ================= -->
+    <div class="card">
+      <h2>C — Icon-Ready Clench (fewer, bolder teeth)</h2>
+      <p class="note">Variant A simplified for small sizes: only three 10px teeth dividers and a 10px clench line. The one to use for the favicon / launcher icon if you keep a detailed version for large placements.</p>
+      <div class="sizes">
+        <div class="size">
+          <svg width="200" height="200" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="244" width="32" height="72" rx="12" stroke-width="12"/>
+            <rect x="270" y="244" width="32" height="72" rx="12" stroke-width="12"/>
+            <rect x="130" y="256" width="140" height="48" rx="10" stroke-width="12"/>
+            <path d="M 164 256 V 304 M 200 256 V 304 M 236 256 V 304 M 130 280 H 270" stroke-width="10"/>
+          </svg>
+          <span>200px</span>
+        </div>
+        <div class="size">
+          <svg width="64" height="64" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="244" width="32" height="72" rx="12" stroke-width="12"/>
+            <rect x="270" y="244" width="32" height="72" rx="12" stroke-width="12"/>
+            <rect x="130" y="256" width="140" height="48" rx="10" stroke-width="12"/>
+            <path d="M 164 256 V 304 M 200 256 V 304 M 236 256 V 304 M 130 280 H 270" stroke-width="10"/>
+          </svg>
+          <span>64px</span>
+        </div>
+        <div class="size">
+          <svg width="32" height="32" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 116 148 L 176 172" stroke-width="12"/><path d="M 166 172 L 166 196" stroke-width="12"/>
+            <path d="M 224 172 L 284 148" stroke-width="12"/><path d="M 234 172 L 234 196" stroke-width="12"/>
+            <rect x="98" y="244" width="32" height="72" rx="12" stroke-width="12"/>
+            <rect x="270" y="244" width="32" height="72" rx="12" stroke-width="12"/>
+            <rect x="130" y="256" width="140" height="48" rx="10" stroke-width="12"/>
+            <path d="M 164 256 V 304 M 200 256 V 304 M 236 256 V 304 M 130 280 H 270" stroke-width="10"/>
+          </svg>
+          <span>32px</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= D ================= -->
+    <div class="card">
+      <h2>D — Full Fierce (snarl mouth + steeper brows + slit eyes)</h2>
+      <p class="note">Variant B's mouth plus steeper, longer brows and angled slit eyes that follow the brow line. The angriest of the set — check it doesn't tip from "fierce" into "hostile" for a consumer app.</p>
+      <div class="sizes">
+        <div class="size">
+          <svg width="200" height="200" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 108 138 L 178 174" stroke-width="12"/><path d="M 160 176 L 172 200" stroke-width="12"/>
+            <path d="M 222 174 L 292 138" stroke-width="12"/><path d="M 240 176 L 228 200" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+            <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+          </svg>
+          <span>200px</span>
+        </div>
+        <div class="size">
+          <svg width="64" height="64" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 108 138 L 178 174" stroke-width="12"/><path d="M 160 176 L 172 200" stroke-width="12"/>
+            <path d="M 222 174 L 292 138" stroke-width="12"/><path d="M 240 176 L 228 200" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+            <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+          </svg>
+          <span>64px</span>
+        </div>
+        <div class="size">
+          <svg width="32" height="32" viewBox="0 0 400 400" fill="none" stroke="#1976D2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="200" cy="200" r="160" stroke-width="14"/>
+            <path d="M 108 138 L 178 174" stroke-width="12"/><path d="M 160 176 L 172 200" stroke-width="12"/>
+            <path d="M 222 174 L 292 138" stroke-width="12"/><path d="M 240 176 L 228 200" stroke-width="12"/>
+            <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+            <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+            <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+          </svg>
+          <span>32px</span>
+        </div>
+      </div>
+      <div class="dark-strip">
+        <svg width="120" height="120" viewBox="0 0 400 400" fill="none" stroke="#60A5FA" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="200" cy="200" r="160" stroke-width="14"/>
+          <path d="M 108 138 L 178 174" stroke-width="12"/><path d="M 160 176 L 172 200" stroke-width="12"/>
+          <path d="M 222 174 L 292 138" stroke-width="12"/><path d="M 240 176 L 228 200" stroke-width="12"/>
+          <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+          <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+          <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+          <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+        </svg>
+        <svg width="48" height="48" viewBox="0 0 400 400" fill="none" stroke="#60A5FA" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="200" cy="200" r="160" stroke-width="14"/>
+          <path d="M 108 138 L 178 174" stroke-width="12"/><path d="M 160 176 L 172 200" stroke-width="12"/>
+          <path d="M 222 174 L 292 138" stroke-width="12"/><path d="M 240 176 L 228 200" stroke-width="12"/>
+          <rect x="98" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+          <rect x="272" y="246" width="30" height="68" rx="12" stroke-width="11"/>
+          <path d="M 128 256 Q 200 270 272 256 L 272 300 Q 200 314 128 300 Z" stroke-width="11"/>
+          <path d="M 152 260 V 304 M 176 263 V 307 M 200 264 V 308 M 224 263 V 307 M 248 260 V 304 M 128 278 Q 200 292 272 278" stroke-width="8"/>
+        </svg>
+        <span class="lbl">Variant D on dark (#60A5FA stroke)</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
