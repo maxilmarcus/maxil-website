@@ -721,6 +721,17 @@ section {
   line-height: 1.6;
 }
 
+.about-visual a {
+  color: var(--text-light);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-visual a:hover {
+  color: rgba(255,255,255,0.8);
+}
+
 /* ===== CTA Section ===== */
 .cta-section {
   background: linear-gradient(135deg, var(--primary-dark), var(--primary));
