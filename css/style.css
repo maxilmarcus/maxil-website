@@ -1432,7 +1432,7 @@ section {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 200px;
+  max-height: 600px;
 }
 
 /* ===== Responsive ===== */

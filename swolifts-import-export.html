@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body>
 
@@ -103,7 +103,7 @@
 
         <div class="guide-callout">
           <h3>Exporting existing data</h3>
-          <p>Exporting from an empty app produces valid CSV files with headers. Exporting from an app with data also includes examples under an <strong>examples/</strong> folder. SwoLifts ignores files under <strong>examples/</strong> during import.</p>
+          <p>Every export contains valid CSV files with headers, plus sample files under an <strong>examples/</strong> folder. SwoLifts ignores files under <strong>examples/</strong> during import, so they are safe to keep, edit, or delete.</p>
         </div>
       </section>
 
@@ -199,7 +199,7 @@
                 <tr><td>templateName</td><td>No</td><td>Informational only. Imported sessions are not linked back to templates.</td></tr>
                 <tr><td>name</td><td>Yes</td><td>Workout name.</td></tr>
                 <tr><td>startTime</td><td>Yes</td><td>ISO 8601 UTC timestamp.</td></tr>
-                <tr><td>endTime</td><td>No</td><td>ISO 8601 UTC timestamp. Leave blank for an in-progress session.</td></tr>
+                <tr><td>endTime</td><td>No</td><td>ISO 8601 UTC timestamp. If blank, the start time is used â€” imported sessions are always treated as completed.</td></tr>
                 <tr><td>notes</td><td>No</td><td>Optional workout notes.</td></tr>
                 <tr><td>bodyweightLbs</td><td>No</td><td>Bodyweight snapshot for that workout.</td></tr>
               </tbody>
@@ -222,7 +222,7 @@
                 <tr><td>durationSeconds</td><td>No</td><td>Whole seconds.</td></tr>
                 <tr><td>distanceMeters</td><td>No</td><td>Decimal meters for cardio distance.</td></tr>
                 <tr><td>rir</td><td>No</td><td>Reps in reserve, as a whole number.</td></tr>
-                <tr><td>completedAt</td><td>No</td><td>ISO 8601 UTC timestamp for when the set was completed.</td></tr>
+                <tr><td>completedAt</td><td>No</td><td>ISO 8601 UTC timestamp for when the set was completed. If blank, the session's end time is used so imported sets still count toward Progress charts and PRs.</td></tr>
                 <tr><td>notes</td><td>No</td><td>Optional set notes.</td></tr>
               </tbody>
             </table>
@@ -259,7 +259,7 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand">Maxil</div>
-          <p class="footer-desc">Building smart, simple tools for fitness enthusiasts.</p>
+          <p class="footer-desc">Building practical, privacy-first tools for data ownership.</p>
         </div>
         <div>
           <h4>Product</h4>
@@ -286,6 +286,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=5"></script>
+  <script src="js/main.js?v=6"></script>
 </body>
 </html>

@@ -1,26 +1,24 @@
 // Theme toggle
 const themeToggle = document.getElementById('themeToggle');
 
-function setTheme(theme) {
+function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  try {
-    localStorage.setItem('theme', theme);
-  } catch (error) {}
   if (themeToggle) {
     themeToggle.innerHTML = theme === 'dark' ? '&#9728;' : '&#9790;';
   }
 }
 
-// Load saved theme or respect system preference
+// Load saved theme or reflect system preference (without persisting it,
+// so the site keeps following the OS until the user explicitly toggles)
 let savedTheme = null;
 try {
   savedTheme = localStorage.getItem('theme');
 } catch (error) {}
 
 if (savedTheme) {
-  setTheme(savedTheme);
+  applyTheme(savedTheme);
 } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  setTheme('dark');
+  applyTheme('dark');
 } else if (themeToggle) {
   themeToggle.innerHTML = '&#9790;';
 }
@@ -28,7 +26,11 @@ if (savedTheme) {
 if (themeToggle) {
   themeToggle.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
-    setTheme(current === 'dark' ? 'light' : 'dark');
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try {
+      localStorage.setItem('theme', next);
+    } catch (error) {}
   });
 }
 
@@ -61,7 +63,13 @@ if (releaseVersionSelect) {
 }
 
 // FAQ accordion
-document.querySelectorAll('.faq-question').forEach(button => {
+document.querySelectorAll('.faq-question').forEach((button, index) => {
+  button.setAttribute('aria-expanded', 'false');
+  const answer = button.nextElementSibling;
+  if (answer) {
+    if (!answer.id) answer.id = 'faq-answer-' + (index + 1);
+    button.setAttribute('aria-controls', answer.id);
+  }
   button.addEventListener('click', () => {
     const item = button.parentElement;
     const isActive = item.classList.contains('active');
@@ -69,25 +77,18 @@ document.querySelectorAll('.faq-question').forEach(button => {
     // Close all FAQ items
     document.querySelectorAll('.faq-item').forEach(faq => {
       faq.classList.remove('active');
+      const q = faq.querySelector('.faq-question');
+      if (q) q.setAttribute('aria-expanded', 'false');
     });
 
     // Open the clicked one (if it wasn't already open)
     if (!isActive) {
       item.classList.add('active');
+      button.setAttribute('aria-expanded', 'true');
     }
   });
 });
 
-// Smooth scroll for anchor links (fallback for older browsers)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      const navbar = document.querySelector('.navbar');
-      const offset = (navbar ? navbar.offsetHeight : 0) + 16;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
+// In-page anchor scrolling is handled by CSS: `scroll-behavior: smooth` on
+// html plus `scroll-margin-top` on sections (which also accounts for the
+// sticky guide tab bar — a JS offset here would scroll underneath it).
