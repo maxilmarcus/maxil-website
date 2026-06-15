@@ -39,6 +39,12 @@
   --footer-border: rgba(255,255,255,0.1);
   --phone-bg: #0F172A;
   --phone-surface: #172033;
+  /* Maxil logo lockup (the wedge mark stands in for the "M") */
+  --maxil-pillar: #1f6fe5;
+  --maxil-c1: #1f6fe5;
+  --maxil-c2: #5b97f0;
+  --maxil-c3: #9cbef9;
+  --maxil-word: #1f6fe5;
 }
 
 /* ===== Dark Mode ===== */
@@ -72,6 +78,12 @@
   --footer-border: rgba(255,255,255,0.08);
   --phone-bg: #050816;
   --phone-surface: #111827;
+  /* Reversed lockup for dark surfaces */
+  --maxil-pillar: #ffffff;
+  --maxil-c1: #4d8dff;
+  --maxil-c2: #7eacff;
+  --maxil-c3: #b8d2ff;
+  --maxil-word: #ffffff;
 }
 
 html {
@@ -159,6 +171,39 @@ section {
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.5px;
+}
+
+/* ===== Maxil logo lockup ===== */
+.maxil-lockup {
+  display: inline-flex;
+  align-items: baseline;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--maxil-word);
+}
+
+.maxil-lockup .maxil-mark {
+  height: 0.82em;          /* cap-height match against the wordmark */
+  width: auto;
+  align-self: baseline;
+  transform: translateY(0.045em); /* drop the mark onto the baseline */
+  margin-right: 0.04em;
+}
+
+.maxil-mark .mx-pillar { stroke: var(--maxil-pillar); }
+.maxil-mark .mx-c1 { fill: var(--maxil-c1); }
+.maxil-mark .mx-c2 { fill: var(--maxil-c2); }
+.maxil-mark .mx-c3 { fill: var(--maxil-c3); }
+
+.maxil-rest { color: var(--maxil-word); }
+
+/* The footer sits on a dark surface in both themes — always use the reversed mark */
+.footer .maxil-lockup {
+  --maxil-pillar: #ffffff;
+  --maxil-c1: #4d8dff;
+  --maxil-c2: #7eacff;
+  --maxil-c3: #b8d2ff;
+  --maxil-word: #ffffff;
 }
 
 .navbar-links {
