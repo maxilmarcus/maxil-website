@@ -78,12 +78,8 @@
   --footer-border: rgba(255,255,255,0.08);
   --phone-bg: #050816;
   --phone-surface: #111827;
-  /* Reversed lockup for dark surfaces */
-  --maxil-pillar: #ffffff;
-  --maxil-c1: #4d8dff;
-  --maxil-c2: #7eacff;
-  --maxil-c3: #b8d2ff;
-  --maxil-word: #ffffff;
+  /* Logo stays cobalt in both themes — no dark-theme override.
+     (Footer overrides to reversed white below, since it's a dark surface in both themes.) */
 }
 
 html {
