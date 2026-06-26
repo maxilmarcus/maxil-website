@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwoLifts Release History | Maxil</title>
-  <meta name="description" content="Track SwoLifts versions, release notes, feature history, bug fixes, and versioning decisions.">
+  <meta name="description" content="See what's new in SwoLifts, including public release notes, feature updates, and improvements.">
   <script>
     (function () {
       try {
@@ -64,84 +64,52 @@
     <div class="container">
       <div class="badge">SwoLifts</div>
       <h1>Release History</h1>
-      <p>Version notes for SwoLifts features, fixes, and product decisions.</p>
+      <p>Public notes for SwoLifts releases, feature updates, and fixes.</p>
     </div>
   </section>
 
   <section class="release-section">
     <div class="container">
       <div class="release-grid">
-        <article class="release-card">
-          <div class="release-version">Versioning Model</div>
-          <h2>How SwoLifts versions are tracked</h2>
-          <ul class="release-list">
-            <li><strong>Major versions</strong> mark large product shifts, major workflow changes, or compatibility-breaking changes.</li>
-            <li><strong>Minor versions</strong> add user-facing features or meaningful UX improvements while preserving existing data.</li>
-            <li><strong>Patch versions</strong> cover bug fixes, performance improvements, copy changes, and low-risk polish.</li>
-          </ul>
-        </article>
-
         <article class="release-card release-card-primary release-selector-card">
-          <div class="release-selector-header">
-            <div>
-              <div class="release-version">Current Version</div>
-              <h2>SwoLifts 1.0</h2>
-              <p>SwoLifts 1.0 is the current development baseline for the planned first public release.</p>
-            </div>
-            <label class="release-select-label" for="releaseVersionSelect">
-              <span>Version</span>
-              <select id="releaseVersionSelect" class="release-select">
-                <option value="release-1-0">1.0 Launch Baseline</option>
-              </select>
-            </label>
+          <div>
+            <div class="release-version">Initial Release</div>
+            <h2>SwoLifts 1.0</h2>
+            <p>The first Android release of SwoLifts focuses on fast workout logging, progress tracking, and local data ownership.</p>
           </div>
 
           <div class="release-panel is-active" id="release-1-0">
-            <div class="release-panel-meta">Planned launch baseline</div>
+            <div class="release-panel-meta">Initial Android release</div>
             <div class="release-columns">
               <div>
                 <h3>Workout Tracking</h3>
                 <ul>
-                  <li>Active workout logging with autosave.</li>
-                  <li>Exercise templates for repeat routines.</li>
-                  <li>Rest timer and persistent workout notification.</li>
-                  <li>Set timestamps captured when sets become complete.</li>
+                  <li>Log active workouts with autosave.</li>
+                  <li>Create reusable workout templates.</li>
+                  <li>Use rest timers and a live workout timer notification.</li>
+                  <li>Mark completed sets and keep accurate workout history.</li>
                 </ul>
               </div>
               <div>
                 <h3>Exercise Data</h3>
                 <ul>
-                  <li>Preloaded exercise library with custom exercises.</li>
-                  <li>External weight, bodyweight, weighted bodyweight, and assisted bodyweight load types.</li>
-                  <li>Assistance weight support for assisted pull-ups, assisted dips, and similar movements.</li>
-                  <li>RIR tracking option for effort-aware strength estimates.</li>
+                  <li>Choose from a large built-in exercise library.</li>
+                  <li>Add custom exercises for your own routines.</li>
+                  <li>Track external weight, bodyweight, weighted bodyweight, and assisted bodyweight work.</li>
+                  <li>Optionally record reps in reserve for effort tracking.</li>
                 </ul>
               </div>
               <div>
-                <h3>Progress and Ownership</h3>
+                <h3>Progress and Data</h3>
                 <ul>
-                  <li>Personal records, exercise trends, weekly volume, muscle volume, and bodyweight charts.</li>
-                  <li>Plate Calculator for bar loading.</li>
-                  <li>Workout history with editable completed sessions.</li>
-                  <li>Offline local storage with ZIP export/import backup.</li>
+                  <li>Review personal records, exercise trends, volume, and bodyweight charts.</li>
+                  <li>Use the plate calculator for bar loading.</li>
+                  <li>Edit completed sessions from workout history.</li>
+                  <li>Keep data local with ZIP export and import support.</li>
                 </ul>
               </div>
             </div>
           </div>
-        </article>
-
-        <article class="release-card">
-          <div class="release-version">Release Note Format</div>
-          <h2>How future entries will be documented</h2>
-          <p>This section is a reminder for how future SwoLifts releases should be written once new versions are published.</p>
-          <ul class="release-list">
-            <li><strong>Version number</strong> such as 1.0.1, 1.1.0, or 2.0.0.</li>
-            <li><strong>Release date</strong> once the update is published.</li>
-            <li><strong>New features</strong> added in that version.</li>
-            <li><strong>Fixes and improvements</strong> that changed behavior, performance, or usability.</li>
-            <li><strong>Data migration notes</strong> when a release changes local storage or import/export behavior.</li>
-            <li><strong>Known limitations</strong> when something needs follow-up or further discussion.</li>
-          </ul>
         </article>
       </div>
     </div>
