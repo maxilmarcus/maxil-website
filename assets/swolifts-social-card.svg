@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e8f0fe"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0f172a" flood-opacity="0.2"/>
+    </filter>
+    <clipPath id="screen-clip">
+      <rect x="829" y="76" width="234" height="507" rx="25"/>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="url(#background)"/>
+  <rect width="18" height="630" fill="#1f6fe5"/>
+  <circle cx="104" cy="91" r="42" fill="#ffffff" stroke="#dbeafe" stroke-width="2"/>
+  <image href="swolifts-lifting-logo.svg" x="66" y="53" width="76" height="76"/>
+  <text x="165" y="108" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="50" font-weight="800">SwoLifts</text>
+  <text x="80" y="229" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Your workout data.</text>
+  <text x="80" y="304" fill="#1f6fe5" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Your progress.</text>
+  <text x="80" y="379" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="800">Your device.</text>
+  <text x="82" y="452" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="500">Offline workout tracking for Android</text>
+  <rect x="80" y="505" width="380" height="66" rx="8" fill="#1f6fe5"/>
+  <text x="270" y="547" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="700">Available on Google Play</text>
+  <rect x="815" y="62" width="262" height="535" rx="39" fill="#111827" filter="url(#shadow)"/>
+  <image href="swolifts-workout-screen.png" x="829" y="76" width="234" height="507" preserveAspectRatio="xMidYMid slice" clip-path="url(#screen-clip)"/>
+  <rect x="898" y="74" width="96" height="15" rx="7.5" fill="#111827"/>
+</svg>
