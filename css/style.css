@@ -1637,6 +1637,11 @@ section {
     padding: 104px 0 56px;
   }
 
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 1.14;
+  }
+
   .hero p {
     font-size: 1.05rem;
     max-width: 100%;
