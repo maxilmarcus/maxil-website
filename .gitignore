@@ -2,3 +2,8 @@ CLAUDE.md
 TODO.md
 New Text Document.txt
 .claude/
+node_modules/
+dist/
+test-results/
+playwright-report/
+.qa/

@@ -1,0 +1,30 @@
+[
+  {
+    "question": "Is SwoLifts free to use?",
+    "answer": "Yes, SwoLifts is free to download, and all core features — workout logging, progress tracking, templates, and data export — are free to use. Optional premium features, such as cloud sync, may be offered in the future."
+  },
+  {
+    "question": "Does SwoLifts require an internet connection?",
+    "answer": "No. SwoLifts is fully offline. All your data is stored locally on your device. You don't need an account or internet connection to use any feature."
+  },
+  {
+    "question": "How do I back up my data?",
+    "answer": "Go to Settings and tap \"Export Workout Data.\" This creates a ZIP file containing your workouts, custom exercises, and templates as CSV files. You can save this file anywhere and import it back into SwoLifts at any time. The Import & Export Guide includes blank and example CSV templates for desktop editing."
+  },
+  {
+    "question": "Can I switch between kilograms and pounds?",
+    "answer": "Yes. Go to Settings and toggle your preferred unit. The app will convert all displayed weights automatically. Your data is always stored in kilograms internally for consistency."
+  },
+  {
+    "question": "Will there be an iOS version?",
+    "answer": "SwoLifts is currently available on Android only. We're focused on making the Android experience great first, but an iOS version may be considered in the future."
+  },
+  {
+    "question": "I found a bug. How do I report it?",
+    "answer": "Please email us at support@maxil.app with a description of the issue, your device model, and Android version. Screenshots are helpful if possible. We appreciate your help in making SwoLifts better."
+  },
+  {
+    "question": "How do I send feedback or feature ideas?",
+    "answer": "Please send feedback to support@maxil.app . Use \"SwoLifts feedback\" in the subject if you want to help us route it quickly."
+  }
+]

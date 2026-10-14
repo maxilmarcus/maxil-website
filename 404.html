@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="noindex" name="robots" />
+    <title>Page not found | SwoLifts</title>
+    <link href="/assets/swolifts-face.svg" rel="icon" type="image/svg+xml" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("theme") ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+      } catch {}
+    </script>
+    <meta content="Page not found | SwoLifts" property="og:title" />
+    <meta content="SwoLifts" property="og:site_name" />
+    <meta content="website" property="og:type" />
+    <meta
+      content="https://maxil.app/assets/swolifts-social-card.png"
+      property="og:image"
+    />
+    <noscript
+      ><style>
+        .menu-toggle,
+        .theme-toggle,
+        .search-label,
+        #faq-search,
+        .search-count {
+          display: none !important;
+        }
+        @media (max-width: 820px) {
+          .site-header {
+            position: relative !important;
+          }
+          .nav-inner {
+            height: auto !important;
+            flex-wrap: wrap !important;
+            padding-block: 16px !important;
+          }
+          .site-nav {
+            display: flex !important;
+            position: static !important;
+            order: 3 !important;
+            width: 100% !important;
+            box-shadow: none !important;
+            border: 0 !important;
+            max-height: none !important;
+            padding: 0 !important;
+          }
+          .guide-tab-links {
+            top: 0 !important;
+          }
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script src="/src/main.jsx" type="module"></script>
+  </body>
+</html>
