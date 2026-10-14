@@ -4,8 +4,10 @@ import {
   DownloadSection,
   Icon,
   SwoLogo,
+  PLAY_URL,
 } from "../components/Layout";
 import ProgressDemo from "../components/ProgressDemo";
+import ScreenshotViewer from "../components/ScreenshotViewer";
 
 const screens = [
   {
@@ -40,6 +42,7 @@ const screens = [
 
 export default function SwoLifts() {
   const [screen, setScreen] = useState(0);
+  const [viewerOpen, setViewerOpen] = useState(false);
   const current = screens[screen];
   return (
     <>
@@ -60,7 +63,10 @@ export default function SwoLifts() {
               keep your training data yours.
             </p>
             <div className="button-row">
-              <DownloadButton />
+              <div className="hero-download">
+                <DownloadButton />
+                <span className="download-note">Free core features</span>
+              </div>
               <a className="text-link" href="#product">
                 Take a look <span aria-hidden="true">↓</span>
               </a>
@@ -68,17 +74,23 @@ export default function SwoLifts() {
             <ul className="check-list">
               <li>
                 <Icon name="check" />
-                No account
+                No account required
               </li>
               <li>
                 <Icon name="check" />
                 Works offline
               </li>
               <li>
-                <Icon name="check" />
-                Free core features
+                <Icon name="lock" />
+                <a href="/privacy-policy.html">Workout data stays on your device</a>
               </li>
             </ul>
+            <a className="desktop-download-qr" href={PLAY_URL} target="_blank" rel="noopener noreferrer">
+              <img src="/assets/swolifts-google-play-qr.svg" alt="QR code for SwoLifts on Google Play" width="132" height="132" />
+              <span><strong>Take SwoLifts to the gym.</strong>
+                <span>Scan to download on your Android.</span>
+              </span>
+            </a>
           </div>
           <div className="hero-device">
             <div className="device-orbit" />
@@ -160,13 +172,23 @@ export default function SwoLifts() {
               </div>
             </div>
             <figure className="tour-visual">
-              <img
+              <a className="screenshot-trigger" href={`/assets/${current.image}`}
+                aria-label={`Enlarge screenshot: ${current.label}`}
+                aria-haspopup="dialog"
+                onClick={(event) => {
+                  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+                  event.preventDefault();
+                  setViewerOpen(true);
+                }}>
+                <img
                 src={`/assets/${current.image}`}
                 alt={current.alt}
                 width="412"
                 height="917"
                 loading="lazy"
-              />
+                />
+                <span className="screenshot-hint">View larger <Icon /></span>
+              </a>
               <figcaption>Inside SwoLifts for Android</figcaption>
             </figure>
           </div>
@@ -266,6 +288,8 @@ export default function SwoLifts() {
         </div>
       </section>
       <DownloadSection />
+      {viewerOpen && <ScreenshotViewer screens={screens} initialIndex={screen}
+        onClose={() => setViewerOpen(false)} />}
     </>
   );
 }
