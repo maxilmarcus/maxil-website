@@ -336,6 +336,17 @@ main:focus {
   width: 156px;
   height: auto;
 }
+[data-theme="dark"] .swo-wordmark {
+  filter: brightness(0) invert(1);
+}
+[data-theme="dark"] .swo-face {
+  /* Fill the transparent face inside the blue rim, without a white halo. */
+  background: radial-gradient(
+    ellipse 45% 45% at 50% 50%,
+    #f8fafc 99%,
+    transparent 100%
+  );
+}
 .product-byline {
   display: block;
   text-transform: uppercase;
