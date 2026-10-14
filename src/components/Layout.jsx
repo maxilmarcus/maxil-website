@@ -1,4 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import lightFavicon from "../../assets/swolifts-face.svg";
+import darkFavicon from "../../assets/swolifts-face-dark.svg";
+
+function updateFavicon(theme) {
+  const icon = document.querySelector('link[rel="icon"]');
+  if (icon) icon.href = theme === "dark" ? darkFavicon : lightFavicon;
+}
 
 export const PLAY_URL =
   "https://play.google.com/store/apps/details?id=com.swolifts.app";
@@ -86,7 +93,9 @@ export function Header({ page }) {
   const menuButton = useRef(null);
   const navigation = useRef(null);
   useEffect(() => {
-    setTheme(document.documentElement.dataset.theme || "light");
+    const initialTheme = document.documentElement.dataset.theme || "light";
+    setTheme(initialTheme);
+    updateFavicon(initialTheme);
     function onKey(event) {
       if (event.key === "Escape") {
         setOpen(false);
@@ -115,6 +124,7 @@ export function Header({ page }) {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
     document.documentElement.dataset.theme = next;
+    updateFavicon(next);
     try {
       localStorage.setItem("theme", next);
     } catch {
