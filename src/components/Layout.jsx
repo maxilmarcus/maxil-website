@@ -45,8 +45,15 @@ export function SwoLogo({ stacked = false }) {
     />
   ) : (
     <span className="swo-lockup">
-      <img src="/assets/swolifts-face.svg" alt="" width="800" height="792" />
       <img
+        className="swo-face"
+        src="/assets/swolifts-face.svg"
+        alt=""
+        width="800"
+        height="792"
+      />
+      <img
+        className="swo-wordmark"
         src="/assets/swolifts-wordmark.svg"
         alt="SwoLifts"
         width="1180"
@@ -240,6 +247,7 @@ export function DownloadSection() {
           <DownloadButton />
         </div>
         <img
+          className="swo-face"
           src="/assets/swolifts-face.svg"
           alt=""
           width="800"
