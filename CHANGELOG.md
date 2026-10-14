@@ -4,6 +4,7 @@ This log covers maxil.app. SwoLifts Android release notes remain on the public a
 
 ## Unreleased
 
+- Match the browser-tab icon to the selected theme, including saved dark-mode preferences.
 - Improve dark-mode logo contrast with a white wordmark and a soft-white background inside the blue face.
 - Migrate all seven public pages to React, with Vite builds and prerendered HTML at the existing URLs.
 - Make SwoLifts the primary brand and homepage, with Maxil LLC only in legal ownership text; redesign the product experience for mobile and desktop.
