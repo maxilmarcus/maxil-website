@@ -1,14 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import lightFavicon from "../../assets/swolifts-face.svg";
 import darkFavicon from "../../assets/swolifts-face-dark.svg";
+import { PLAY_URL } from "../constants";
+export { PLAY_URL } from "../constants";
 
 function updateFavicon(theme) {
   const icon = document.querySelector('link[rel="icon"]');
   if (icon) icon.href = theme === "dark" ? darkFavicon : lightFavicon;
 }
-
-export const PLAY_URL =
-  "https://play.google.com/store/apps/details?id=com.swolifts.app";
 
 export function Icon({ name = "arrow", ...props }) {
   const paths = {
