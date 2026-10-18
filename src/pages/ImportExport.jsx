@@ -1,3 +1,5 @@
+import BackupWorkbench from "../components/BackupWorkbench";
+
 export default function ImportExport() {
   return (
     <>
@@ -6,13 +8,14 @@ export default function ImportExport() {
           <h1>{"SwoLifts Import & Export Guide"}</h1>
           <p>
             {
-              "Download CSV templates, edit them on a computer, and import workout history into SwoLifts."
+              "Open a backup, check and edit it privately in your browser, then bring it back to SwoLifts."
             }
           </p>
         </div>
       </section>
       <section className="content-page">
         <div className="container guide-content">
+          <BackupWorkbench />
           <div className="guide-intro">
             <p>
               {
@@ -20,6 +23,20 @@ export default function ImportExport() {
               }
             </p>
           </div>
+          <section className="guide-section" id="quick-share">
+            <h2>Phone to computer, and back</h2>
+            <p>These phone actions use SwoLifts 1.2.0. Quick Share is provided by Android and Windows; SwoLifts itself does not connect to your computer.</p>
+            <ol>
+              <li><strong>Set up your PC.</strong> <a href="https://www.android.com/quick-share/with-windows-pc/" target="_blank" rel="noopener noreferrer">Get Quick Share for Windows from Google</a>. Follow its setup and visibility instructions, and keep the phone and PC nearby with Bluetooth and Wi-Fi enabled. <a href="https://support.google.com/android/answer/13801258?hl=en" target="_blank" rel="noopener noreferrer">Google's setup and troubleshooting guide</a> covers device compatibility.</li>
+              <li><strong>Send your backup.</strong> In SwoLifts, open Settings, then Send to computer, choose Quick Share, then choose your PC. Open the received ZIP in the workbench above.</li>
+              <li><strong>Bring your changes back.</strong> Download the corrected ZIP. In Windows, right-click it and choose Send with Quick Share (or drag it into Quick Share), then choose your phone. Open the received ZIP with SwoLifts, review the preview and confirm Import backup.</li>
+            </ol>
+            <div className="template-download-grid">
+              <figure><img src="/assets/transfer/send-to-computer.png" alt="SwoLifts Settings with Send to computer and Export to file" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Choose Send to computer in Settings.</figcaption></figure>
+              <figure><img src="/assets/transfer/import-preview.png" alt="SwoLifts previews workouts and sets before the Import backup confirmation" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Review the file before importing it.</figcaption></figure>
+            </div>
+            <p><strong>USB fallback:</strong> use Export to file, connect the phone with a USB cable and select File transfer on the phone. Copy the ZIP between Downloads folders using Windows File Explorer. Open the returned ZIP with SwoLifts, or select it through Settings, then Import Workout Data.</p>
+          </section>
           <div className="template-download-grid">
             <article className="template-download-card">
               <span className="guide-kicker">{"Empty starter"}</span>
@@ -68,7 +85,7 @@ export default function ImportExport() {
               </div>
               <p>
                 {
-                  "The import ZIP should contain the CSV files directly at the root of the archive."
+                  "The CSV files may be at the ZIP root or inside a wrapping folder. Files in examples/ are reference examples and are not imported."
                 }
               </p>
             </div>
@@ -113,6 +130,11 @@ export default function ImportExport() {
               </p>
             </div>
           </section>
+          <section className="guide-section" id="exact-values">
+            <h2>Keep exact values and identities</h2>
+            <p>Set files can include weightKg and assistanceWeightKg; template exercises use targetWeightKg and targetAssistanceWeightKg; workouts use bodyweightKg. The workbench keeps these columns and updates the paired value when you edit a weight. Older files without kilogram columns still work.</p>
+            <p>Keep exerciseUuid, merge/deletion records and other unedited columns from your export. UUID matching takes priority over exercise names. Deleted exercise rows can still be needed by historical workouts. Duplicate data filenames use the first copy; duplicate existing workouts/templates may be skipped by the app. The browser cannot inspect what is already on your phone.</p>
+          </section>
           <section className="guide-section" id="rules">
             <div className="guide-section-header">
               <div>
@@ -124,7 +146,7 @@ export default function ImportExport() {
             <ul>
               <li>
                 {
-                  "Files are UTF-8 CSV. Values containing commas, quotes, or line breaks must be quoted, and quotes inside values must be doubled."
+                  "Files are UTF-8 CSV, with or without an Excel byte-order mark (BOM). Values containing commas, quotes, or line breaks must be quoted, and quotes inside values must be doubled."
                 }
               </li>
               <li>
@@ -139,7 +161,7 @@ export default function ImportExport() {
               </li>
               <li>
                 {
-                  "CSV weights are in pounds. SwoLifts converts them internally if you use kilograms in the app."
+                  "Exports include pounds and exact kilogram columns. Unchanged rounded pounds preserve exact kilograms; edited pounds take precedence. Clearing pounds clears the value. For kg-only imports, omit the paired pounds column."
                 }
               </li>
               <li>
@@ -151,7 +173,7 @@ export default function ImportExport() {
                 {"Exercise names must match a built-in exercise or a row in "}
                 <strong>{"custom_exercises.csv"}</strong>
                 {
-                  ". Import matching tolerates common casing, punctuation, spacing, and abbreviation variants."
+                  ". Import matching tolerates common casing, punctuation, and spacing variants; abbreviations do not prove identity."
                 }
               </li>
               <li>

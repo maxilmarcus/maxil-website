@@ -1,0 +1,29 @@
+{
+  "workPackage": "WEB-WORKBENCH-01",
+  "date": "2026-10-17",
+  "node": "24.22.0",
+  "chromium": "156.0.8078.4",
+  "unitTests": 22,
+  "browserTests": 46,
+  "failures": 0,
+  "build": "passed",
+  "sourcePin": "24565afcc0be67ca8b5f3fbafd3c319746095b68",
+  "logsRetainedLocally": {
+    "workbench-unit.log": "90e1e6e743d8aac374bb32f3f2a0da2ef9a39d03be1afc61ab629ff00c5c4721",
+    "workbench-build.log": "9854edc5abb2ef0082c2b9f374a14e6cbc09a3844efb8a7f4321566b597271a1",
+    "workbench-tests-final.log": "55975d5673e546fcf725f799c742230f5cde26035116069b98f1bffd2de72011",
+    "workbench-first-browser-findings.zip": "d8de5b7905fffcb7735484a42e92bc93109754201e139cd9399c9dd47d751468"
+  },
+  "screenshots": {
+    "desktop-workbench-320-dark.png": "63a0695504775dce7efaf729651e677c09ed01bc0c68cfb1a0373d032a97fc5f",
+    "desktop-workbench-320-light.png": "4718002ef1ffd05d2ec1fa30ae8562c8678fd0f730994458ac8d8957d73f8515",
+    "desktop-workbench-edited.png": "7ab09eafed6ab2208be7e5f624f49649e27e3b9b07a8528c60052531c2fe94eb",
+    "mobile-workbench-edited.png": "fad0cdd5153a5c4a3a5af6e8b528ad432e5f6b1147d91eaafd51f66bda8463bb"
+  },
+  "cleanup": {
+    "previewPort4173": "closed",
+    "browserContexts": "closed by Playwright",
+    "initialFailureTraces": "retained in test-results: automatic approval rejected removal; remove after review and when policy permits",
+    "sharedCaches": "node_modules, Node24 npm cache and Playwright browser cache retained for reuse"
+  }
+}
