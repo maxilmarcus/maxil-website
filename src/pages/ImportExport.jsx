@@ -1,3 +1,5 @@
+import BackupWorkbench from "../components/BackupWorkbench";
+
 export default function ImportExport() {
   return (
     <>
@@ -6,28 +8,42 @@ export default function ImportExport() {
           <h1>{"SwoLifts Import & Export Guide"}</h1>
           <p>
             {
-              "Export a SwoLifts ZIP backup, inspect its CSV files, and restore it in the app."
+              "Open a backup, check and edit it privately in your browser, then bring it back to SwoLifts."
             }
           </p>
         </div>
       </section>
       <section className="content-page">
         <div className="container guide-content">
+          <BackupWorkbench />
           <div className="guide-intro">
             <p>
               {
-                "SwoLifts exports workouts, sets, custom exercises, and templates as a ZIP of CSV files. Importing a SwoLifts ZIP restores or merges that data. The blank and example files below show the format; this guide does not convert exports from other workout apps."
+                "SwoLifts exports your data as a ZIP of CSV files. You can import the same format back into the app, or use the templates below to bulk migrate workouts, custom exercises, and workout templates from another tool."
               }
             </p>
-            <p>Keep an unchanged backup before editing or importing. Imports merge with data already in the app; duplicate or invalid rows may be skipped. Review the result afterward.</p>
           </div>
+          <section className="guide-section" id="quick-share">
+            <h2>Phone to computer, and back</h2>
+            <p>These phone actions use SwoLifts 1.2.0. Quick Share is provided by Android and Windows; SwoLifts itself does not connect to your computer.</p>
+            <ol>
+              <li><strong>Set up your PC.</strong> <a href="https://www.android.com/quick-share/with-windows-pc/" target="_blank" rel="noopener noreferrer">Get Quick Share for Windows from Google</a>. Follow its setup and visibility instructions, and keep the phone and PC nearby with Bluetooth and Wi-Fi enabled. <a href="https://support.google.com/android/answer/13801258?hl=en" target="_blank" rel="noopener noreferrer">Google's setup and troubleshooting guide</a> covers device compatibility.</li>
+              <li><strong>Send your backup.</strong> In SwoLifts, open Settings, then Send to computer, choose Quick Share, then choose your PC. Open the received ZIP in the workbench above.</li>
+              <li><strong>Bring your changes back.</strong> Download the corrected ZIP. In Windows, right-click it and choose Send with Quick Share (or drag it into Quick Share), then choose your phone. Open the received ZIP with SwoLifts, review the preview and confirm Import backup.</li>
+            </ol>
+            <div className="template-download-grid">
+              <figure><img src="/assets/transfer/send-to-computer.png" alt="SwoLifts Settings with Send to computer and Export to file" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Choose Send to computer in Settings.</figcaption></figure>
+              <figure><img src="/assets/transfer/import-preview.png" alt="SwoLifts previews workouts and sets before the Import backup confirmation" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Review the file before importing it.</figcaption></figure>
+            </div>
+            <p><strong>USB fallback:</strong> use Export to file, connect the phone with a USB cable and select File transfer on the phone. Copy the ZIP between Downloads folders using Windows File Explorer. Open the returned ZIP with SwoLifts, or select it through Settings, then Import Workout Data.</p>
+          </section>
           <div className="template-download-grid">
             <article className="template-download-card">
               <span className="guide-kicker">{"Empty starter"}</span>
-              <h2>{"Blank CSV Format"}</h2>
+              <h2>{"Blank CSV Template"}</h2>
               <p>
                 {
-                  "Header-only CSV files showing the SwoLifts backup format. Start with your own SwoLifts export for an actual backup or restore."
+                  "Header-only CSV files at the ZIP root. Use this when you want to start clean and fill in your own data."
                 }
               </p>
               <a
@@ -40,10 +56,10 @@ export default function ImportExport() {
             </article>
             <article className="template-download-card">
               <span className="guide-kicker">{"Worked example"}</span>
-              <h2>{"CSV Format Example"}</h2>
+              <h2>{"Example CSV Template"}</h2>
               <p>
                 {
-                  "Sample SwoLifts workouts, templates, and sets. Use this as a format reference, not as a converter for another app."
+                  "Sample workouts, templates, and sets that match built-in SwoLifts exercises. Use it as a reference while editing."
                 }
               </p>
               <a
@@ -64,20 +80,20 @@ export default function ImportExport() {
           <section className="guide-section" id="workflow">
             <div className="guide-section-header">
               <div>
-                <span className="guide-kicker">{"Backup workflow"}</span>
-                <h2>{"Check a SwoLifts Backup, Then Import on Android"}</h2>
+                <span className="guide-kicker">{"Migration workflow"}</span>
+                <h2>{"Edit on Desktop, Import on Android"}</h2>
               </div>
               <p>
                 {
-                  "The import ZIP should contain the CSV files directly at the root of the archive."
+                  "The CSV files may be at the ZIP root or inside a wrapping folder. Files in examples/ are reference examples and are not imported."
                 }
               </p>
             </div>
             <ol>
-              <li>{"Export a ZIP from SwoLifts and keep the original unchanged. The blank and example ZIPs above are format references."}</li>
+              <li>{"Download the blank or example ZIP above."}</li>
               <li>
                 {
-                  "If you need to make corrections, extract a copy on your computer and edit its CSV files in Excel, Google Sheets, Numbers, or a text editor."
+                  "Extract it on your computer and edit the CSV files in Excel, Google Sheets, Numbers, or a text editor."
                 }
               </li>
               <li>
@@ -114,6 +130,11 @@ export default function ImportExport() {
               </p>
             </div>
           </section>
+          <section className="guide-section" id="exact-values">
+            <h2>Keep exact values and identities</h2>
+            <p>Set files can include weightKg and assistanceWeightKg; template exercises use targetWeightKg and targetAssistanceWeightKg; workouts use bodyweightKg. The workbench keeps these columns and updates the paired value when you edit a weight. Older files without kilogram columns still work.</p>
+            <p>Keep exerciseUuid, merge/deletion records and other unedited columns from your export. UUID matching takes priority over exercise names. Deleted exercise rows can still be needed by historical workouts. Duplicate data filenames use the first copy; duplicate existing workouts/templates may be skipped by the app. The browser cannot inspect what is already on your phone.</p>
+          </section>
           <section className="guide-section" id="rules">
             <div className="guide-section-header">
               <div>
@@ -125,7 +146,7 @@ export default function ImportExport() {
             <ul>
               <li>
                 {
-                  "Files are UTF-8 CSV. Values containing commas, quotes, or line breaks must be quoted, and quotes inside values must be doubled."
+                  "Files are UTF-8 CSV, with or without an Excel byte-order mark (BOM). Values containing commas, quotes, or line breaks must be quoted, and quotes inside values must be doubled."
                 }
               </li>
               <li>
@@ -140,7 +161,7 @@ export default function ImportExport() {
               </li>
               <li>
                 {
-                  "CSV weights are in pounds. SwoLifts converts them internally if you use kilograms in the app."
+                  "Exports include pounds and exact kilogram columns. Unchanged rounded pounds preserve exact kilograms; edited pounds take precedence. Clearing pounds clears the value. For kg-only imports, omit the paired pounds column."
                 }
               </li>
               <li>
@@ -152,7 +173,7 @@ export default function ImportExport() {
                 {"Exercise names must match a built-in exercise or a row in "}
                 <strong>{"custom_exercises.csv"}</strong>
                 {
-                  ". Import matching tolerates common casing, punctuation, spacing, and abbreviation variants."
+                  ". Import matching tolerates common casing, punctuation, and spacing variants; abbreviations do not prove identity."
                 }
               </li>
               <li>

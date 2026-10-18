@@ -4,6 +4,11 @@ This log covers maxil.app. SwoLifts Android release notes remain on the public a
 
 ## Unreleased
 
+- Add an on-device backup workbench to Import & Export: local ZIP/CSV checks,
+  editable tables, safe bulk fixes, corrected ZIP and AI-readable JSON downloads.
+- Document Quick Share and USB transfer, preserve the manual guide, and refresh
+  templates with exact kilograms, Excel BOM support and exercise references.
+- Explain browser-memory processing and file privacy in the privacy policy.
 - Highlight on-device workout data and link to the privacy policy in the homepage benefits.
 - Add an accessible screenshot viewer with gallery controls and full-size image links.
 - Add a desktop QR code linking directly to Google Play; keep free core features beside the download button.

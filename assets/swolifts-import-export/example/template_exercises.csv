@@ -1,9 +1,9 @@
-templateId,templateName,exerciseName,orderIndex,targetSets,targetReps,targetWeightLbs,targetAssistanceWeightLbs,targetDurationSeconds
-tpl-push,Push Day,Barbell Bench Press,0,4,8,185.0,,
-tpl-push,Push Day,Overhead Press,1,3,8,95.0,,
-tpl-push,Push Day,Plank,2,3,,,,60
-tpl-pull,Pull Day,Pull Up,0,4,6,,,
-tpl-pull,Pull Day,Assisted Pull Up,1,3,8,,60.0,
-tpl-pull,Pull Day,Barbell Row,2,4,8,155.0,,
-tpl-legs,Leg Day,Barbell Back Squat,0,5,5,225.0,,
-tpl-legs,Leg Day,Conventional Deadlift,1,3,5,275.0,,
+templateId,templateName,exerciseName,orderIndex,targetSets,targetReps,targetWeightLbs,targetAssistanceWeightLbs,targetDurationSeconds,targetWeightKg,targetAssistanceWeightKg
+tpl-push,Push Day,Barbell Bench Press,0,4,8,185.0,,,83.91468824559335,
+tpl-push,Push Day,Overhead Press,1,3,8,95.0,,,43.091326396385774,
+tpl-push,Push Day,Plank,2,3,,,,60,,
+tpl-pull,Pull Day,Pull Up,0,4,6,,,,,
+tpl-pull,Pull Day,Assisted Pull Up,1,3,8,,60.0,,,27.215574566138386
+tpl-pull,Pull Day,Barbell Row,2,4,8,155.0,,,70.30690096252415,
+tpl-legs,Leg Day,Barbell Back Squat,0,5,5,225.0,,,102.05840462301894,
+tpl-legs,Leg Day,Conventional Deadlift,1,3,5,275.0,,,124.73805009480093,

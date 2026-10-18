@@ -29,6 +29,7 @@ The build creates `dist/`, including complete HTML for each page. `scripts/prere
 - Root HTML files: metadata and React entry points for each public URL.
 - `assets/`: screenshots, vector logos, and the existing import/export ZIPs and CSVs.
 - `tests/`: desktop and mobile browser checks.
+- `src/workbench/`: local backup parsing, validation, edits and downloads.
 - `css/`, `js/`, and standalone logo concept HTML files: retained for the historical design explorations, not loaded by the new React pages.
 
 Page copy belongs in the React components. SEO titles, descriptions, canonical links, and SwoLifts structured data belong in the corresponding root HTML entry. Keep `sitemap.xml` current when adding pages.
@@ -42,6 +43,38 @@ npm test
 ```
 
 Tests exercise the production build at port 4173: all page routes, prerendering and hydration, internal links and fragment targets, images and ZIP downloads, mobile navigation and Escape handling, persistent themes, FAQ search, screenshot selection, sample chart controls, 320px layouts, and essential content without JavaScript. Screenshots are written to ignored `.qa/` for visual inspection. CI installs the same Chromium browser.
+
+`npm run test:unit` runs the backup contract tests without a browser; `npm test`
+runs those tests followed by the browser suite. Workbench browser tests cover
+file opening, row errors, edits, ZIP/AI downloads, keyboard access, both themes,
+320px layouts and the absence of file-bearing network requests.
+
+## Local backup workbench
+
+The Import & Export page reads ZIP/CSV files in browser memory. It has no upload
+endpoint, file analytics, external scripts, persistent file storage or AI API.
+The only workbench fetch loads the public bundled example. AI export creates a
+local JSON download which the user can choose to share separately.
+
+The archive reader uses pinned, BSD-licensed zip.js 2.24.0's native-stream entry
+point with workers disabled and CRC checks enabled. It bounds compressed bytes,
+actual decompressed bytes (including ignored entries), entry counts and CSV
+dimensions. The supported path is a current browser with native compression
+streams; Chromium is the automated browser target. Unknown columns and
+non-data ZIP entries are preserved. Files in `examples/` remain examples.
+
+The Android repository owns the transfer contract and five canonical ZIPs.
+`tests/fixtures/transfer-v1/source.json` pins its commit and manifest SHA-256;
+unit tests verify every fixture hash and both implementations' archive preview
+accept/reject outcomes. It also records the reference exercise catalog source.
+When the Android importer changes, update the pin, fixtures, browser validation
+and tests together. Review [the implementation handoff](docs/WEB_WORKBENCH_01.md)
+for the source link, limits, validation and remaining release gates.
+
+File validation is conservative: malformed values block corrected downloads,
+while device-dependent identity matches are warnings. The app remains the
+authority on its existing database, ownership and merge history. The workbench
+does not claim that a clean file guarantees an unchanged import on every device.
 
 ## GitHub Pages migration
 
