@@ -4,14 +4,14 @@
 - Release: [SwoLifts #497 / RELEASE-120-01](https://github.com/maxilmarcus/SwoLifts/issues/497).
 - Android transfer: [#502 / TRANSFER-APP-01](https://github.com/maxilmarcus/SwoLifts/pull/502).
 - Required review: Claude; Data, Security/Privacy, Product/UX and Accessibility.
-- Status: local validation passed; awaiting hosted-PR CI authorization and Claude review.
+- Status: Claude review fixes locally validated and source pin refreshed; hosted-PR CI authorization pending.
 
 ## Contract and behavior
 
-Android source is pinned to `24565afcc0be67ca8b5f3fbafd3c319746095b68`:
-[transfer contract](https://github.com/maxilmarcus/SwoLifts/blob/24565afcc0be67ca8b5f3fbafd3c319746095b68/docs/engineering/OFFLINE_BACKUP_TRANSFER.md),
-[importer](https://github.com/maxilmarcus/SwoLifts/blob/24565afcc0be67ca8b5f3fbafd3c319746095b68/app/src/main/java/com/swolifts/app/data/export/DataExportImportManager.kt),
-and [canonical fixtures](https://github.com/maxilmarcus/SwoLifts/tree/24565afcc0be67ca8b5f3fbafd3c319746095b68/app/src/androidTest/assets/transfer-v1).
+Android source is pinned to `394d58a9f9469f8eddca925a775cc521266c7667`:
+[transfer contract](https://github.com/maxilmarcus/SwoLifts/blob/394d58a9f9469f8eddca925a775cc521266c7667/docs/engineering/OFFLINE_BACKUP_TRANSFER.md),
+[importer](https://github.com/maxilmarcus/SwoLifts/blob/394d58a9f9469f8eddca925a775cc521266c7667/app/src/main/java/com/swolifts/app/data/export/DataExportImportManager.kt),
+and [canonical fixtures](https://github.com/maxilmarcus/SwoLifts/tree/394d58a9f9469f8eddca925a775cc521266c7667/app/src/androidTest/assets/transfer-v1).
 Local fixture hashes and the exercise reference source hash are recorded in
 [`source.json`](../tests/fixtures/transfer-v1/source.json).
 
@@ -35,10 +35,13 @@ UTC. Ambiguous locale dates are left for the user.
 Editing kilograms updates the rounded pounds pair; editing pounds clears stale
 exact kilograms. Unknown columns, multiline notes, IDs, tombstones and unrelated
 ZIP entries survive export. Bulk trim changes known scalar fields, preserving
-notes, descriptions and unknown values. Mapping names also updates an existing
+notes, descriptions, names, identity fields and unknown values. Column headers
+are read-only. Bulk edits have one-step Undo; name mapping previews its affected
+row count before confirmation. Mapping names also updates an existing
 UUID column. Only a unique included reference/custom exercise can be selected.
 
-The table displays 20 rows at a time. Downloading creates a new file; the browser
+The table displays 20 rows at a time. Validation is debounced by 200 ms; downloads
+and name mapping remain disabled until the current edit is validated. Downloading creates a new file; the browser
 never overwrites the original. Edits are in React memory only. Reload/close loses
 them. Replacing/clearing a modified file requires confirmation. There is no
 automatic AI call: the AI download is readable JSON with units, tables and file
@@ -71,9 +74,9 @@ Node 24.22.0 / Chromium 156.0.8078.4, 2026-10-17:
 - Primary buttons and error text meet 4.5:1 contrast in both themes; keyboard
   opening, post-load summary focus and row-error focus pass. Narrow pages fit
   320px; the editable table scrolls horizontally.
-- Network assertions permit only same-origin static font GETs with no body or
-  query. No workout data requests, socket, worker, executable cell markup or
-  file-content storage was observed during editing and AI export.
+- Original network coverage began after navigation and missed the inherited
+  Cloudflare beacon. Claude correctly caught this gap; that earlier result was
+  insufficient to establish the page-level privacy claim.
 - The first browser run exposed a React focus timing defect, fixed by focusing
   after rendering. Test sequencing now waits for parsing, and the privacy test
   correctly permits a lazily loaded local font. The final full suite passes.
@@ -89,7 +92,7 @@ Node 24.22.0 / Chromium 156.0.8078.4, 2026-10-17:
 |---|---|
 | ![Workbench opening controls in light theme](workbench-2026-10-17/desktop-workbench-320-light.png) | ![Workbench opening controls in dark theme](workbench-2026-10-17/desktop-workbench-320-dark.png) |
 
-The unit suite covers the five shared Android ZIPs and hashes, exact weights,
+The unit suite covers the six shared Android ZIPs and hashes, exact weights,
 BOM/wrappers, multiline notes, unknown columns, first duplicate behavior, error
 rows, date fixes, references, deletion/merge warnings, AI output, CRC corruption,
 unsafe/encrypted archives and size/dimension limits. The bundled blank/example
@@ -105,9 +108,48 @@ screenshots in `.qa/` remain until review reconciles the committed evidence;
 remove those redundant copies at that point. `dist/` remains the validated
 candidate for review and should be replaced by the next changed-source build.
 
+Review-candidate validation: `npm run build` passed; the full suite passed 25
+unit / 50 browser tests. After adding the sixth shared browser-download fixture,
+all 26 unit tests passed and the changed download regression passed on both
+desktop and mobile (2/2). Application code was unchanged between those runs.
+The corrected privacy checks cover all requests from before navigation, and the
+CSP test blocks injected inline/foreign scripts and foreign connections.
+[Review receipt](workbench-2026-10-17/review-validation.json) identifies the logs,
+source file hashes and browser-produced fixture. Preview processes are stopped.
+
+## Independent review corrections
+
+[Claude review](https://github.com/maxilmarcus/maxil-website/issues/54#issuecomment-6245376580)
+identified the inherited analytics beacon and Windows-converted fixture hashes.
+The beacon is removed only from this page. Its meta CSP allows same-origin
+resources and the exact inline theme-script hash; foreign scripts/connections
+are blocked. Static styles still use `unsafe-inline`. This is a page policy,
+not a claim that meta CSP supplies response-header-only protections.
+The privacy test now records requests before navigation and checks script tags,
+workers and sockets; an adversarial test verifies CSP enforcement. Other site
+pages retain their existing analytics configuration. Workbench/ZIP code loads
+only when this route mounts.
+
+Fixture and catalog hashes use canonical Git LF bytes, with `.gitattributes`
+preserving them on Windows. Both runtimes consume shared Java Formatter decimal
+rounding cases. `valid-browser-corrected-tie.zip` is an actual Chromium UI
+download, not a handwritten approximation: SHA-256
+`0ef7bf2ae7815d053c613a5d84bb469867882e0bf3ac43d8dac4f90cc7113b89`.
+It changes the wrapped fixture's exact kg value to `0.06803893641534596` and
+rounded pounds to `0.2`. Browser regression compares decoded output to these
+bytes; Android imports them into a fresh database and checks weight/notes.
+ZIP timestamps are incidental and not compared across fresh browser downloads.
+
+Invalid UTF-8 now gives an actionable CSV UTF-8 message. Android's lenient UTF-8
+decoder can replace malformed bytes; this is not faithful Windows-1252 support,
+so the browser continues to reject malformed encoding instead of corrupting text.
+Generic merge notices are aggregated; row-specific defects remain visible.
+A formula caution explains spreadsheet risk without rewriting workout values.
+Font subsets and unrelated app UX changes are outside this workbench correction.
+
 ## Remaining release gates
 
-- Claude review of this branch and Android #501/#502.
+- Reconcile Claude review findings with changed-candidate evidence in #54 and Android #501/#502.
 - Website PR CI requires owner authorization to start GitHub-hosted runners;
   its existing workflow runs on PRs to `master` and deploys only after a production
   merge. A draft PR also starts the hosted build. Local checks do not waive it.

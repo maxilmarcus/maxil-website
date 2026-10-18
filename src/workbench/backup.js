@@ -20,7 +20,7 @@ const uuid = value => /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]
 const number = value => /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(value.trim()) && Number.isFinite(Number(value));
 export const normalizeName = value => value.normalize("NFKC").trim().toLowerCase().replace(/[^\p{L}\p{Nd}]/gu, "");
 const bool = value => ["true", "1", "yes", "y"].includes((value || "").trim().toLowerCase());
-const trimFields = new Set(("id name exerciseName exerciseUuid templateId sessionId templateName orderIndex setNumber " +
+const trimFields = new Set(("exerciseUuid orderIndex setNumber " +
   "loggingType loadType loadMode muscleGroup equipment category canonicalKey isDeleted isBodyweight " +
   "reps targetReps targetSets rir durationSeconds targetDurationSeconds distanceMeters " +
   "weightKg weightLbs assistanceWeightKg assistanceWeightLbs targetWeightKg targetWeightLbs " +
@@ -65,6 +65,21 @@ export function writeCsv(rows) {
     ? `"${value.replaceAll('"', '""')}"` : value).join(",")).join("\n") + "\n";
 }
 
+/** Java Formatter uses decimal half-up rounding, not JS toFixed's binary ties. */
+export function roundedPounds(value) {
+  if (!Number.isFinite(value)) throw new Error("Weight must be a finite number.");
+  const [mantissa, exponent = "0"] = Math.abs(value).toString().split("e");
+  const [whole, fraction = ""] = mantissa.split(".");
+  let tenths = BigInt(whole + fraction);
+  const scale = Number(exponent) - fraction.length + 1;
+  if (scale >= 0) tenths *= 10n ** BigInt(scale);
+  else {
+    const divisor = 10n ** BigInt(-scale);
+    tenths = (tenths + divisor / 2n) / divisor;
+  }
+  return `${value < 0 ? "-" : ""}${tenths / 10n}.${tenths % 10n}`;
+}
+
 /** CRC and decompressed bytes are checked even for files the app ignores. No network I/O. */
 export async function openBackup(file, allowReferenceOnly = false) {
   if (file.size > LIMITS.compressedBytes) throw new Error("ZIP exceeds the 32 MiB file limit.");
@@ -105,7 +120,10 @@ export async function openBackup(file, allowReferenceOnly = false) {
     const name = baseName(entry.name);
     if (isExample(entry.name) || (!(name in REQUIRED) && name !== "built_in_exercises.csv")) continue;
     if (files[name]) { warnings.push(`ZIP contains more than one '${name}' — only the first is used.`); continue; }
-    files[name] = { name, rows: parseCsv(decoder.decode(entry.bytes), name in REQUIRED ? budget : undefined) };
+    let text;
+    try { text = decoder.decode(entry.bytes); }
+    catch { throw new Error(`${name} is not UTF-8 text. In Excel, save it as CSV UTF-8, then open it again.`); }
+    files[name] = { name, rows: parseCsv(text, name in REQUIRED ? budget : undefined) };
   }
   if (!Object.keys(files).some(name => name in REQUIRED) && !(allowReferenceOnly && files["built_in_exercises.csv"])) throw new Error("No data CSVs found in the ZIP.");
   return { files, entries, warnings, filename: file.name || "backup.zip" };
@@ -170,7 +188,7 @@ export function inspectBackup(backup) {
       }
       for (const prefix of ["weight", "assistanceWeight", "targetWeight", "targetAssistanceWeight", "bodyweight"]) {
         const kg = value[prefix + "Kg"], lbs = value[prefix + "Lbs"];
-        if (kg?.trim() && number(kg) && headers.includes(prefix + "Lbs") && (!lbs?.trim() || (number(lbs) && Number(lbs) !== Number((Number(kg) * KG_TO_LBS).toFixed(1)))))
+        if (kg?.trim() && number(kg) && Number.isFinite(Number(kg) * KG_TO_LBS) && headers.includes(prefix + "Lbs") && (!lbs?.trim() || (number(lbs) && Number(lbs) !== Number(roundedPounds(Number(kg) * KG_TO_LBS)))))
           add(file, row, prefix + "Kg", lbs?.trim() ? "Pounds differ from the rounded kilogram value; the app will use pounds. Edit kilograms here to update both." : "The pounds cell is empty; the app will clear this weight despite its kilogram value. Edit kilograms here to update both.", "warning");
       }
       if (["workout_templates.csv", "workout_sessions.csv"].includes(file) && value.id) {
@@ -221,10 +239,12 @@ export function inspectBackup(backup) {
           else { activeFrom.add(value.fromExerciseUuid); activeTo.add(value.toExerciseUuid); }
           if (bool(uuids.get(value.toExerciseUuid)?.isDeleted)) add(file, row, "toExerciseUuid", "An active merge cannot target a deleted exercise.");
         }
-        add(file, row, "isDeleted", bool(value.isDeleted) ? "Undone merge: the app checks its existing identity/mapping state." : "Active merge may hide the losing exercise. Existing device mappings and ownership are checked by the app.", "warning");
       }
     }
   }
+  const mappings = data["exercise_merge_mappings.csv"] || [];
+  if (mappings.length) add("exercise_merge_mappings.csv", 2, "isDeleted",
+    `${mappings.length} merge records (${mappings.filter(item => !bool(item.values.isDeleted)).length} active). Active merges can hide losing exercises; the app checks existing mappings and ownership. Undone records retain history.`, "warning");
   return { issues, exercises, rowCounts: Object.fromEntries(Object.entries(data).filter(([name]) => name in REQUIRED).map(([name, rows]) => [name, rows.length])) };
 }
 
@@ -236,7 +256,8 @@ export function editCell(backup, name, row, column, text) {
   if (/^(weight|assistanceWeight|targetWeight|targetAssistanceWeight|bodyweight)(Kg|Lbs)$/.test(field)) {
     const kg = field.endsWith("Kg"), other = field.replace(kg ? /Kg$/ : /Lbs$/, kg ? "Lbs" : "Kg");
     const pair = rows[0].indexOf(other);
-    if (pair >= 0 && (!text.trim() || number(text))) rows[row][pair] = kg && text.trim() ? (Number(text) * KG_TO_LBS).toFixed(1) : "";
+    if (pair >= 0 && (!text.trim() || number(text))) rows[row][pair] = kg && text.trim()
+      ? (Number.isFinite(Number(text) * KG_TO_LBS) ? roundedPounds(Number(text) * KG_TO_LBS) : "") : "";
   }
   return { ...backup, files: { ...backup.files, [name]: { ...file, rows } } };
 }

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { BlobReader, BlobWriter, ZipWriter } from "@zip.js/zip.js/index-native.js";
-import { LIMITS, openBackup, parseCsv, writeCsv, inspectBackup, editCell, bulkFix, downloadZip, aiExport, addCsv, validDate } from "../../src/workbench/backup.js";
+import { LIMITS, openBackup, parseCsv, writeCsv, inspectBackup, editCell, bulkFix, downloadZip, aiExport, addCsv, validDate, roundedPounds } from "../../src/workbench/backup.js";
 
 const root = new URL("../fixtures/transfer-v1/", import.meta.url);
 const sha = bytes => createHash("sha256").update(bytes).digest("hex");
@@ -22,6 +22,9 @@ const errors = backup => inspectBackup(backup).issues.filter(issue => issue.seve
 test("shared Android manifest and limits stay pinned", () => {
   assert.equal(sha(manifestBytes), source.manifestSha256);
   assert.deepEqual(LIMITS, manifest.limits);
+});
+test("reference catalog source matches its canonical LF pin", async () => {
+  assert.equal(sha(await readFile(new URL(source.catalog.localFile, root))), source.catalog.sha256);
 });
 for (const item of manifest.fixtures) test(`Android acceptance: ${item.file}`, async () => {
   const file = await fixture(item.file);
@@ -54,9 +57,23 @@ test("CSV quoting, whitespace, and unknown columns survive safe bulk edits", asy
   assert.deepEqual(parseCsv(writeCsv(rows)), rows);
   const backup = await csv("custom_exercises.csv", writeCsv(rows));
   const trimmed = bulkFix(backup, "trim");
-  assert.deepEqual(trimmed.files["custom_exercises.csv"].rows[1], ["My lift", rows[1][1], rows[1][2]]);
+  assert.deepEqual(trimmed.files["custom_exercises.csv"].rows[1], rows[1]);
   const output = await openBackup(new File([await downloadZip(trimmed)], "out.zip"));
   assert.deepEqual(output.files, trimmed.files);
+});
+
+test("non-UTF-8 text has a practical Excel correction message", async () => {
+  await assert.rejects(openBackup(new File([new Uint8Array([110,97,109,101,10,233,10])], "custom_exercises.csv")), /save it as CSV UTF-8/);
+});
+
+test("rounding matches the shared Java Formatter cases including decimal ties", async () => {
+  const bytes = await readFile(new URL(manifest.rounding.file, root));
+  assert.equal(sha(bytes), manifest.rounding.sha256);
+  const cases = JSON.parse(bytes);
+  for (const item of cases) {
+    assert.equal(roundedPounds(item.value), item.rounded);
+    assert.equal(roundedPounds(item.kg * 2.20462), item.roundedLbs);
+  }
 });
 
 test("weight edits keep exact-kg/pounds precedence coherent without changing other cells", async () => {
