@@ -23,7 +23,7 @@ export default function ImportExport() {
     <>
       <section className="page-header">
         <div className="container">
-          <h1>{"SwoLifts Import & Export Guide"}</h1>
+          <h1>{"SwoLifts Backup Workbench"}</h1>
           <p>
             {
               "Open a backup, check and edit it privately in your browser, then bring it back to SwoLifts."

@@ -178,3 +178,35 @@ test("documentation, FAQs and downloads work with JavaScript disabled", async ({
   ).toBeVisible();
   await context.close();
 });
+
+
+test("workbench is discoverable from main navigation", async ({ page, isMobile }) => {
+  await page.goto("/");
+  if (isMobile) await page.getByRole("button", { name: "Open menu" }).click();
+  await page.getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "Workbench", exact: true }).click();
+  await expect(page).toHaveURL(/swolifts-import-export.html/);
+  await expect(page.getByRole("heading", { name: "SwoLifts Backup Workbench" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Open my SwoLifts file", exact: true })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Try an example", exact: true })).toBeVisible();
+  await expect(page.locator("#quick-share ol li")).toHaveCount(3);
+  await expect(page.locator("header .nav-download")).toHaveAttribute("href", /play.google.com/);
+  if (isMobile) await expect(page.getByRole("navigation", { name: "Main navigation" })).toBeHidden();
+});
+
+
+test("workbench navigation fits tablet widths", async ({ page }, testInfo) => {
+  for (const width of [821, 900, 1050]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/swolifts-import-export.html");
+    await page.evaluate(() => document.fonts.ready);
+    const header = await page.locator("header .nav-inner").evaluate(el => {
+      const children = [...el.children].filter(child => getComputedStyle(child).display !== "none")
+        .map(child => child.getBoundingClientRect());
+      return children.every((rect, i) => rect.left >= 0 && rect.right <= innerWidth &&
+        (i === 0 || children[i - 1].right <= rect.left));
+    });
+    expect(header).toBe(true);
+    await page.screenshot({ path: `.qa/ux-120-${testInfo.project.name}-${width}.png` });
+  }
+});
