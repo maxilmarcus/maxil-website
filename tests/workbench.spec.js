@@ -10,7 +10,16 @@ const open = async (page, name = fixture) => {
   await expect(input).toBeEnabled();
   await input.setInputFiles(fixturePath(name));
 };
-test.beforeEach(async ({ page }) => { await page.goto("/swolifts-import-export.html"); });
+const network = new WeakMap();
+test.beforeEach(async ({ page }) => {
+  const record = { requests: [], sockets: [], workers: [] };
+  network.set(page, record);
+  page.on("request", request => record.requests.push({ url: request.url(), data: request.postData(), method: request.method(), type: request.resourceType() }));
+  page.on("websocket", socket => record.sockets.push(socket.url()));
+  page.on("worker", worker => record.workers.push(worker.url()));
+  await page.goto("/swolifts-import-export.html");
+  await expect(page.getByRole("button", { name: "Open my SwoLifts file" })).toBeVisible();
+});
 
 test("shared backup opens, reports bad edit, focuses the field and downloads corrected exact weights", async ({ page }, info) => {
   await open(page);
@@ -22,24 +31,22 @@ test("shared backup opens, reports bad edit, focuses the field and downloads cor
   await expect(page.getByRole("button", { name: "Download corrected ZIP" })).toBeDisabled();
   await page.getByRole("button", { name: "exercise_sets.csv row 2", exact: true }).click();
   await expect(page.getByLabel("weightKg, row 2", { exact: true })).toBeFocused();
-  await page.getByLabel("weightKg, row 2", { exact: true }).fill("100");
-  await expect(page.getByLabel("weightLbs, row 2", { exact: true })).toHaveValue("220.5");
+  await page.getByLabel("weightKg, row 2", { exact: true }).fill("0.06803893641534596");
+  await expect(page.getByLabel("weightLbs, row 2", { exact: true })).toHaveValue("0.2");
   const pending = page.waitForEvent("download");
   await page.getByRole("button", { name: "Download corrected ZIP" }).click();
   const download = await pending;
   expect(download.suggestedFilename()).toMatch(/^SwoLifts-corrected-\d{4}-\d{2}-\d{2}\.zip$/);
   const corrected = await openBackup(new File([await readFile(await download.path())], "corrected.zip"));
-  expect(corrected.files["exercise_sets.csv"].rows[1].slice(4, 7)).toEqual(["220.5", "100", "First line\nSecond line"]);
+  expect(corrected.files["exercise_sets.csv"].rows[1].slice(4, 7)).toEqual(["0.2", "0.06803893641534596", "First line\nSecond line"]);
+  const golden = await openBackup(new File([await readFile(fixturePath("valid-browser-corrected-tie.zip"))], "golden.zip"));
+  expect(corrected.files).toEqual(golden.files);
   await page.locator(".wb-summary").scrollIntoViewIfNeeded();
   await page.screenshot({ path: `.qa/${info.project.name}-workbench-edited.png` });
 });
 
 test("file contents stay local through editing and AI export", async ({ page }) => {
-  await page.waitForLoadState("networkidle");
-  const requests = [], sockets = [], workers = [];
-  page.on("request", request => requests.push({ url: request.url(), data: request.postData(), method: request.method(), type: request.resourceType() }));
-  page.on("websocket", socket => sockets.push(socket.url()));
-  page.on("worker", worker => workers.push(worker.url()));
+  const { requests, sockets, workers } = network.get(page);
   await open(page);
   await page.getByLabel("CSV file", { exact: true }).selectOption("exercise_sets.csv");
   const marker = 'PRIVATE_WORKOUT_9a18\n<script>window.fileExecuted=true</script>';
@@ -52,21 +59,56 @@ test("file contents stay local through editing and AI export", async ({ page }) 
   expect(ai.tables["exercise_sets.csv"][0].weightKg).toBe("61.25");
   expect(await page.evaluate(() => window.fileExecuted)).toBeUndefined();
   expect(await page.evaluate(() => JSON.stringify({ local: localStorage, session: sessionStorage }))).not.toContain("PRIVATE_WORKOUT");
-  // Opening the editable table can lazily load an already-bundled font weight.
+  // Observe from BEFORE navigation, including scripts loaded before file opening.
+  const scriptSources = await page.locator("script[src]").evaluateAll(scripts => scripts.map(script => script.src));
+  for (const src of scriptSources) expect(new URL(src).origin).toBe("http://127.0.0.1:4173");
+  expect(scriptSources.join(" ")).not.toContain("cloudflareinsights");
   for (const request of requests) {
     const url = new URL(request.url);
     expect(request.method).toBe("GET");
     expect(request.data).toBeNull();
-    expect(request.type).toBe("font");
     expect(url.origin).toBe("http://127.0.0.1:4173");
     expect(url.search).toBe("");
-    expect(url.pathname).toMatch(/^\/assets\/(inter|barlow-condensed)-[\w-]+\.woff2?$/);
+    expect(["document", "script", "stylesheet", "font", "image"]).toContain(request.type);
     expect(request.url).not.toContain("PRIVATE_WORKOUT");
   }
   expect(sockets).toEqual([]);
   expect(workers).toEqual([]);
   await page.reload();
   await expect(page.locator(".wb-summary")).toHaveCount(0);
+});
+
+test("CSP blocks foreign connections and scripts while local theme initialization works", async ({ page }) => {
+  await expect(page.locator('meta[http-equiv="Content-Security-Policy"]')).toHaveAttribute("content", /script-src 'self' 'sha256-/);
+  await page.evaluate(() => { localStorage.setItem("theme", "dark"); });
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  const result = await page.evaluate(async () => {
+    const failures = [];
+    document.addEventListener("securitypolicyviolation", event => failures.push(event.effectiveDirective));
+    const inline = document.createElement("script"); inline.textContent = "window.untrustedScriptRan = true";
+    document.body.append(inline);
+    const foreign = document.createElement("script"); foreign.src = "https://example.invalid/untrusted.js";
+    const scriptBlocked = new Promise(resolve => { foreign.onerror = () => resolve(true); foreign.onload = () => resolve(false); });
+    document.body.append(foreign);
+    const connectionBlocked = await fetch("https://example.invalid/workout").then(() => false, () => true);
+    return { connectionBlocked, scriptBlocked: await scriptBlocked, ran: !!window.untrustedScriptRan };
+  });
+  expect(result).toEqual({ connectionBlocked: true, scriptBlocked: true, ran: false });
+});
+
+test("headers are read-only and bulk edits can be undone without changing workout identity", async ({ page }) => {
+  await page.getByLabel("Open a SwoLifts ZIP or CSV", { exact: true }).setInputFiles({ name: "workout_sessions.csv", mimeType: "text/csv", buffer: Buffer.from("id,name,startTime\n  s  ,  Original name  ,2026-01-02\n") });
+  await expect(page.locator(".wb-summary")).toContainText("1 problems");
+  await expect(page.locator(".wb-table thead input")).toHaveCount(0);
+  await page.getByText("Fix several rows at once", { exact: true }).click();
+  await page.getByRole("button", { name: "Normalize ISO dates to UTC" }).click();
+  await expect(page.getByLabel("startTime, row 2", { exact: true })).toHaveValue("2026-01-02T00:00:00Z");
+  await page.getByRole("button", { name: "Undo last bulk change" }).click();
+  await expect(page.getByLabel("startTime, row 2", { exact: true })).toHaveValue("2026-01-02");
+  await page.getByRole("button", { name: "Trim fields", exact: true }).click();
+  await expect(page.getByLabel("name, row 2", { exact: true })).toHaveValue("  Original name  ");
+  await expect(page.getByLabel("id, row 2", { exact: true })).toHaveValue("  s  ");
 });
 
 test("drag/drop, CSV additions and date bulk fix produce a valid download", async ({ page }) => {

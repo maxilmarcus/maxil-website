@@ -1,4 +1,22 @@
-import BackupWorkbench from "../components/BackupWorkbench";
+import { useEffect, useState } from "react";
+
+// Keep ZIP parsing and editor code out of the other seven pages. The initial
+// markup is identical for prerender and hydration; load only on this route.
+function WorkbenchLoader() {
+  const [Workbench, setWorkbench] = useState(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    let active = true;
+    import("../components/BackupWorkbench").then(module => {
+      if (active) setWorkbench(() => module.default);
+    }).catch(() => { if (active) setFailed(true); });
+    return () => { active = false; };
+  }, []);
+  return Workbench ? <Workbench /> : <section id="workbench" className="guide-section">
+    <h2>Backup workbench</h2>
+    <p role="status">{failed ? "The workbench could not load. Reload this page to retry, or use the templates below." : "The workbench uses JavaScript to check and edit your file locally. The templates and manual guide below also work without JavaScript."}</p>
+  </section>;
+}
 
 export default function ImportExport() {
   return (
@@ -15,7 +33,7 @@ export default function ImportExport() {
       </section>
       <section className="content-page">
         <div className="container guide-content">
-          <BackupWorkbench />
+          <WorkbenchLoader />
           <div className="guide-intro">
             <p>
               {

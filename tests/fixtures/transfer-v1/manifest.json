@@ -34,6 +34,15 @@
       "file": "invalid-not-zip.zip",
       "sha256": "8e50345ecefe59daa32bac18d7ac6d7190519b80117568db47c9977797f21638",
       "previewAccepted": false
+    },
+    {
+      "file": "valid-browser-corrected-tie.zip",
+      "sha256": "0ef7bf2ae7815d053c613a5d84bb469867882e0bf3ac43d8dac4f90cc7113b89",
+      "previewAccepted": true
     }
-  ]
+  ],
+  "rounding": {
+    "file": "weight-rounding.json",
+    "sha256": "2d36593f15ce46c99c2d9c852e20b48b5d5ebc892bf02063d99d941cf535f1b1"
+  }
 }

@@ -1,0 +1,380 @@
+id,name,primary_muscle_group,category,equipment,logging_type,load_type,source,source_id,source_license,source_url,exercise_uuid,canonical_key,normalization_version
+1,Barbell Bench Press,Chest,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-1,internal_curated,,b44a29d5-e6cd-5473-92f1-19ab0b98bb12,swolifts:builtin-1,1
+2,Incline Barbell Bench Press,Chest,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-2,internal_curated,,0218cfb6-94fa-5424-bc5c-eecad1e5a52e,swolifts:builtin-2,1
+3,Decline Barbell Bench Press,Chest,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-3,internal_curated,,d03c7cda-1c7f-5ebe-bec6-abbfae3dc47b,swolifts:builtin-3,1
+4,Dumbbell Bench Press,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-4,internal_curated,,141ef7a7-73aa-5a69-bf0a-20ad3692c21d,swolifts:builtin-4,1
+5,Incline Dumbbell Bench Press,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-5,internal_curated,,3b0258d1-9321-5c32-a71b-39490725ac51,swolifts:builtin-5,1
+6,Decline Dumbbell Bench Press,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-6,internal_curated,,a3c390fa-ce40-55b9-8614-d08289825f08,swolifts:builtin-6,1
+7,Dumbbell Fly,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-7,internal_curated,,8b8aa82c-9f77-5d0d-b809-fa43e75b6a98,swolifts:builtin-7,1
+8,Incline Dumbbell Fly,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-8,internal_curated,,b4b4949c-f99a-53b0-a020-63491660cc75,swolifts:builtin-8,1
+9,Cable Crossover,Chest,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-9,internal_curated,,5f9cdac1-43f5-5c4d-bf92-79dce71fab76,swolifts:builtin-9,1
+10,Chest Press Machine,Chest,Strength,Machine,reps_weight,external_weight,swolifts,builtin-10,internal_curated,,268ccb0c-c5d3-5532-a778-5f50bcbf4353,swolifts:builtin-10,1
+11,Pec Deck Machine,Chest,Strength,Machine,reps_weight,external_weight,swolifts,builtin-11,internal_curated,,d1d9aa60-0f3a-54b3-a14c-b078b360c114,swolifts:builtin-11,1
+12,Barbell Back Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-12,internal_curated,,2dc94b01-8626-514b-b64c-19e7b4b821f0,swolifts:builtin-12,1
+13,Front Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-13,internal_curated,,0cbc9ddf-33d7-5753-b761-983a68aa51f6,swolifts:builtin-13,1
+14,Leg Press,Quadriceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-14,internal_curated,,3ee78503-8317-51de-a545-8b8ce4bf2373,swolifts:builtin-14,1
+15,Hack Squat,Quadriceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-15,internal_curated,,76fa9872-d93b-5c07-b038-a55c45df3744,swolifts:builtin-15,1
+16,Goblet Squat,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-16,internal_curated,,ea503bf9-8ed4-5154-a3db-aee1bc17e2f2,swolifts:builtin-16,1
+17,Dumbbell Lunges,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-17,internal_curated,,a712a32d-b34f-595a-b106-1a5b2442df5a,swolifts:builtin-17,1
+18,Barbell Lunges,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-18,internal_curated,,fcb5b10a-b5ba-5c3c-9958-263b806e937c,swolifts:builtin-18,1
+19,Bulgarian Split Squat,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-19,internal_curated,,e7ead24d-a818-5e49-84db-cfd6882e1f8a,swolifts:builtin-19,1
+20,Leg Extension,Quadriceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-20,internal_curated,,fecd0ba1-dd93-51b0-ad56-ab81d8a96f2e,swolifts:builtin-20,1
+21,Step Ups,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-21,internal_curated,,8bea2be7-075b-5171-b39b-2c54495d2ada,swolifts:builtin-21,1
+22,Romanian Deadlift,Hamstrings,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-22,internal_curated,,467e9716-bb55-5284-9c7e-f851f8a6207e,swolifts:builtin-22,1
+23,Dumbbell Romanian Deadlift,Hamstrings,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-23,internal_curated,,359dfa37-73cf-569f-9950-450699654ab7,swolifts:builtin-23,1
+24,Lying Leg Curl,Hamstrings,Strength,Machine,reps_weight,external_weight,swolifts,builtin-24,internal_curated,,5ba6440d-8696-5142-ba2b-8d7836c150dd,swolifts:builtin-24,1
+25,Seated Leg Curl,Hamstrings,Strength,Machine,reps_weight,external_weight,swolifts,builtin-25,internal_curated,,870fa59f-a0b6-5011-8ea4-f321dbe30670,swolifts:builtin-25,1
+26,Stiff Leg Deadlift,Hamstrings,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-26,internal_curated,,bc6a44f4-c2c3-54bb-80c2-33fc12c88e6a,swolifts:builtin-26,1
+27,Good Mornings,Hamstrings,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-27,internal_curated,,5c6c47f2-f3e4-5f9d-829e-a307035cff35,swolifts:builtin-27,1
+28,Nordic Hamstring Curl,Hamstrings,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-28,internal_curated,,81bf5cfa-4938-5d0a-b362-cf647162e995,swolifts:builtin-28,1
+29,Conventional Deadlift,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-29,internal_curated,,3f105466-5ad0-575d-95e2-595652a33264,swolifts:builtin-29,1
+30,Sumo Deadlift,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-30,internal_curated,,5c9f9664-3e96-502a-9c68-8f9e6c885a4d,swolifts:builtin-30,1
+31,Barbell Row,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-31,internal_curated,,49d50c78-1b18-5313-b180-040f4a125b37,swolifts:builtin-31,1
+32,Dumbbell Row,Back,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-32,internal_curated,,d1137251-dd71-5555-8425-d39496285436,swolifts:builtin-32,1
+33,Seated Cable Row,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-33,internal_curated,,ea26f404-cf13-5224-87e7-e2d6f9de3829,swolifts:builtin-33,1
+34,Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-34,internal_curated,,79828b20-899e-5303-becf-addabfefcf89,swolifts:builtin-34,1
+35,Wide Grip Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-35,internal_curated,,543aa8a2-fd04-5d4c-a360-1cbee3f803ab,swolifts:builtin-35,1
+36,Close Grip Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-36,internal_curated,,8179c42e-361c-5c0c-b80c-e17438cebb8a,swolifts:builtin-36,1
+37,T-Bar Row,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-37,internal_curated,,660e3361-b809-5438-80ab-ede4f7149a61,swolifts:builtin-37,1
+38,Chest Supported Row,Back,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-38,internal_curated,,2e4aae85-b3cb-5e4c-bfea-b29f974979c7,swolifts:builtin-38,1
+39,Face Pull,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-39,internal_curated,,5374424c-7eb1-522a-b73f-a7fee85eb8f1,swolifts:builtin-39,1
+40,Straight Arm Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-40,internal_curated,,2a84be31-f01b-5659-9bac-b3b012ae7743,swolifts:builtin-40,1
+41,Barbell Shrug,Traps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-41,internal_curated,,ebcbe2ed-5a78-5319-afcb-70ae0000b91a,swolifts:builtin-41,1
+42,Dumbbell Shrug,Traps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-42,internal_curated,,f0bc6365-1239-52e3-b78f-7aeab80b03da,swolifts:builtin-42,1
+43,Overhead Press,Shoulders,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-43,internal_curated,,583ef0e9-a9ea-5d77-b4f0-109a2f5e15fb,swolifts:builtin-43,1
+44,Seated Dumbbell Press,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-44,internal_curated,,09e90fe8-6ccc-54de-afa4-aece8c6f29c0,swolifts:builtin-44,1
+45,Arnold Press,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-45,internal_curated,,7d28899d-5bda-5b4d-afd9-6a4712143955,swolifts:builtin-45,1
+46,Lateral Raise,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-46,internal_curated,,da133555-a4c7-5c87-b1be-b2db206fe4c8,swolifts:builtin-46,1
+47,Cable Lateral Raise,Shoulders,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-47,internal_curated,,5ea9a302-d5b3-5469-b4df-d3a6cf7dc1cf,swolifts:builtin-47,1
+48,Front Raise,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-48,internal_curated,,512efde6-f915-57e3-b6f2-d8ee634dcc1c,swolifts:builtin-48,1
+49,Reverse Fly,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-49,internal_curated,,3f4cb89b-0f3a-516f-9fac-f70ab74876b9,swolifts:builtin-49,1
+50,Cable Reverse Fly,Shoulders,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-50,internal_curated,,4a9a4f10-5f7c-52bf-a82a-1c5d3884e885,swolifts:builtin-50,1
+51,Upright Row,Shoulders,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-51,internal_curated,,1b049f3d-bfbb-56b1-9578-4fd60eb500d4,swolifts:builtin-51,1
+52,Machine Shoulder Press,Shoulders,Strength,Machine,reps_weight,external_weight,swolifts,builtin-52,internal_curated,,7e1fe9a4-3636-564d-a0cd-c62cf4788272,swolifts:builtin-52,1
+53,Barbell Curl,Biceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-53,internal_curated,,eae03b77-f278-5e07-a48c-8f68841301d1,swolifts:builtin-53,1
+54,EZ Bar Curl,Biceps,Strength,EZ Bar,reps_weight,external_weight,swolifts,builtin-54,internal_curated,,1e995b1a-9d34-59db-85aa-8425cf544336,swolifts:builtin-54,1
+55,Dumbbell Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-55,internal_curated,,9d5749bc-ca30-5f0a-b49d-aaf80c05e049,swolifts:builtin-55,1
+56,Hammer Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-56,internal_curated,,d38306b3-b1d9-5864-979f-77d0a7446acd,swolifts:builtin-56,1
+57,Incline Dumbbell Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-57,internal_curated,,054b6102-3228-5628-9369-c024c6312057,swolifts:builtin-57,1
+58,Preacher Curl,Biceps,Strength,EZ Bar,reps_weight,external_weight,swolifts,builtin-58,internal_curated,,3daa3a89-8aea-5e66-8de9-fcbd5264630c,swolifts:builtin-58,1
+59,Concentration Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-59,internal_curated,,e8ef46de-8af7-5508-84ba-44cf51ae79ab,swolifts:builtin-59,1
+60,Cable Curl,Biceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-60,internal_curated,,808a166f-7575-5e45-b829-506f05ec728f,swolifts:builtin-60,1
+61,Spider Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-61,internal_curated,,99f60b18-f2c3-514b-a9cc-f4b6e8c0a1a2,swolifts:builtin-61,1
+62,Close Grip Bench Press,Triceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-62,internal_curated,,52951882-e385-58ab-85c0-92a743cc7dcf,swolifts:builtin-62,1
+63,Tricep Dip Machine,Triceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-63,internal_curated,,1fc2b1c5-f06c-59e0-aa75-ab2342909e93,swolifts:builtin-63,1
+64,Skull Crushers,Triceps,Strength,EZ Bar,reps_weight,external_weight,swolifts,builtin-64,internal_curated,,2ba7cff7-9682-5f18-bd82-491875528e45,swolifts:builtin-64,1
+65,Overhead Tricep Extension,Triceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-65,internal_curated,,b122c09d-e514-5860-91c4-a4589ec9c55a,swolifts:builtin-65,1
+66,Cable Tricep Pushdown,Triceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-66,internal_curated,,aa2fff63-476d-59ff-85b5-a4aafd971cae,swolifts:builtin-66,1
+67,Cable Overhead Tricep Extension,Triceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-67,internal_curated,,3b1ba36a-34e0-52b7-8bbb-22a5a584a5a7,swolifts:builtin-67,1
+68,Dumbbell Kickback,Triceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-68,internal_curated,,29747daa-92f0-5a1a-a6eb-2736bb598521,swolifts:builtin-68,1
+69,Wrist Curl,Forearms,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-69,internal_curated,,873768d7-1c61-54b1-8bad-0759cec76d1d,swolifts:builtin-69,1
+70,Reverse Wrist Curl,Forearms,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-70,internal_curated,,8155cf10-dd60-5e69-bce7-26bcc6b1f223,swolifts:builtin-70,1
+71,Farmer's Walk,Forearms,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-71,internal_curated,,50a0342b-d273-5ebb-ae5d-2885b5957096,swolifts:builtin-71,1
+72,Standing Calf Raise,Calves,Strength,Machine,reps_weight,external_weight,swolifts,builtin-72,internal_curated,,ce73ad3e-9f07-5819-98e7-767e7605c9af,swolifts:builtin-72,1
+73,Seated Calf Raise,Calves,Strength,Machine,reps_weight,external_weight,swolifts,builtin-73,internal_curated,,ffc652d9-0911-5f87-8b2e-6d212bbe2b1c,swolifts:builtin-73,1
+74,Dumbbell Calf Raise,Calves,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-74,internal_curated,,7bdc116a-0b95-5e0e-aaed-bb935f4a761f,swolifts:builtin-74,1
+75,Hip Thrust,Glutes,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-75,internal_curated,,a0f156a2-7fdf-5ea9-b5fb-04744f0405cb,swolifts:builtin-75,1
+76,Barbell Hip Thrust,Glutes,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-76,internal_curated,,14588070-2b18-54bc-9aab-bb81bd5ce293,swolifts:builtin-76,1
+77,Cable Kickback,Glutes,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-77,internal_curated,,580891fb-c23e-5869-a8f4-611e05a855d7,swolifts:builtin-77,1
+78,Hip Abduction Machine,Glutes,Strength,Machine,reps_weight,external_weight,swolifts,builtin-78,internal_curated,,d989644a-32f0-5d04-a888-edb41241947b,swolifts:builtin-78,1
+79,Hip Adduction Machine,Adductors,Strength,Machine,reps_weight,external_weight,swolifts,builtin-79,internal_curated,,b3c5e157-5f9d-516c-97ea-5c11ac925826,swolifts:builtin-79,1
+80,Cable Crunch,Abs,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-80,internal_curated,,aa6d781d-5853-515d-8227-ed41c1daf286,swolifts:builtin-80,1
+81,Weighted Decline Sit Up,Abs,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-81,internal_curated,,410d48de-5db0-5b2c-b115-5f687518c1dd,swolifts:builtin-81,1
+82,Landmine Press,Shoulders,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-82,internal_curated,,62900650-bd1a-5e9c-9c77-50bbbb0fa4d2,swolifts:builtin-82,1
+83,Landmine Row,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-83,internal_curated,,50353b7a-d112-5404-b80c-8c69800433de,swolifts:builtin-83,1
+84,Trap Bar Deadlift,Back,Strength,Trap Bar,reps_weight,external_weight,swolifts,builtin-84,internal_curated,,240a31b3-22b6-53c0-b2a3-e96a976b67c1,swolifts:builtin-84,1
+85,Dumbbell Pullover,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-85,internal_curated,,651cefdb-7b09-5d16-9153-ec58cba8aadf,swolifts:builtin-85,1
+86,Single Arm Dumbbell Row,Back,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-86,internal_curated,,08206153-8521-51c2-9bd6-a6447cb9c5c7,swolifts:builtin-86,1
+87,Pendlay Row,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-87,internal_curated,,89670b6b-d355-5399-95f1-23042f07a13b,swolifts:builtin-87,1
+88,Smith Machine Squat,Quadriceps,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-88,internal_curated,,905b53c7-a2a2-5c64-bd00-15715f50c243,swolifts:builtin-88,1
+89,Smith Machine Bench Press,Chest,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-89,internal_curated,,1451db4c-cff8-54de-96d8-bde5dc21a3d4,swolifts:builtin-89,1
+90,Cable Woodchop,Abs,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-90,internal_curated,,48c99121-ac93-55a0-9cc9-61c81bad152d,swolifts:builtin-90,1
+91,Push Up,Chest,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-91,internal_curated,,fd7e6293-2b16-54de-b004-78dc47570f3a,swolifts:builtin-91,1
+92,Wide Push Up,Chest,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-92,internal_curated,,16e8b80f-13e0-573b-81d3-c83d7ecc78da,swolifts:builtin-92,1
+93,Diamond Push Up,Triceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-93,internal_curated,,9d0e01e8-9cab-566a-ba12-aceab29acf99,swolifts:builtin-93,1
+94,Decline Push Up,Chest,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-94,internal_curated,,cb2753ec-b0cf-5f1d-95e8-13f98bd5d652,swolifts:builtin-94,1
+95,Incline Push Up,Chest,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-95,internal_curated,,21f9d759-82c9-5739-ad36-6811ac4c77e1,swolifts:builtin-95,1
+96,Pike Push Up,Shoulders,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-96,internal_curated,,7274e444-121b-5add-9c46-bf71bd247d3b,swolifts:builtin-96,1
+97,Pull Up,Back,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-97,internal_curated,,50459b96-a1de-5609-bf45-ebf6926fcd5d,swolifts:builtin-97,1
+98,Chin Up,Biceps,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-98,internal_curated,,eba1a86a-0287-5931-80a1-7cd8411b26a3,swolifts:builtin-98,1
+99,Wide Grip Pull Up,Back,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-99,internal_curated,,e4ed87b4-e255-5517-90b4-044cb606d6ad,swolifts:builtin-99,1
+100,Neutral Grip Pull Up,Back,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-100,internal_curated,,45f205e4-5959-5233-aa6b-ff28a36bf831,swolifts:builtin-100,1
+101,Muscle Up,Back,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-101,internal_curated,,f3bf2f1d-cb2b-526a-9f87-197850536984,swolifts:builtin-101,1
+102,Bodyweight Dip,Triceps,Bodyweight,Dip Bars,reps_weight,bodyweight,swolifts,builtin-102,internal_curated,,f420f2ca-2798-5ba1-87db-98986148ce26,swolifts:builtin-102,1
+103,Bodyweight Squat,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-103,internal_curated,,985e26a1-98ba-5158-acbf-c2caeb6ce8d7,swolifts:builtin-103,1
+104,Jump Squat,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-104,internal_curated,,306c01a6-ca83-515b-b455-d307fb414fbd,swolifts:builtin-104,1
+105,Pistol Squat,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-105,internal_curated,,2e938c64-6d89-593a-8e16-7401fde9f330,swolifts:builtin-105,1
+106,Walking Lunge,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-106,internal_curated,,1bbcff19-b124-5a2a-bdf2-05881456d06f,swolifts:builtin-106,1
+107,Reverse Lunge,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-107,internal_curated,,2bb70f75-36c8-5791-8d26-c51df905c08b,swolifts:builtin-107,1
+108,Lateral Lunge,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-108,internal_curated,,432d960d-6f22-51bf-9b94-9d067b76a0f9,swolifts:builtin-108,1
+109,Wall Sit,Quadriceps,Bodyweight,None,duration_only,external_weight,swolifts,builtin-109,internal_curated,,cc3e5529-5884-5639-b2fc-a4016364bbcd,swolifts:builtin-109,1
+110,Glute Bridge,Glutes,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-110,internal_curated,,8858f976-e2be-5198-abfb-cc740d83070c,swolifts:builtin-110,1
+111,Single Leg Glute Bridge,Glutes,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-111,internal_curated,,5b7eb96d-c703-5f0c-b929-77a83e67fb46,swolifts:builtin-111,1
+112,Donkey Kick,Glutes,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-112,internal_curated,,6810cb9b-d4d8-5456-964d-621612b27787,swolifts:builtin-112,1
+113,Fire Hydrant,Glutes,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-113,internal_curated,,94a0299c-32f8-515e-a7bb-3e4677676799,swolifts:builtin-113,1
+114,Calf Raise,Calves,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-114,internal_curated,,dbfbef64-5493-5570-916b-4573c8e6c958,swolifts:builtin-114,1
+115,Plank,Abs,Bodyweight,None,duration_only,external_weight,swolifts,builtin-115,internal_curated,,c5f782b2-9b04-52f5-9a7a-f4f9dbbf06bb,swolifts:builtin-115,1
+116,Side Plank,Abs,Bodyweight,None,duration_only,external_weight,swolifts,builtin-116,internal_curated,,e8fd70f5-b2b6-50f3-9f62-f19669bfbfe9,swolifts:builtin-116,1
+117,Crunch,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-117,internal_curated,,4547acda-7b1e-5fe8-983e-1aad1bdf0b5e,swolifts:builtin-117,1
+118,Bicycle Crunch,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-118,internal_curated,,3bafbc1a-f3b5-5df8-84d8-3551802637d8,swolifts:builtin-118,1
+119,Leg Raise,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-119,internal_curated,,6090647f-3980-54eb-9e15-dc80d61d59dd,swolifts:builtin-119,1
+120,Hanging Leg Raise,Abs,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-120,internal_curated,,7bd53d76-0bcd-5ec6-9ee0-e74ab80b73c4,swolifts:builtin-120,1
+121,Hanging Knee Raise,Abs,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-121,internal_curated,,ff350024-118c-5e00-a269-6fbc9721269d,swolifts:builtin-121,1
+122,Flutter Kick,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-122,internal_curated,,1bb65299-6ec7-5f20-9554-8c07afc45123,swolifts:builtin-122,1
+123,Mountain Climber,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-123,internal_curated,,24d18323-4c49-5f3c-8c28-5ad69a841ee8,swolifts:builtin-123,1
+124,Russian Twist,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-124,internal_curated,,b3a31fee-a881-582e-b1e5-19a94e712804,swolifts:builtin-124,1
+125,V-Up,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-125,internal_curated,,d51745ce-44e1-5091-9a4b-d26e7c481584,swolifts:builtin-125,1
+126,Sit Up,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-126,internal_curated,,8b09d111-9f21-5737-be4a-9f88e5e28d51,swolifts:builtin-126,1
+127,Dead Bug,Abs,Bodyweight,None,duration_only,external_weight,swolifts,builtin-127,internal_curated,,cf8b6b1f-c8da-5a22-b345-086ce3292025,swolifts:builtin-127,1
+128,Bird Dog,Abs,Bodyweight,None,duration_only,external_weight,swolifts,builtin-128,internal_curated,,d8302bdb-9209-5d72-8023-6430a5a223d5,swolifts:builtin-128,1
+129,Superman,Back,Bodyweight,None,duration_only,external_weight,swolifts,builtin-129,internal_curated,,84d3b246-e276-5fbd-a905-47317afab073,swolifts:builtin-129,1
+130,Hollow Body Hold,Abs,Bodyweight,None,duration_only,external_weight,swolifts,builtin-130,internal_curated,,359a4d96-f963-560e-99cd-f4e3eacb4386,swolifts:builtin-130,1
+131,L-Sit,Abs,Bodyweight,None,duration_only,external_weight,swolifts,builtin-131,internal_curated,,1f75003d-0fed-52b5-b205-1c4eebc480cd,swolifts:builtin-131,1
+132,Bear Crawl,Full Body,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-132,internal_curated,,e93fe935-4225-59f0-a965-c31f5c6ff4bf,swolifts:builtin-132,1
+133,Inchworm,Full Body,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-133,internal_curated,,ed00bb2a-4691-581b-a3fc-3d05cd643530,swolifts:builtin-133,1
+134,Burpee,Full Body,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-134,internal_curated,,75d77a0a-879c-5f78-9018-3b8d079b7719,swolifts:builtin-134,1
+135,Bodyweight Tricep Dip,Triceps,Bodyweight,Bench,reps_weight,bodyweight,swolifts,builtin-135,internal_curated,,19115d85-3b1c-5c78-a450-aeedea505883,swolifts:builtin-135,1
+136,Inverted Row,Back,Bodyweight,Barbell,reps_weight,bodyweight,swolifts,builtin-136,internal_curated,,850c459e-1006-5d4c-a038-4601acd6179d,swolifts:builtin-136,1
+137,Box Jump,Quadriceps,Bodyweight,Plyo Box,reps_weight,bodyweight,swolifts,builtin-137,internal_curated,,8e222d66-f604-5e3c-a79c-9005210ea9ba,swolifts:builtin-137,1
+138,Broad Jump,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-138,internal_curated,,745e2db5-9525-517f-b86d-2a32ee234907,swolifts:builtin-138,1
+139,Tuck Jump,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-139,internal_curated,,945e12be-290c-5530-a968-47a9be214ff1,swolifts:builtin-139,1
+140,Skater Jump,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-140,internal_curated,,9bcb263a-5165-57b1-9565-814f59f4e1c3,swolifts:builtin-140,1
+141,Crab Walk,Triceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-141,internal_curated,,36614a11-1ce2-5e58-96ed-4c3dc4388210,swolifts:builtin-141,1
+142,Handstand Push Up,Shoulders,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-142,internal_curated,,32624d80-b2f4-558c-84e0-982f4edbdf7f,swolifts:builtin-142,1
+143,Handstand Hold,Shoulders,Bodyweight,None,duration_only,external_weight,swolifts,builtin-143,internal_curated,,abe513bf-281a-5e64-8406-ab01a898ebf5,swolifts:builtin-143,1
+144,Running,Full Body,Cardio,None,duration_distance,external_weight,swolifts,builtin-144,internal_curated,,a698d34b-a727-5d4d-877b-e3bdaf39f300,swolifts:builtin-144,1
+145,Treadmill Running,Full Body,Cardio,Treadmill,duration_distance,external_weight,swolifts,builtin-145,internal_curated,,7d604176-afcf-5844-9e8b-eff15113d9e1,swolifts:builtin-145,1
+146,Treadmill Walking,Full Body,Cardio,Treadmill,duration_distance,external_weight,swolifts,builtin-146,internal_curated,,a5c09526-865d-59d3-870b-98ceb75132f1,swolifts:builtin-146,1
+147,Incline Treadmill Walk,Full Body,Cardio,Treadmill,duration_distance,external_weight,swolifts,builtin-147,internal_curated,,565f6cac-6583-589e-94ca-73fe000a06bf,swolifts:builtin-147,1
+148,Outdoor Cycling,Full Body,Cardio,Bicycle,duration_distance,external_weight,swolifts,builtin-148,internal_curated,,b55f9cb8-2c05-5a1e-8a53-9458b80ebf16,swolifts:builtin-148,1
+149,Stationary Bike,Full Body,Cardio,Stationary Bike,duration_distance,external_weight,swolifts,builtin-149,internal_curated,,9f2fd41e-d980-57c5-9d66-993453dc02d2,swolifts:builtin-149,1
+150,Rowing Machine,Full Body,Cardio,Rowing Machine,duration_distance,external_weight,swolifts,builtin-150,internal_curated,,80ff3f3a-88a4-543a-a157-71a628366072,swolifts:builtin-150,1
+151,Elliptical,Full Body,Cardio,Elliptical,duration_distance,external_weight,swolifts,builtin-151,internal_curated,,468bd171-da57-5462-bb01-64c062b73aba,swolifts:builtin-151,1
+152,Stair Climber,Quadriceps,Cardio,Stair Climber,duration_only,external_weight,swolifts,builtin-152,internal_curated,,0dacecb8-4a4b-578d-ab9e-d748b21a5960,swolifts:builtin-152,1
+153,Jump Rope,Full Body,Cardio,Jump Rope,duration_only,external_weight,swolifts,builtin-153,internal_curated,,38bce8c9-4833-50e2-9ac1-192366e6685c,swolifts:builtin-153,1
+154,Swimming,Full Body,Cardio,None,duration_distance,external_weight,swolifts,builtin-154,internal_curated,,345dc46b-de15-5a10-ac09-0a1a49725c4c,swolifts:builtin-154,1
+155,Kettlebell Swing,Full Body,Cardio,Kettlebell,duration_only,external_weight,swolifts,builtin-155,internal_curated,,5062bd97-e719-593c-b324-40d1e8800ae5,swolifts:builtin-155,1
+156,Battle Ropes,Full Body,Cardio,Battle Ropes,duration_only,external_weight,swolifts,builtin-156,internal_curated,,1432c4d1-ff32-5195-a3b3-8a5e82ac19bb,swolifts:builtin-156,1
+157,Assault Bike,Full Body,Cardio,Assault Bike,duration_only,external_weight,swolifts,builtin-157,internal_curated,,a3354146-14a2-5abb-a869-09674529650c,swolifts:builtin-157,1
+158,Ski Erg,Full Body,Cardio,Ski Erg,duration_only,external_weight,swolifts,builtin-158,internal_curated,,56a40d5d-66d1-50a3-9cd2-151dba0c36e3,swolifts:builtin-158,1
+159,Sprints,Full Body,Cardio,None,sets_duration,external_weight,swolifts,builtin-159,internal_curated,,d0f737af-c774-5c1f-b031-f28e31497806,swolifts:builtin-159,1
+160,High Knees,Full Body,Cardio,None,sets_duration,external_weight,swolifts,builtin-160,internal_curated,,88c3421f-a8cf-50c4-92b3-71a9a06f9f13,swolifts:builtin-160,1
+161,Butt Kicks,Full Body,Cardio,None,sets_duration,external_weight,swolifts,builtin-161,internal_curated,,6e105ab1-7147-565a-99d6-1fddfd8144f6,swolifts:builtin-161,1
+162,Jumping Jacks,Full Body,Cardio,None,duration_only,external_weight,swolifts,builtin-162,internal_curated,,4100b7bc-e978-596f-8a2c-9cc3502d14d8,swolifts:builtin-162,1
+163,Box Step Ups,Quadriceps,Cardio,Plyo Box,duration_only,external_weight,swolifts,builtin-163,internal_curated,,ead0607c-7d43-5ddb-b128-0e6a61fe4ec9,swolifts:builtin-163,1
+164,Sled Push,Full Body,Cardio,Sled,sets_duration,external_weight,swolifts,builtin-164,internal_curated,,5f71e370-c5d1-57bb-aad1-b8f858572f99,swolifts:builtin-164,1
+165,Sled Pull,Full Body,Cardio,Sled,sets_duration,external_weight,swolifts,builtin-165,internal_curated,,a41f0dc5-803b-5a59-80be-bab86c155a49,swolifts:builtin-165,1
+166,Hiking,Full Body,Cardio,None,duration_distance,external_weight,swolifts,builtin-166,internal_curated,,4f43bd40-98ec-5185-babc-589dd4cad2c5,swolifts:builtin-166,1
+167,Walking,Full Body,Cardio,None,duration_distance,external_weight,swolifts,builtin-167,internal_curated,,180cd7be-d1a0-5be9-a5d5-84f3190662f9,swolifts:builtin-167,1
+168,Shadow Boxing,Full Body,Cardio,None,duration_only,external_weight,swolifts,builtin-168,internal_curated,,3dfd1af2-cfc8-5eb1-a2d4-b6d72cde0286,swolifts:builtin-168,1
+169,Heavy Bag Work,Full Body,Cardio,Heavy Bag,duration_only,external_weight,swolifts,builtin-169,internal_curated,,154c9303-9f03-5738-a991-e263e6f08a1f,swolifts:builtin-169,1
+170,Lateral Shuffle,Full Body,Cardio,None,sets_duration,external_weight,swolifts,builtin-170,internal_curated,,3886db89-1d77-5d03-ae3e-338b074556e9,swolifts:builtin-170,1
+171,Stair Running,Full Body,Cardio,None,duration_distance,external_weight,swolifts,builtin-171,internal_curated,,af27cde1-02d2-5c63-8bdd-3d3449b6a22d,swolifts:builtin-171,1
+172,Dumbbell Lateral Lunge,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-172,internal_curated,,b16d1681-430e-5f78-80d3-6ad7cfd00881,swolifts:builtin-172,1
+173,Barbell Calf Raise,Calves,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-173,internal_curated,,8ea37ed9-9d6e-5cce-8ea7-8ae5fb8c93bc,swolifts:builtin-173,1
+174,Reverse Grip Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-174,internal_curated,,e8257d82-1216-5aab-8713-5a062e293126,swolifts:builtin-174,1
+175,EZ Bar Overhead Tricep Extension,Triceps,Strength,EZ Bar,reps_weight,external_weight,swolifts,builtin-175,internal_curated,,48422bf0-bcfa-50cf-b458-d2493436ed94,swolifts:builtin-175,1
+176,Single Arm Cable Curl,Biceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-176,internal_curated,,d58eac3c-ad3e-5dda-a30f-03878f72e5b2,swolifts:builtin-176,1
+177,Dumbbell Snatch,Full Body,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-177,internal_curated,,6665b9c6-3312-519f-bad7-f9513e8dd3cb,swolifts:builtin-177,1
+178,Clean and Press,Full Body,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-178,internal_curated,,471d6e32-5467-542b-92f7-6ecb5a0af276,swolifts:builtin-178,1
+179,Power Clean,Full Body,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-179,internal_curated,,e1c46a4a-e39b-5880-a776-555c9ba4789b,swolifts:builtin-179,1
+180,Hang Clean,Full Body,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-180,internal_curated,,4a43a315-1fca-53f9-9426-51c48f92c962,swolifts:builtin-180,1
+181,Thruster,Full Body,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-181,internal_curated,,0156428a-6ad4-5938-96f2-16cc4435d3b8,swolifts:builtin-181,1
+182,Dumbbell Thruster,Full Body,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-182,internal_curated,,2975592d-83fb-5464-82d0-99ec767494e7,swolifts:builtin-182,1
+183,Kettlebell Goblet Squat,Quadriceps,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-183,internal_curated,,6627df82-6af3-5cbd-8d32-bba680230daf,swolifts:builtin-183,1
+184,Kettlebell Turkish Get Up,Full Body,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-184,internal_curated,,4db912de-c937-5e23-947c-b1b1d5e1f983,swolifts:builtin-184,1
+185,Kettlebell Clean and Press,Full Body,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-185,internal_curated,,06c4f4e9-1dd5-5de3-b40b-3c295e34da1c,swolifts:builtin-185,1
+186,Kettlebell Snatch,Full Body,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-186,internal_curated,,c16f345e-9804-5d82-8cfe-35dd33fa4c21,swolifts:builtin-186,1
+187,Plank to Push Up,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-187,internal_curated,,401140ea-9522-5861-9287-363760dd4885,swolifts:builtin-187,1
+188,Clap Push Up,Chest,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-188,internal_curated,,f6e80a21-d2ec-5c68-8fbf-44aff2426909,swolifts:builtin-188,1
+189,Spiderman Push Up,Chest,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-189,internal_curated,,3575f29e-98fd-5cbe-af29-c359f606da16,swolifts:builtin-189,1
+190,Commando Pull Up,Back,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-190,internal_curated,,67a8806d-6f7f-5d05-b285-062c7b822656,swolifts:builtin-190,1
+191,Low Cable Fly,Chest,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-191,internal_curated,,d175ae1d-3406-5e71-a34b-118d460b55d7,swolifts:builtin-191,1
+192,High Cable Fly,Chest,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-192,internal_curated,,32d0156b-e44f-50aa-bb6c-e86428c27bb4,swolifts:builtin-192,1
+193,Smith Machine Incline Bench Press,Chest,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-193,internal_curated,,f66956ec-76b6-5d9e-8d05-84d75fe1233b,swolifts:builtin-193,1
+194,Decline Cable Fly,Chest,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-194,internal_curated,,b1e26a37-3f7a-52e6-9206-faa6965789fb,swolifts:builtin-194,1
+195,Machine Chest Fly,Chest,Strength,Machine,reps_weight,external_weight,swolifts,builtin-195,internal_curated,,0a2db8da-3b33-506e-b9fb-0bdc4fc7f9e3,swolifts:builtin-195,1
+196,Single Arm Cable Fly,Chest,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-196,internal_curated,,be2cf8f2-cfa4-5469-907c-32b700e8d6df,swolifts:builtin-196,1
+197,Floor Press,Chest,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-197,internal_curated,,19a3a84e-7e51-5ad5-9429-76dc92e3fdd5,swolifts:builtin-197,1
+198,Dumbbell Floor Press,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-198,internal_curated,,b3f7959c-02d2-5d38-bfbc-016d894b9453,swolifts:builtin-198,1
+199,Meadows Row,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-199,internal_curated,,227b38bb-ea36-5694-934f-ba959a314b22,swolifts:builtin-199,1
+200,Seal Row,Back,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-200,internal_curated,,d26332cd-1b56-5e98-8954-271fb9fc1a31,swolifts:builtin-200,1
+201,Cable Pullover,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-201,internal_curated,,c341ef93-ad44-5ba1-9115-d888f1b7dde4,swolifts:builtin-201,1
+202,Single Arm Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-202,internal_curated,,64aa856b-de21-512f-b0b8-ec379b9b649b,swolifts:builtin-202,1
+203,Machine Row,Back,Strength,Machine,reps_weight,external_weight,swolifts,builtin-203,internal_curated,,909bc7eb-bb65-58c6-a127-bfcdf9e807b1,swolifts:builtin-203,1
+204,Rack Pull,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-204,internal_curated,,ba41b035-3d36-5695-8864-950c3df59743,swolifts:builtin-204,1
+205,Deficit Deadlift,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-205,internal_curated,,104d87a3-760c-5b4a-a8e8-011b3fd7c075,swolifts:builtin-205,1
+206,Snatch Grip Deadlift,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-206,internal_curated,,86a6507e-b4d4-50a7-b474-4ae4b64f706b,swolifts:builtin-206,1
+207,Single Arm Cable Row,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-207,internal_curated,,4cbd489b-6660-5dcc-8deb-cc97871dfac4,swolifts:builtin-207,1
+208,Reverse Grip Barbell Row,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-208,internal_curated,,9923e55f-e95f-5271-880f-930cbcabd216,swolifts:builtin-208,1
+209,Machine Lateral Raise,Shoulders,Strength,Machine,reps_weight,external_weight,swolifts,builtin-209,internal_curated,,7475cb39-ea0b-5078-bd2f-2d9b8437a90a,swolifts:builtin-209,1
+210,Cable Front Raise,Shoulders,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-210,internal_curated,,e708d32f-3924-5d25-bbe7-13f6b4da84f3,swolifts:builtin-210,1
+211,Behind The Neck Press,Shoulders,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-211,internal_curated,,9aa7a574-acc2-5e4a-9c0b-b1ce0c12cbc4,swolifts:builtin-211,1
+212,Lu Raise,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-212,internal_curated,,5cce2a60-7ed2-503e-9871-bd33117fbcda,swolifts:builtin-212,1
+213,Dumbbell Upright Row,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-213,internal_curated,,1eef8559-db09-5f9a-b905-a374a40808cc,swolifts:builtin-213,1
+214,Smith Machine Overhead Press,Shoulders,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-214,internal_curated,,a272ad89-0dc7-5ef0-be4c-b0dc351454ef,swolifts:builtin-214,1
+215,Machine Reverse Fly,Shoulders,Strength,Machine,reps_weight,external_weight,swolifts,builtin-215,internal_curated,,ef9cdeff-3670-5263-b3c1-f30910491e18,swolifts:builtin-215,1
+216,Plate Front Raise,Shoulders,Strength,Other,reps_weight,external_weight,swolifts,builtin-216,internal_curated,,391c7f4d-309a-50ad-b641-1f53a9af6ca5,swolifts:builtin-216,1
+217,Seated Barbell Press,Shoulders,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-217,internal_curated,,cb18443b-9c5e-5d3f-b741-c7cce0040c8e,swolifts:builtin-217,1
+218,Single Arm Dumbbell Press,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-218,internal_curated,,c4c95e58-8bb4-53fc-bab8-9edc9ed19bbf,swolifts:builtin-218,1
+219,Sissy Squat,Quadriceps,Strength,None,reps_weight,external_weight,swolifts,builtin-219,internal_curated,,7abaf5c9-d1d1-5281-89f3-3172e2ef2f42,swolifts:builtin-219,1
+220,Belt Squat,Quadriceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-220,internal_curated,,b09e70ff-e576-5812-905c-e05e79782499,swolifts:builtin-220,1
+221,Pendulum Squat,Quadriceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-221,internal_curated,,27160a94-92f9-54ad-9cba-f0d5289e2089,swolifts:builtin-221,1
+222,Single Leg Leg Press,Quadriceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-222,internal_curated,,358e3a3b-7f71-5552-a5b0-ede8505d9e6b,swolifts:builtin-222,1
+223,Smith Machine Lunges,Quadriceps,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-223,internal_curated,,53edcd96-7521-559f-8518-9d3cfab3c637,swolifts:builtin-223,1
+224,Leg Press Calf Raise,Calves,Strength,Machine,reps_weight,external_weight,swolifts,builtin-224,internal_curated,,7403928a-2436-5e98-b056-0a692be28d8d,swolifts:builtin-224,1
+225,Barbell Front Lunge,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-225,internal_curated,,0982ec30-0abe-5321-b545-28fdc247747c,swolifts:builtin-225,1
+226,Walking Dumbbell Lunge,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-226,internal_curated,,8fe183fe-abc2-55e3-b19c-04d9fbefd3f0,swolifts:builtin-226,1
+227,Zercher Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-227,internal_curated,,fbc4a38d-3ec5-5ea3-a31c-8569f43a5429,swolifts:builtin-227,1
+228,Pause Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-228,internal_curated,,8d6d2f30-40dc-502b-8135-6af7f6f9c123,swolifts:builtin-228,1
+229,Glute Ham Raise,Hamstrings,Strength,Machine,reps_weight,external_weight,swolifts,builtin-229,internal_curated,,22097db8-7bee-5a04-97c7-a63e8a5e9f65,swolifts:builtin-229,1
+230,Reverse Hyperextension,Hamstrings,Strength,Machine,reps_weight,external_weight,swolifts,builtin-230,internal_curated,,f78bb687-f582-5ea7-b208-11d6272429b4,swolifts:builtin-230,1
+231,Single Leg Romanian Deadlift,Hamstrings,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-231,internal_curated,,35ce23e0-6dbc-57e1-9743-4e8dd61b2929,swolifts:builtin-231,1
+232,Cable Pull Through,Glutes,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-232,internal_curated,,6b4cdf3d-4e11-57bd-83da-d4b82ac64dcd,swolifts:builtin-232,1
+233,Sumo Squat,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-233,internal_curated,,1b5edc35-456e-56cd-8edd-f8cbef9427d7,swolifts:builtin-233,1
+234,Barbell Glute Bridge,Glutes,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-234,internal_curated,,2bf4aa44-ef73-5043-81f0-58dd8e98e9fe,swolifts:builtin-234,1
+235,Machine Hip Thrust,Glutes,Strength,Machine,reps_weight,external_weight,swolifts,builtin-235,internal_curated,,bedac096-5cc9-5d67-8bde-750c25c8595e,swolifts:builtin-235,1
+236,Cable Hip Abduction,Glutes,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-236,internal_curated,,63003de0-744a-5b0a-a26b-e10b7d82e94d,swolifts:builtin-236,1
+237,Bayesian Cable Curl,Biceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-237,internal_curated,,54668c74-6e07-5719-8eeb-44005de9e8e0,swolifts:builtin-237,1
+238,Cable Hammer Curl,Biceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-238,internal_curated,,f485e219-2115-5a8c-af00-d8f10350dd2b,swolifts:builtin-238,1
+239,Zottman Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-239,internal_curated,,52880d4e-dda0-57ec-93c4-8bb46f7cdb52,swolifts:builtin-239,1
+240,Cross Body Hammer Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-240,internal_curated,,f628645d-32b6-5039-a30a-89962e7a8496,swolifts:builtin-240,1
+241,Machine Bicep Curl,Biceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-241,internal_curated,,6c63d50b-0523-5c91-bbb8-cbd552d1de55,swolifts:builtin-241,1
+242,Reverse Barbell Curl,Biceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-242,internal_curated,,c2750007-565d-529d-809d-2f1b106075a7,swolifts:builtin-242,1
+243,Cable Preacher Curl,Biceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-243,internal_curated,,9b8a9b0a-92cd-538e-918b-26011990e866,swolifts:builtin-243,1
+244,Rope Tricep Pushdown,Triceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-244,internal_curated,,428ae71e-47c2-5380-b3b4-0aefc6aa8543,swolifts:builtin-244,1
+245,JM Press,Triceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-245,internal_curated,,4a1979ab-f7f0-5315-854d-8485cbc1a5bf,swolifts:builtin-245,1
+246,Single Arm Tricep Pushdown,Triceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-246,internal_curated,,af64e32f-4d09-58d4-bba2-4467c2a5095b,swolifts:builtin-246,1
+247,Dumbbell Skull Crusher,Triceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-247,internal_curated,,83a6c42d-4048-50f8-bb36-ae83b222a2bb,swolifts:builtin-247,1
+248,Machine Tricep Extension,Triceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-248,internal_curated,,526a7459-c8af-549c-9187-564d58c23a72,swolifts:builtin-248,1
+249,Bench Dip,Triceps,Strength,Bench,reps_weight,external_weight,swolifts,builtin-249,internal_curated,,fadd3557-1438-5c46-9f29-85e63e13cc21,swolifts:builtin-249,1
+250,Overhead Cable Tricep Extension,Triceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-250,internal_curated,,55de6280-6741-5bac-9dd0-f270549f2136,swolifts:builtin-250,1
+251,Cable Shrug,Traps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-251,internal_curated,,c2c6dae4-dab9-53ce-a94a-1fae4ca6cf1d,swolifts:builtin-251,1
+252,Smith Machine Shrug,Traps,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-252,internal_curated,,5918ff01-a5ae-51af-bb8a-149f37e90b53,swolifts:builtin-252,1
+253,Dumbbell High Pull,Traps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-253,internal_curated,,3158dccf-0dd1-5cd0-a7cb-7dd1901d35de,swolifts:builtin-253,1
+254,Barbell Behind Back Shrug,Traps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-254,internal_curated,,4fccbf8e-1b45-5ee3-b5c1-751f71228c00,swolifts:builtin-254,1
+255,Ab Wheel Rollout,Abs,Strength,Ab Wheel,reps_weight,external_weight,swolifts,builtin-255,internal_curated,,bfc923ba-4575-5ac2-a1c8-9d1b700726fe,swolifts:builtin-255,1
+256,Pallof Press,Abs,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-256,internal_curated,,8ca0c1cf-85ba-5e86-8125-e9e68303030d,swolifts:builtin-256,1
+257,Decline Crunch,Abs,Strength,Bench,reps_weight,external_weight,swolifts,builtin-257,internal_curated,,cc623b88-7e0c-5ef5-9206-8c62a5b1ea64,swolifts:builtin-257,1
+258,Toe Touches,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-258,internal_curated,,17e71b28-a9c9-5a3e-909c-4b894abb1c54,swolifts:builtin-258,1
+259,Windshield Wipers,Abs,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-259,internal_curated,,f685a81e-8acc-5968-8f6d-b3648c82c1dd,swolifts:builtin-259,1
+260,Dragon Flag,Abs,Bodyweight,Bench,reps_weight,bodyweight,swolifts,builtin-260,internal_curated,,80991ff8-8684-51c1-b26d-c82b2132047c,swolifts:builtin-260,1
+261,Weighted Plank,Abs,Strength,Other,duration_only,external_weight,swolifts,builtin-261,internal_curated,,13ebae54-5774-5c25-8b78-3a37d101284f,swolifts:builtin-261,1
+262,Weighted Russian Twist,Abs,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-262,internal_curated,,671d558f-9066-5f39-a5b9-eaa22f070635,swolifts:builtin-262,1
+263,Hanging Windshield Wiper,Abs,Bodyweight,Pull Up Bar,reps_weight,bodyweight,swolifts,builtin-263,internal_curated,,b4fcf407-1769-5339-9744-6afef12ba01a,swolifts:builtin-263,1
+264,Ab Crunch Machine,Abs,Strength,Machine,reps_weight,external_weight,swolifts,builtin-264,internal_curated,,2e683d27-64fb-501c-b0b7-fb781a69c60a,swolifts:builtin-264,1
+265,Barbell Wrist Curl,Forearms,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-265,internal_curated,,88c014f9-6517-5812-a72b-0e8e490d7e35,swolifts:builtin-265,1
+266,Reverse Barbell Wrist Curl,Forearms,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-266,internal_curated,,895da568-48a4-5312-8860-7f7a7f7bc53c,swolifts:builtin-266,1
+267,Dead Hang,Forearms,Bodyweight,Pull Up Bar,duration_only,external_weight,swolifts,builtin-267,internal_curated,,917e92f9-14c4-5127-8980-0c46c11ceffc,swolifts:builtin-267,1
+268,Plate Pinch,Forearms,Strength,Other,duration_only,external_weight,swolifts,builtin-268,internal_curated,,49b69a0e-850b-51df-93d4-aab3a96645e8,swolifts:builtin-268,1
+269,Kettlebell Row,Back,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-269,internal_curated,,b0f41ed6-bc23-57fc-880c-dc1efa7136bd,swolifts:builtin-269,1
+270,Kettlebell Deadlift,Back,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-270,internal_curated,,571c1af7-4fa5-50f7-a4f6-dcd09d9c89da,swolifts:builtin-270,1
+271,Kettlebell Press,Shoulders,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-271,internal_curated,,68859618-1098-546b-b935-1498ee34b370,swolifts:builtin-271,1
+272,Kettlebell Curl,Biceps,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-272,internal_curated,,05ce540a-24e7-5085-91d6-4a74ac891ea0,swolifts:builtin-272,1
+273,Kettlebell Windmill,Full Body,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-273,internal_curated,,8f977466-9eb4-5f31-8666-8be112a5a84c,swolifts:builtin-273,1
+274,Kettlebell Halo,Shoulders,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-274,internal_curated,,92cf3e1a-f2a9-53b9-880b-c7587e0df716,swolifts:builtin-274,1
+275,Single Arm Kettlebell Swing,Full Body,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-275,internal_curated,,9d1779cb-cad5-56c6-b406-32e85d430037,swolifts:builtin-275,1
+276,Smith Machine Hip Thrust,Glutes,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-276,internal_curated,,c4adace9-ac74-50ae-b22b-4fd7785b8ad1,swolifts:builtin-276,1
+277,Smith Machine Calf Raise,Calves,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-277,internal_curated,,44524266-ae8d-5a1a-816b-1b007ece6f48,swolifts:builtin-277,1
+278,Smith Machine Row,Back,Strength,Smith Machine,reps_weight,external_weight,swolifts,builtin-278,internal_curated,,18665489-8028-528c-aee3-79be02bdfe1e,swolifts:builtin-278,1
+279,Machine Back Extension,Back,Strength,Machine,reps_weight,external_weight,swolifts,builtin-279,internal_curated,,a9c20886-80f5-5ba9-b11c-eda718b1032d,swolifts:builtin-279,1
+280,Hyperextension,Back,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-280,internal_curated,,abff0934-405b-52ec-b5a4-67df7bc899df,swolifts:builtin-280,1
+284,Barbell Reverse Lunge,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-284,internal_curated,,6b573b56-76d3-5dcc-8831-030185f032bb,swolifts:builtin-284,1
+285,Dumbbell Step Up,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-285,internal_curated,,21f66627-484d-51dd-a0cf-c10010e401a4,swolifts:builtin-285,1
+286,Dumbbell Front Raise,Shoulders,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-286,internal_curated,,876b5b3d-ee18-5377-a22e-21bebde9a29c,swolifts:builtin-286,1
+287,EZ Bar Reverse Curl,Forearms,Strength,EZ Bar,reps_weight,external_weight,swolifts,builtin-287,internal_curated,,90bc972f-9bf3-5164-83a3-55749417c63d,swolifts:builtin-287,1
+288,EZ Bar Preacher Curl,Biceps,Strength,EZ Bar,reps_weight,external_weight,swolifts,builtin-288,internal_curated,,64fc39ba-6e84-5995-b616-25348d0f5a2a,swolifts:builtin-288,1
+289,Incline Hammer Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-289,internal_curated,,71fb8bbd-91e5-5c1f-ae1b-cbb56404d039,swolifts:builtin-289,1
+290,Decline Dumbbell Fly,Chest,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-290,internal_curated,,9c2c60db-1c06-51c9-8c8b-ec0da062e17e,swolifts:builtin-290,1
+291,Cable Lateral Walk,Glutes,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-291,internal_curated,,2dd69124-0899-5637-84b1-b7ff03b34229,swolifts:builtin-291,1
+292,Banded Walk,Glutes,Bodyweight,Resistance Band,reps_weight,bodyweight,swolifts,builtin-292,internal_curated,,4727db42-2646-5673-bc20-6bcbc9da3afe,swolifts:builtin-292,1
+293,Resistance Band Pull Apart,Shoulders,Bodyweight,Resistance Band,reps_weight,bodyweight,swolifts,builtin-293,internal_curated,,10aff577-1166-5e71-8ec6-726413b941c1,swolifts:builtin-293,1
+294,Banded Face Pull,Back,Bodyweight,Resistance Band,reps_weight,bodyweight,swolifts,builtin-294,internal_curated,,e1c7112e-57af-59ef-81a8-2612257665b5,swolifts:builtin-294,1
+295,Hip Circle,Glutes,Bodyweight,Resistance Band,reps_weight,bodyweight,swolifts,builtin-295,internal_curated,,890cb299-0132-5650-b9a1-0730b2152719,swolifts:builtin-295,1
+296,Foam Roll Upper Back,Back,Stretching,Foam Roller,duration_only,external_weight,swolifts,builtin-296,internal_curated,,51206cae-3839-5991-a305-69a6f999f47e,swolifts:builtin-296,1
+297,Foam Roll Quads,Quadriceps,Stretching,Foam Roller,duration_only,external_weight,swolifts,builtin-297,internal_curated,,88f7b3ef-2c7c-52bd-a23d-17a8f23d0201,swolifts:builtin-297,1
+298,Foam Roll Hamstrings,Hamstrings,Stretching,Foam Roller,duration_only,external_weight,swolifts,builtin-298,internal_curated,,0002e6f8-49df-5209-b740-9f09943d26d6,swolifts:builtin-298,1
+299,Foam Roll IT Band,Quadriceps,Stretching,Foam Roller,duration_only,external_weight,swolifts,builtin-299,internal_curated,,319bfe3e-52ff-5616-a9eb-cc2e804e29d3,swolifts:builtin-299,1
+300,Foam Roll Calves,Calves,Stretching,Foam Roller,duration_only,external_weight,swolifts,builtin-300,internal_curated,,6d798991-60d2-53ec-ab6e-1e622d4209b8,swolifts:builtin-300,1
+301,Foam Roll Lats,Back,Stretching,Foam Roller,duration_only,external_weight,swolifts,builtin-301,internal_curated,,7ee9b0ab-17e8-543f-bdce-20d4b6764aa5,swolifts:builtin-301,1
+302,Standing Hamstring Stretch,Hamstrings,Stretching,None,duration_only,external_weight,swolifts,builtin-302,internal_curated,,d2fcf270-7857-5992-a2cb-0f6030e60e08,swolifts:builtin-302,1
+303,Pigeon Stretch,Glutes,Stretching,None,duration_only,external_weight,swolifts,builtin-303,internal_curated,,f591628f-3a47-5941-be13-70dc2b3c1486,swolifts:builtin-303,1
+304,Hip Flexor Stretch,Quadriceps,Stretching,None,duration_only,external_weight,swolifts,builtin-304,internal_curated,,6bf1d11e-d96d-57f3-84d9-4e86d6666578,swolifts:builtin-304,1
+305,Chest Doorway Stretch,Chest,Stretching,None,duration_only,external_weight,swolifts,builtin-305,internal_curated,,5228296c-df5e-523f-97f9-e4b41470b661,swolifts:builtin-305,1
+306,Lat Stretch,Back,Stretching,None,duration_only,external_weight,swolifts,builtin-306,internal_curated,,679ce49a-2aa9-5637-84f2-8fd1fb5e2f23,swolifts:builtin-306,1
+307,Shoulder Cross Body Stretch,Shoulders,Stretching,None,duration_only,external_weight,swolifts,builtin-307,internal_curated,,e6f8d2b3-28bd-5bd6-9082-d2e40f85038e,swolifts:builtin-307,1
+308,Tricep Overhead Stretch,Triceps,Stretching,None,duration_only,external_weight,swolifts,builtin-308,internal_curated,,14914df8-3904-52eb-9acf-775ce49e753f,swolifts:builtin-308,1
+309,Figure Four Stretch,Glutes,Stretching,None,duration_only,external_weight,swolifts,builtin-309,internal_curated,,a202c15b-1de1-5c4a-b218-6b70a3b27dc2,swolifts:builtin-309,1
+310,Cat Cow Stretch,Back,Stretching,None,duration_only,external_weight,swolifts,builtin-310,internal_curated,,a37f2688-1e7c-5b69-a4a3-0e6d435bec7a,swolifts:builtin-310,1
+311,Child's Pose,Back,Stretching,None,duration_only,external_weight,swolifts,builtin-311,internal_curated,,3b794a1a-75ea-50cc-9a26-fd9f4cb52d94,swolifts:builtin-311,1
+312,World's Greatest Stretch,Full Body,Stretching,None,duration_only,external_weight,swolifts,builtin-312,internal_curated,,01a1d0f9-0f7d-57b5-9165-3ce5bfcd9fd3,swolifts:builtin-312,1
+313,Couch Stretch,Quadriceps,Stretching,None,duration_only,external_weight,swolifts,builtin-313,internal_curated,,6b44ecce-54ed-5e85-a35a-13c7b2938c77,swolifts:builtin-313,1
+314,Seated Forward Fold,Hamstrings,Stretching,None,duration_only,external_weight,swolifts,builtin-314,internal_curated,,e4a2b408-4491-55a4-a415-fd0d3717db5d,swolifts:builtin-314,1
+315,Butterfly Stretch,Adductors,Stretching,None,duration_only,external_weight,swolifts,builtin-315,internal_curated,,8418f80d-e069-5ff7-af85-7c6c55650273,swolifts:builtin-315,1
+319,Incline Chest Press Machine,Chest,Strength,Machine,reps_weight,external_weight,swolifts,builtin-319,internal_curated,,6aa4f089-5e9a-52bd-acfa-fae54d49613c,swolifts:builtin-319,1
+320,Decline Chest Press Machine,Chest,Strength,Machine,reps_weight,external_weight,swolifts,builtin-320,internal_curated,,2b08e065-3140-5d3d-b99f-ef250ceab615,swolifts:builtin-320,1
+321,Single Arm Chest Press Machine,Chest,Strength,Machine,reps_weight,external_weight,swolifts,builtin-321,internal_curated,,bff67a5e-e8da-5c24-9c99-3cc54d1d8a39,swolifts:builtin-321,1
+322,Cable Incline Press,Chest,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-322,internal_curated,,98e8320e-277e-5897-acd5-cac9696089a1,swolifts:builtin-322,1
+323,Single Arm Cable Press,Chest,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-323,internal_curated,,d940ca1b-eb57-55d9-8006-eca856701fd7,swolifts:builtin-323,1
+324,Landmine Floor Press,Chest,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-324,internal_curated,,fa3df60d-8f7f-5b1d-8ecb-1abdf14037a6,swolifts:builtin-324,1
+325,Resistance Band Chest Press,Chest,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-325,internal_curated,,eb5fcf92-197f-54bd-8a4f-beb570432809,swolifts:builtin-325,1
+326,Machine Pullover,Back,Strength,Machine,reps_weight,external_weight,swolifts,builtin-326,internal_curated,,bb4b3c12-fe21-5b1c-93b8-a88b3df8e9ec,swolifts:builtin-326,1
+327,Neutral Grip Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-327,internal_curated,,8bd7f7b7-3b29-5ca5-986f-f9a5f03a8858,swolifts:builtin-327,1
+328,V Bar Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-328,internal_curated,,2e637c38-5960-56d4-8edc-7cffd538d77a,swolifts:builtin-328,1
+329,Kneeling Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-329,internal_curated,,9ad4714d-3286-56e9-a88c-d4acb9e66be9,swolifts:builtin-329,1
+330,Half Kneeling Single Arm Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-330,internal_curated,,274c44ca-fb91-5416-b66b-4bfef418a629,swolifts:builtin-330,1
+331,Chest Supported Machine Row,Back,Strength,Machine,reps_weight,external_weight,swolifts,builtin-331,internal_curated,,b30a9a70-cb67-5a32-859e-816ed36f3dce,swolifts:builtin-331,1
+332,Iso Lateral Row Machine,Back,Strength,Machine,reps_weight,external_weight,swolifts,builtin-332,internal_curated,,7e59e26d-fc3f-5885-a35e-247a13a9b771,swolifts:builtin-332,1
+333,Cable High Row,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-333,internal_curated,,9d6340ba-dd58-58f5-b553-bfddde0e7eb8,swolifts:builtin-333,1
+334,Cable Low Row,Back,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-334,internal_curated,,bccd4b84-05dc-50bc-a356-5a473c2852c0,swolifts:builtin-334,1
+335,Resistance Band Row,Back,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-335,internal_curated,,5eeb657b-1d7c-5396-a6cb-f675a6bf10be,swolifts:builtin-335,1
+336,Resistance Band Lat Pulldown,Back,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-336,internal_curated,,83a50ce4-3642-5418-887f-69591c448d0a,swolifts:builtin-336,1
+337,Landmine Single Arm Row,Back,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-337,internal_curated,,31309550-3645-567e-a031-37ad79431576,swolifts:builtin-337,1
+338,Landmine Reverse Lunge,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-338,internal_curated,,7d27f996-4dc7-5779-89ee-738e81aa6534,swolifts:builtin-338,1
+339,Landmine Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-339,internal_curated,,33ab963a-6cfa-5aa9-815e-52ad382ad224,swolifts:builtin-339,1
+340,Landmine Romanian Deadlift,Hamstrings,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-340,internal_curated,,aee8fe6b-bc6e-59e4-b863-a2fb81b64bde,swolifts:builtin-340,1
+341,Landmine Rotation,Abs,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-341,internal_curated,,39d4e190-e3d4-517a-92fc-7b82469c65e2,swolifts:builtin-341,1
+342,Landmine Thruster,Full Body,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-342,internal_curated,,e904a7d8-e284-5880-a9c1-d46d9856b0d6,swolifts:builtin-342,1
+343,Machine Glute Kickback,Glutes,Strength,Machine,reps_weight,external_weight,swolifts,builtin-343,internal_curated,,9ef247f1-2cb0-58ce-a354-f84dc1b1c291,swolifts:builtin-343,1
+344,Standing Cable Hip Adduction,Adductors,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-344,internal_curated,,5b19156b-a794-5587-9eb2-5976271f85a4,swolifts:builtin-344,1
+345,Side Lying Hip Adduction,Adductors,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-345,internal_curated,,6e7fe93a-6e3a-527b-acfb-ef4b3f010820,swolifts:builtin-345,1
+346,Copenhagen Plank,Adductors,Bodyweight,Bench,duration_only,external_weight,swolifts,builtin-346,internal_curated,,1bf8cc53-4e9f-5f35-8529-fd39115f08b1,swolifts:builtin-346,1
+347,Banded Hip Adduction,Adductors,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-347,internal_curated,,3467a081-e536-50ef-9bf6-1cd332e9f470,swolifts:builtin-347,1
+348,Cossack Squat,Adductors,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-348,internal_curated,,e2c1874a-4b52-5dbc-86c7-2cf2b959fe09,swolifts:builtin-348,1
+349,Lateral Step Down,Quadriceps,Bodyweight,Plyo Box,reps_weight,bodyweight,swolifts,builtin-349,internal_curated,,e273465c-5c4d-5383-a238-56c9a6f0113a,swolifts:builtin-349,1
+350,Curtsy Lunge,Glutes,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-350,internal_curated,,a226d740-2679-52ab-82ad-afc8249c327a,swolifts:builtin-350,1
+351,Single Leg Standing Calf Raise,Calves,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-351,internal_curated,,5c894baa-d343-5dc4-82fe-5f994e65bc0f,swolifts:builtin-351,1
+352,Single Leg Seated Calf Raise,Calves,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-352,internal_curated,,ced097c3-669f-51bc-95c4-c5cc68514a17,swolifts:builtin-352,1
+353,Donkey Calf Raise,Calves,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-353,internal_curated,,6afa3a47-2435-57e5-a816-ea57442b9fe2,swolifts:builtin-353,1
+354,Calf Press Machine,Calves,Strength,Machine,reps_weight,external_weight,swolifts,builtin-354,internal_curated,,5ab3790e-4bed-5470-bbf2-6fbf28f405cc,swolifts:builtin-354,1
+355,Tibialis Raise,Calves,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-355,internal_curated,,a4e85549-0bea-5ac9-b9c5-fa781a8a5b75,swolifts:builtin-355,1
+356,Seated Tibialis Raise,Calves,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-356,internal_curated,,58c4cac3-e97a-5d1d-9c5c-1ece1401616f,swolifts:builtin-356,1
+357,Resistance Band Calf Raise,Calves,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-357,internal_curated,,2f0f1431-6db8-543e-89d7-606a17c6fde0,swolifts:builtin-357,1
+358,Wrist Roller,Forearms,Strength,Other,duration_only,external_weight,swolifts,builtin-358,internal_curated,,7a67a51a-5b92-5946-87b1-d18bb1986d74,swolifts:builtin-358,1
+359,Dumbbell Pronation,Forearms,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-359,internal_curated,,887c53bd-fd90-52c7-b879-82cf2109db9e,swolifts:builtin-359,1
+360,Dumbbell Supination,Forearms,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-360,internal_curated,,3b9c7da0-22b1-58ad-b924-fabd5d8c90f5,swolifts:builtin-360,1
+361,Reverse Cable Curl,Forearms,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-361,internal_curated,,b8cf69d5-5217-5cba-a9d5-de8f016548a1,swolifts:builtin-361,1
+362,Cable Wrist Curl,Forearms,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-362,internal_curated,,1d6bf416-cc3f-5315-ad37-be67048fe7ac,swolifts:builtin-362,1
+363,Cable Reverse Wrist Curl,Forearms,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-363,internal_curated,,da4cbd9d-9e9c-5d88-a4ee-c576923bbfbf,swolifts:builtin-363,1
+364,Towel Dead Hang,Forearms,Bodyweight,Pull Up Bar,duration_only,external_weight,swolifts,builtin-364,internal_curated,,a66d3f99-9860-56e5-a825-7e7ff75bf050,swolifts:builtin-364,1
+365,Fat Grip Farmer's Walk,Forearms,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-365,internal_curated,,13d4a94c-b781-5df7-aeed-1babc5f17bc1,swolifts:builtin-365,1
+366,Suitcase Carry,Forearms,Strength,Dumbbells,duration_only,external_weight,swolifts,builtin-366,internal_curated,,83b7c702-479d-5c83-93db-65e23a6cbdfa,swolifts:builtin-366,1
+367,Trap Bar Shrug,Traps,Strength,Trap Bar,reps_weight,external_weight,swolifts,builtin-367,internal_curated,,e242addc-9ae9-55f0-8549-a6509fa35f50,swolifts:builtin-367,1
+368,Kettlebell Shrug,Traps,Strength,Kettlebell,reps_weight,external_weight,swolifts,builtin-368,internal_curated,,abf01ddd-4a8f-562d-a7bf-acebd6a57f00,swolifts:builtin-368,1
+369,Incline Dumbbell Shrug,Traps,Strength,Dumbbells,reps_weight,external_weight,swolifts,builtin-369,internal_curated,,c45683e4-8e58-52e7-8573-d4445c150455,swolifts:builtin-369,1
+370,Rack Pull Shrug,Traps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-370,internal_curated,,b6febd04-94df-51e3-b798-0d561358df94,swolifts:builtin-370,1
+371,Overhead Barbell Shrug,Traps,Strength,Barbell,reps_weight,external_weight,swolifts,builtin-371,internal_curated,,b191bb2d-b03c-5dc2-a5ec-384e01188e7d,swolifts:builtin-371,1
+372,Cable Upright Row,Traps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-372,internal_curated,,a5aaaf3b-7a32-58c7-ba8d-9c620fee7f96,swolifts:builtin-372,1
+373,Single Arm Cable Lateral Raise,Shoulders,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-373,internal_curated,,fef3c96e-97ac-53ff-87b2-af8bee983feb,swolifts:builtin-373,1
+374,Leaning Cable Lateral Raise,Shoulders,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-374,internal_curated,,d182ca9f-bfa4-5136-937a-05abdaf2c80a,swolifts:builtin-374,1
+375,Cable Y Raise,Shoulders,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-375,internal_curated,,4239db1b-9847-5e51-b038-07178ec8be54,swolifts:builtin-375,1
+376,Resistance Band Lateral Raise,Shoulders,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-376,internal_curated,,e87c9c80-ff46-5ed6-a75c-07a59c0c0c55,swolifts:builtin-376,1
+377,Resistance Band Shoulder Press,Shoulders,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-377,internal_curated,,f511abb5-3d4e-546e-ab11-0bd73c1d32e2,swolifts:builtin-377,1
+378,Machine Rear Delt Row,Shoulders,Strength,Machine,reps_weight,external_weight,swolifts,builtin-378,internal_curated,,c6f85dc6-5094-5f36-b1fd-bbe57faedd21,swolifts:builtin-378,1
+379,Resistance Band Bicep Curl,Biceps,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-379,internal_curated,,da0d9dce-9da2-5e4c-af25-a506445fc2ac,swolifts:builtin-379,1
+380,Resistance Band Hammer Curl,Biceps,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-380,internal_curated,,d736d1de-6526-581f-b7b2-bbad1b957181,swolifts:builtin-380,1
+381,Resistance Band Tricep Pushdown,Triceps,Strength,Resistance Band,reps_weight,external_weight,swolifts,builtin-381,internal_curated,,0cffa28a-fd18-5483-9cc8-b22103a875c7,swolifts:builtin-381,1
+382,Cross Body Cable Tricep Extension,Triceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-382,internal_curated,,3766dbcf-447a-5cac-896d-ab1b52a4c779,swolifts:builtin-382,1
+383,Cable Tricep Kickback,Triceps,Strength,Cable Machine,reps_weight,external_weight,swolifts,builtin-383,internal_curated,,61ac308d-7586-507a-846e-0c94e04bf346,swolifts:builtin-383,1
+384,Machine Preacher Curl,Biceps,Strength,Machine,reps_weight,external_weight,swolifts,builtin-384,internal_curated,,eacbee68-726b-5a63-b834-0c50ec6ecc32,swolifts:builtin-384,1
+393,Single Leg Squat,Quadriceps,Bodyweight,None,reps_weight,bodyweight,swolifts,builtin-393,internal_curated,,6ec6c07e-a729-5628-9bb3-8c01e518877d,swolifts:builtin-393,1

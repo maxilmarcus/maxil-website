@@ -1,0 +1,4 @@
+# Preserve canonical byte hashes across Windows and Linux checkouts.
+tests/fixtures/** -text
+# CSP hashes use HTML-parser-normalized LF text.
+*.html text eol=lf
