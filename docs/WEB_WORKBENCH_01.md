@@ -163,3 +163,21 @@ Font subsets and unrelated app UX changes are outside this workbench correction.
   navigation item or Android layout changes are implied by this implementation.
 - Production website merge/deployment waits for separate owner approval after
   the app is live. No deployment or Play upload has occurred.
+
+
+## UX-120-01: Workbench discovery
+
+The owner approved UX04 in Android [#500](https://github.com/maxilmarcus/SwoLifts/issues/500)
+on 2026-10-18 under release `RELEASE-120-01`. Desktop and mobile main navigation
+now offer Workbench directly. The destination heading matches that purpose;
+Open my SwoLifts file / Try an example remain first, followed by the existing
+three transfer steps. Guides retains its import/export route, and Get SwoLifts
+remains the primary acquisition action. This is a development candidate; website
+hosted CI and production deployment still require their separate approvals.
+
+Validation: Node 24 build, 26 unit tests and 52 desktop/mobile browser cases
+passed. Two additional tablet checks passed at 821, 900 and 1050px, including
+header overlap assertions. [Receipt](ux-120-01-2026-10-18/validation.json) and
+[821px screenshot](ux-120-01-2026-10-18/workbench-tablet.png) retain the evidence.
+Preview/browser processes stopped; local logs and screenshots remain until
+review acceptance, then remove duplicates after verifying the committed evidence.
