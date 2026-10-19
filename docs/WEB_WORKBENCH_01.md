@@ -4,7 +4,7 @@
 - Release: [SwoLifts #497 / RELEASE-120-01](https://github.com/maxilmarcus/SwoLifts/issues/497).
 - Android transfer: [#502 / TRANSFER-APP-01](https://github.com/maxilmarcus/SwoLifts/pull/502).
 - Required review: Claude; Data, Security/Privacy, Product/UX and Accessibility.
-- Status: Claude review fixes locally validated and source pin refreshed; hosted-PR CI authorization pending.
+- Status: Claude review fixes locally validated and source pin refreshed; owner approved isolated GitHub-hosted CI and repository hardening on 2026-10-19. PR validation and final review in progress; production deployment remains a separate owner gate.
 
 ## Contract and behavior
 

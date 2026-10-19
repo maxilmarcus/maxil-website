@@ -84,6 +84,32 @@ The website workflow validates pull requests. Pushes to `master` (or a manual wo
 
 For local development no hosting change is needed. Do not merge the React entry points while Pages still publishes the repository root: browsers cannot run the unbuilt JSX entry points directly.
 
+## Repository and deployment security
+
+This repository is public. Visitors can propose changes but cannot merge or
+deploy them without write access. `master` requires a pull request, the current
+GitHub Actions `build` check, and resolved review conversations. These rules
+also apply to administrators; force pushes and deletion are blocked. Because
+there is one maintainer, GitHub does not require a second account's approving
+review. Independent review and the owner's manual production merge remain
+release requirements.
+
+All outside-contributor workflow runs require maintainer approval. Review the
+entire proposed change, including scripts and dependencies, before allowing
+execution. PR checks use isolated GitHub-hosted runners with a read-only token;
+never attach this public repository to the personal development PC's runner.
+Only the separate deployment job receives Pages write/OIDC permissions, and
+the `github-pages` environment permits only the `master` branch.
+
+Workflow actions are pinned to upstream commit SHAs. Repository settings
+enforce SHA pins, and Dependabot security updates create reviewable PRs rather
+than automatically merging fixes. Secret scanning and push protection remain
+enabled. Keep account authentication and authorized tokens protected; these
+controls do not prevent an administrator from changing the settings themselves.
+
+See the [2026-10-19 hardening record](docs/WEBSITE_SECURITY_2026-10-19.md) for
+applied settings, validation, and the pending production boundary.
+
 ## Branding and release notes
 
 SwoLifts is the visitor-facing brand throughout the site. Maxil LLC remains identified only as the legal owner in copyright and privacy text. The domain and support email stay at maxil.app until a new domain is acquired. The old /swolifts.html URL remains functional with a canonical URL pointing to the homepage.
