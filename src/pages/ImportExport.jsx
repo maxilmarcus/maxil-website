@@ -89,6 +89,14 @@ export default function ImportExport() {
               </a>
             </article>
           </div>
+          <p>
+            The templates include the 453-exercise built-in catalog under{" "}
+            <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL-1.0</a>.
+            {" "}<a href="/assets/swolifts-import-export/catalog/NOTICE.txt">Attribution and license notice</a>
+            {" · "}<a href="/assets/swolifts-import-export/catalog/exercises.csv" download>Download the full exercise catalog</a>.
+            {" "}This license applies to the catalog, not your personal workout data.
+            {" "}Use SwoLifts 1.2.0 or newer for the newly added exercises; older versions may skip their sets when importing.
+          </p>
           <nav className="guide-tab-links" aria-label="Import guide sections">
             <a href="#workflow">{"Workflow"}</a>
             <a href="#rules">{"Rules"}</a>

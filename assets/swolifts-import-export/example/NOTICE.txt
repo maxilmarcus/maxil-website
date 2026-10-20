@@ -1,0 +1,25 @@
+SwoLifts built-in exercise catalog, version 2
+
+This adapted database is available under the Open Data Commons Open Database
+License (ODbL) 1.0: https://opendatacommons.org/licenses/odbl/1-0/
+
+Contains information from "600K+ Fitness Exercise & Workout Program Dataset",
+published by adnanelouardi on Kaggle, version 1:
+https://www.kaggle.com/datasets/adnanelouardi/600k-fitness-exercise-and-workout-program-dataset
+Source database license: ODbL. Source contents notice: Copyright Original Authors.
+
+SwoLifts selected exercise names, normalized their display names and independently
+curated movement classifications. Program descriptions, schedules and prescribed
+sets/repetitions are not included. The catalog combines those additions with
+SwoLifts' existing built-in exercises. Individual source/license fields record
+origin; this notice states the license for the adapted database as a whole.
+This includes the original 379 SwoLifts-curated rows: their internal_curated
+source/license fields retain historical provenance, not a separate database license.
+
+The accompanying exercises.csv is the complete machine-readable bundled catalog.
+In SwoLifts, Settings > About > Exercise catalog provides this notice and a free
+offline export. Recipients may reuse the catalog under ODbL, including commercially.
+
+Application software has a separate license. This export contains no user
+workouts, custom exercises, accounts or other personal data. No affiliation with
+or endorsement by the source platform or uploader is claimed.

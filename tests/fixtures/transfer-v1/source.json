@@ -5,8 +5,11 @@
   "manifestSha256": "28061146d70521cd70741745c871ee29e9413ee10a7e58530630b12c89b509db",
   "catalog": {
     "path": "app/src/main/assets/exercises.csv",
-    "sha256": "8ca93b9ba1b4cfb04e94a919282d611e525351608980dbf13796ef645c490d76",
-    "count": 379,
-    "localFile": "catalog-source.csv"
+    "sha256": "e5f9e55fa3f9ee8a7f35a2b9d7f9ca688b21b42a809908d769f619ab58aa6993",
+    "count": 453,
+    "localFile": "catalog-source.csv",
+    "commit": "4033f56e6fd9acfb2b2cc45aca38256ea6ddfa28",
+    "version": 2,
+    "noticeSha256": "8671457b8927c536a34b3aebaba0a02b0fccba4747b5dfb498ddad3c42293178"
   }
 }

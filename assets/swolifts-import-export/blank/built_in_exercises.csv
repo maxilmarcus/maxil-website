@@ -378,3 +378,77 @@ Cross Body Cable Tricep Extension,Triceps,Strength,Cable Machine,reps_weight,ext
 Cable Tricep Kickback,Triceps,Strength,Cable Machine,reps_weight,external_weight,61ac308d-7586-507a-846e-0c94e04bf346,swolifts:builtin-383
 Machine Preacher Curl,Biceps,Strength,Machine,reps_weight,external_weight,eacbee68-726b-5a63-b834-0c50ec6ecc32,swolifts:builtin-384
 Single Leg Squat,Quadriceps,Bodyweight,None,reps_weight,bodyweight,6ec6c07e-a729-5628-9bb3-8c01e518877d,swolifts:builtin-393
+Barbell Skull Crusher,Triceps,Strength,Barbell,reps_weight,external_weight,60ec9b6c-fbe9-5f6c-9013-586712a1e110,swolifts:boostcamp-v1-29a198357e0d44fd
+Dumbbell Preacher Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,7046b53f-831c-50f8-b9dc-4c9c157bc3cf,swolifts:boostcamp-v1-f5f3853b10bbf267
+Barbell Preacher Curl,Biceps,Strength,Barbell,reps_weight,external_weight,4eab4980-2f0c-506d-b7ca-a0cb12126db4,swolifts:boostcamp-v1-8ae241de910a198f
+Captain's Chair Leg Raise,Abs,Bodyweight,Machine,reps_weight,bodyweight,6d2c55d2-0d0a-5b5a-a14f-01639f8ad89d,swolifts:boostcamp-v1-b2cd2928d9e9e472
+Seated Wide Grip Cable Row,Back,Strength,Cable Machine,reps_weight,external_weight,bbf59f75-c26d-516a-9343-e94ecbd07469,swolifts:boostcamp-v1-bb08078bc68b49b2
+Dumbbell Split Squat,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,a6915053-7d14-5778-8027-08e29aca9995,swolifts:boostcamp-v1-b0f77de8c7d29f35
+Barbell Push Press,Shoulders,Strength,Barbell,reps_weight,external_weight,0c05b9c7-a348-59e7-867d-7ef57c1a12e3,swolifts:boostcamp-v1-dd5245dfd509be07
+Smith Machine JM Press,Triceps,Strength,Smith Machine,reps_weight,external_weight,ea5d1e1f-58fe-5d7d-bb67-ec45559db9d7,swolifts:boostcamp-v1-d4e388de2655bc0a
+Barbell Bulgarian Split Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,3a9471ae-0773-596d-aa81-316306261e1a,swolifts:boostcamp-v1-0b19f037d20b543d
+Dumbbell Reverse Lunge,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,ced6acaa-4f1f-5fad-8bf1-9f278a273b7c,swolifts:boostcamp-v1-020154e320d3549a
+Barbell Box Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,55f328cf-eb75-5289-a47e-b3d5f4aede8f,swolifts:boostcamp-v1-340a1e4fd40b2d99
+Reverse Crunch,Abs,Bodyweight,None,reps_weight,bodyweight,4c2cad40-6ed0-5865-9a08-e99183c92758,swolifts:boostcamp-v1-da63205b3f2d4c14
+Seated Dumbbell Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,4aca48ce-4098-5a6b-be27-0d963eee24b3,swolifts:boostcamp-v1-c2963572681fc7a5
+Single Arm Cable High Row,Back,Strength,Cable Machine,reps_weight,external_weight,540d50a1-8aa7-559c-8476-e9c828ae5b56,swolifts:boostcamp-v1-004cf56c93d656bb
+Deficit Push Up,Chest,Bodyweight,Other,reps_weight,bodyweight,ee099065-f9e2-5b23-8a92-af83fff6ceb0,swolifts:boostcamp-v1-f447ff4a08611b14
+Dumbbell Side Bend,Abs,Strength,Dumbbells,reps_weight,external_weight,f6f68c5f-2793-5e00-99f1-8bf25fa2127f,swolifts:boostcamp-v1-92ce95fe94d1e0c7
+Bodyweight Bulgarian Split Squat,Quadriceps,Bodyweight,Bench,reps_weight,bodyweight,906a3696-45a4-59af-8210-106d184162c1,swolifts:boostcamp-v1-cba70663b6a3ae37
+Dumbbell Deadlift,Back,Strength,Dumbbells,reps_weight,external_weight,a5fc0304-2a5a-5715-b200-ba847f291ef6,swolifts:boostcamp-v1-08fbabffca3f658f
+Dumbbell Glute Bridge,Glutes,Strength,Dumbbells,reps_weight,external_weight,50a81d8f-513d-5a84-bb50-ec48ca86f812,swolifts:boostcamp-v1-a84d878162836b08
+Smith Machine Split Squat,Quadriceps,Strength,Smith Machine,reps_weight,external_weight,b482e9a7-0811-5086-b747-727b5ce4ca4d,swolifts:boostcamp-v1-b7ac7c29c99f6b62
+Barbell Split Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,2a684014-bb21-5e81-b4f6-4f5c4472fbd6,swolifts:boostcamp-v1-76fa140253a852cf
+Smith Machine Close Grip Bench Press,Triceps,Strength,Smith Machine,reps_weight,external_weight,71870dc3-4ac9-5f20-b5f6-e5bb5fd25985,swolifts:boostcamp-v1-c7c8bec57e9040e5
+Reverse Dumbbell Curl,Biceps,Strength,Dumbbells,reps_weight,external_weight,44e855b5-2c89-53eb-b782-8286c0fd6fdb,swolifts:boostcamp-v1-6231ddde2facc104
+Dumbbell Hip Thrust,Glutes,Strength,Dumbbells,reps_weight,external_weight,6c115c14-7a3d-5251-83ae-7974ea00427f,swolifts:boostcamp-v1-52bdd298f360b728
+Dumbbell Stiff Leg Deadlift,Hamstrings,Strength,Dumbbells,reps_weight,external_weight,b8bd534a-b154-5dc8-a685-4b1196248768,swolifts:boostcamp-v1-e77d182c82414f59
+Barbell Pin Bench Press,Chest,Strength,Barbell,reps_weight,external_weight,0b783342-e47a-5898-9854-184cb5fbc7e5,swolifts:boostcamp-v1-994889e223e35198
+Ring Push Up,Chest,Bodyweight,Other,reps_weight,bodyweight,c0124d34-801e-5485-8f91-97041eef8bc5,swolifts:boostcamp-v1-a78a69e0cbf938d2
+Incline Dumbbell Tricep Extension,Triceps,Strength,Dumbbells,reps_weight,external_weight,754a28d9-338e-52d3-af4a-a4b0c362c1d3,swolifts:boostcamp-v1-fa70dc6b814ded1a
+Single Arm Dumbbell Lateral Raise,Shoulders,Strength,Dumbbells,reps_weight,external_weight,7bd14c71-0257-5410-804e-8c1e235f0ea3,swolifts:boostcamp-v1-74b64e37ab36540d
+Decline Sit Up,Abs,Bodyweight,Bench,reps_weight,bodyweight,053b41fb-c74e-5f96-a80f-b5fb5e9d5189,swolifts:boostcamp-v1-e12da00e31ac418b
+Captain's Chair Knee Raise,Abs,Bodyweight,Machine,reps_weight,bodyweight,a110aaf9-35c9-5ef6-8053-bed6da141e60,swolifts:boostcamp-v1-80f5114ffef55973
+Seated Smith Machine Shoulder Press,Shoulders,Strength,Smith Machine,reps_weight,external_weight,e6f09994-620c-53f1-b5dc-0641e1d1e3a7,swolifts:boostcamp-v1-12e8b489471cebc1
+Ring Dip,Triceps,Bodyweight,Other,reps_weight,bodyweight,10f1b8e8-02cb-500d-b7c4-fb522425c9a6,swolifts:boostcamp-v1-f89f3e02cc5f6b03
+Single Arm Cable Reverse Fly,Shoulders,Strength,Cable Machine,reps_weight,external_weight,be326337-ce57-551b-aa5c-19e82b1a6d8e,swolifts:boostcamp-v1-5cc7f0ee1ec837fe
+EZ Bar Pullover,Back,Strength,EZ Bar,reps_weight,external_weight,f03ba378-f330-5645-9da4-afca991188a8,swolifts:boostcamp-v1-c1ff622bd945b571
+B-Stance Dumbbell Romanian Deadlift,Hamstrings,Strength,Dumbbells,reps_weight,external_weight,0b810808-6784-5ce7-8670-bfb363daea39,swolifts:boostcamp-v1-e634c233f2a0de0e
+Dumbbell Front Squat,Quadriceps,Strength,Dumbbells,reps_weight,external_weight,aaab497f-3588-5ee1-a42b-6ce3be522d5b,swolifts:boostcamp-v1-0428cc5bd057ba67
+Plank with Shoulder Taps,Abs,Bodyweight,None,reps_weight,bodyweight,3251fc59-614a-5c76-855f-cfa3096380c0,swolifts:boostcamp-v1-b31a81821049e9ca
+Hanging Toes To Bar,Abs,Bodyweight,Pull Up Bar,reps_weight,bodyweight,92caa169-3309-5f1b-92d3-a95f81ab4057,swolifts:boostcamp-v1-b7f97444cdfbe938
+Ring Row,Back,Bodyweight,Other,reps_weight,bodyweight,c7fc97d9-0803-5032-9407-86bc924a79d2,swolifts:boostcamp-v1-fa7b99d4ceefa56e
+Dumbbell Sumo Deadlift,Back,Strength,Dumbbells,reps_weight,external_weight,f23f6c26-23a5-558b-ad27-f062d1ee79d0,swolifts:boostcamp-v1-74da21111cea4153
+Rolling Dumbbell Tricep Extension,Triceps,Strength,Dumbbells,reps_weight,external_weight,ab94703c-e11d-5d90-a57a-e20ffb94aafb,swolifts:boostcamp-v1-17dbdcf36f9d0d16
+Seated EZ Bar Overhead Tricep Extension,Triceps,Strength,EZ Bar,reps_weight,external_weight,e8b0f641-8fd7-5d22-b6e2-b4393b45e9fe,swolifts:boostcamp-v1-c2fe0f2f88a33e82
+Barbell Snatch,Full Body,Strength,Barbell,reps_weight,external_weight,b895c67b-ebeb-52c2-ae2c-604aca84266b,swolifts:boostcamp-v1-158b231202a65e8d
+Barbell Clean,Full Body,Strength,Barbell,reps_weight,external_weight,2625d35e-1199-5030-816a-7989b018629e,swolifts:boostcamp-v1-61d4263b0b3ef59e
+Knee Push Up,Chest,Bodyweight,None,reps_weight,bodyweight,af65680e-d60e-54ea-bd35-b1259a822733,swolifts:boostcamp-v1-2ab899deb7769e3e
+Clean and Jerk,Full Body,Strength,Barbell,reps_weight,external_weight,dd00f39d-3c79-5cf9-bf39-f9b0b27a0fd6,swolifts:boostcamp-v1-8871fabfb1360c7d
+Smith Machine Deadlift,Back,Strength,Smith Machine,reps_weight,external_weight,f7b29b6a-5581-5886-9f0d-e160a474d2f7,swolifts:boostcamp-v1-3d57c7dc89899b8b
+Hang Power Clean,Full Body,Strength,Barbell,reps_weight,external_weight,7bb70a22-0992-56db-bd4b-55946b212860,swolifts:boostcamp-v1-fa5fba24e650306e
+Kettlebell Lunge,Quadriceps,Strength,Kettlebell,reps_weight,external_weight,46f8df87-899b-5317-b2cc-601d03198d5b,swolifts:boostcamp-v1-d6017e8e78f1bbaa
+Bodyweight Split Squat,Quadriceps,Bodyweight,None,reps_weight,bodyweight,a0dbff9b-9889-52b8-8af4-bd8763e67326,swolifts:boostcamp-v1-500b2d81835855ee
+Behind The Neck Lat Pulldown,Back,Strength,Cable Machine,reps_weight,external_weight,d4071143-15a3-5435-959e-d50e95294972,swolifts:boostcamp-v1-d22c3cb478d0018c
+Hanging Oblique Knee Raise,Abs,Bodyweight,Pull Up Bar,reps_weight,bodyweight,ff2b7daa-e761-5fa1-8be1-1d1b82b539ae,swolifts:boostcamp-v1-626e0573b4977da5
+Trap Bar Romanian Deadlift,Hamstrings,Strength,Trap Bar,reps_weight,external_weight,1dae480e-a48a-53bd-9c13-1867d23184db,swolifts:boostcamp-v1-35f53c39c69cd1f0
+Reverse Plank,Abs,Bodyweight,None,duration_only,external_weight,d0833cff-4d33-5b97-b571-047dbc944311,swolifts:boostcamp-v1-3d133432d26e3461
+Kettlebell Gorilla Row,Back,Strength,Kettlebell,reps_weight,external_weight,e6962888-7b6d-5a4a-81e5-c653d5bd2fb2,swolifts:boostcamp-v1-bf38339c8368a354
+Power Snatch,Full Body,Strength,Barbell,reps_weight,external_weight,d41bd66e-2dd0-5ac2-b6a8-cec561d1aa77,swolifts:boostcamp-v1-71730077270bee97
+Dumbbell Y Raise,Shoulders,Strength,Dumbbells,reps_weight,external_weight,49d579e3-37aa-5c82-9ea0-9fb1878f034a,swolifts:boostcamp-v1-928636fecef2db0b
+Scapular Pull Up,Back,Bodyweight,Pull Up Bar,reps_weight,bodyweight,6a689ba3-5db6-5c7c-b6da-adce4f1894d3,swolifts:boostcamp-v1-a42f087fe27450d8
+Seated Cable Crunch,Abs,Strength,Cable Machine,reps_weight,external_weight,68906230-f67d-5812-805a-62bf4a108f10,swolifts:boostcamp-v1-9dd457feaae7a11d
+Front Lever,Abs,Bodyweight,Pull Up Bar,duration_only,external_weight,ef1d61e5-7282-540b-827a-6f3f68160b94,swolifts:boostcamp-v1-21ca6c6b3ecfe695
+Hang Snatch,Full Body,Strength,Barbell,reps_weight,external_weight,b29ffcea-5904-5a36-915c-0f13c64013a4,swolifts:boostcamp-v1-de1f7cf81123f6d2
+Hollow Rock,Abs,Bodyweight,None,reps_weight,bodyweight,ae956157-1f08-5afc-a296-1d5eddf1ad26,swolifts:boostcamp-v1-c31c818dde48216e
+Lateral Box Jump,Quadriceps,Bodyweight,Plyo Box,reps_weight,bodyweight,b902b9f5-6dea-51de-ab52-dcf98750a2f8,swolifts:boostcamp-v1-a9384439b068a522
+Neutral Grip Dumbbell Bench Press,Chest,Strength,Dumbbells,reps_weight,external_weight,88d0540f-64e6-5941-ae81-b882e0f29e42,swolifts:boostcamp-v1-811e480bc65df55b
+Behind The Back Cable Lateral Raise,Shoulders,Strength,Cable Machine,reps_weight,external_weight,86bf8af7-5643-5a63-893c-e02eda791a06,swolifts:boostcamp-v1-f0e050de4fdb6ed1
+Smith Machine Bulgarian Split Squat,Quadriceps,Strength,Smith Machine,reps_weight,external_weight,b07cedd1-3d46-57c0-99ae-2939d9f25837,swolifts:boostcamp-v1-f9b4cd57da63f4da
+Clean Pull,Full Body,Strength,Barbell,reps_weight,external_weight,5fd209e4-41e7-56f9-935c-da4e6f91a97a,swolifts:boostcamp-v1-8f944ffe7d4ac171
+Overhead Squat,Quadriceps,Strength,Barbell,reps_weight,external_weight,e71fc737-f965-56fa-a699-9b7da039f5d7,swolifts:boostcamp-v1-a31c7e083ce73f14
+Split Jerk,Full Body,Strength,Barbell,reps_weight,external_weight,5d2fb89c-06da-5e7b-8e48-34f05add48ab,swolifts:boostcamp-v1-25adfa21ebf40888
+Trap Bar Power Shrug,Traps,Strength,Trap Bar,reps_weight,external_weight,bda5edcd-909e-580f-bacf-b6372e8951ab,swolifts:boostcamp-v1-aa654880f1310682
+Deficit Handstand Push Up,Shoulders,Bodyweight,Other,reps_weight,bodyweight,5ed5d54a-5e1c-5b7f-ab97-78074e32facc,swolifts:boostcamp-v1-b5cbaa05e2c498b9
+Wall Press Dead Bug,Abs,Bodyweight,None,reps_weight,bodyweight,bf194788-4487-5dff-9b12-3f2f7ad1445d,swolifts:boostcamp-v1-80951cfb483874e4
+Banded Clamshell,Glutes,Bodyweight,Resistance Band,reps_weight,bodyweight,c05fbcdb-826d-53d9-aba1-fcf20a957c94,swolifts:boostcamp-v1-49c2f26a88ae6cb7
