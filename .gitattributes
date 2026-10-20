@@ -1,4 +1,6 @@
 # Preserve canonical byte hashes across Windows and Linux checkouts.
 tests/fixtures/** -text
+assets/swolifts-import-export/catalog/** -text
+assets/swolifts-import-export/*/NOTICE.txt -text
 # CSP hashes use HTML-parser-normalized LF text.
 *.html text eol=lf

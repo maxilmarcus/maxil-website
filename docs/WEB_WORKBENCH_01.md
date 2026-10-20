@@ -15,6 +15,14 @@ and [canonical fixtures](https://github.com/maxilmarcus/SwoLifts/tree/394d58a9f9
 Local fixture hashes and the exercise reference source hash are recorded in
 [`source.json`](../tests/fixtures/transfer-v1/source.json).
 
+The catalog has a separate source pin at merged Android commit
+`4033f56e6fd9acfb2b2cc45aca38256ea6ddfa28` (CATALOG-CURATION-01 / #505):
+generation 2, 453 exercises. The transfer fixture pin above is unchanged.
+Both templates retain the original 379 identities and add the 74 reviewed
+exercises. They include the full canonical CSV and the matching ODbL notice;
+the page also offers both files directly. Corrected ZIP downloads preserve
+the notice and full catalog. Personal data is outside the catalog license.
+
 | Limit | Value |
 |---|---|
 | Compressed input / expanded ZIP data | 32 MiB / 64 MiB |
@@ -157,8 +165,9 @@ Font subsets and unrelated app UX changes are outside this workbench correction.
   including these transfer captures, from the integrated release candidate.
 - Reconcile version references with the eventual 1.2.0 release record; this work
   does not publish release notes or change the live app version claim.
-- The exercise-library update #279 waits on the owner's file. The bundled 379-row
-  reference is the pinned current catalog, not the future catalog.
+- The exercise-library update #279 is integrated in Android dev. The bundled
+  453-row reference matches merged #505. Website production remains coordinated
+  with the app release; older apps may skip sets for the 74 new exercise UUIDs.
 - Extra UX choices in #500 remain a separate owner decision. No new Workbench
   navigation item or Android layout changes are implied by this implementation.
 - Production website merge/deployment waits for separate owner approval after
