@@ -4,14 +4,14 @@
 - Release: [SwoLifts #497 / RELEASE-120-01](https://github.com/maxilmarcus/SwoLifts/issues/497).
 - Android transfer: [#502 / TRANSFER-APP-01](https://github.com/maxilmarcus/SwoLifts/pull/502).
 - Required review: Claude; Data, Security/Privacy, Product/UX and Accessibility.
-- Status: Claude review fixes locally validated and source pin refreshed; owner approved isolated GitHub-hosted CI and repository hardening on 2026-10-19. PR validation and final review in progress; production deployment remains a separate owner gate.
+- Status: Independent follow-up review accepted at `1831df3`; existing build, 26 unit tests and 54 browser tests passed. Integrated transfer source pin, final app screenshots and release-version reconciliation remain. Production deployment stays separately owner-gated after Android 1.2.0 is live.
 
 ## Contract and behavior
 
-Android source is pinned to `394d58a9f9469f8eddca925a775cc521266c7667`:
-[transfer contract](https://github.com/maxilmarcus/SwoLifts/blob/394d58a9f9469f8eddca925a775cc521266c7667/docs/engineering/OFFLINE_BACKUP_TRANSFER.md),
-[importer](https://github.com/maxilmarcus/SwoLifts/blob/394d58a9f9469f8eddca925a775cc521266c7667/app/src/main/java/com/swolifts/app/data/export/DataExportImportManager.kt),
-and [canonical fixtures](https://github.com/maxilmarcus/SwoLifts/tree/394d58a9f9469f8eddca925a775cc521266c7667/app/src/androidTest/assets/transfer-v1).
+Android source is pinned to `c86db4c8f95ec7f7905763225df55b3392b8709e`:
+[transfer contract](https://github.com/maxilmarcus/SwoLifts/blob/c86db4c8f95ec7f7905763225df55b3392b8709e/docs/engineering/OFFLINE_BACKUP_TRANSFER.md),
+[importer](https://github.com/maxilmarcus/SwoLifts/blob/c86db4c8f95ec7f7905763225df55b3392b8709e/app/src/main/java/com/swolifts/app/data/export/DataExportImportManager.kt),
+and [canonical fixtures](https://github.com/maxilmarcus/SwoLifts/tree/c86db4c8f95ec7f7905763225df55b3392b8709e/app/src/androidTest/assets/transfer-v1).
 Local fixture hashes and the exercise reference source hash are recorded in
 [`source.json`](../tests/fixtures/transfer-v1/source.json).
 
@@ -157,21 +157,30 @@ Font subsets and unrelated app UX changes are outside this workbench correction.
 
 ## Remaining release gates
 
-- Reconcile Claude review findings with changed-candidate evidence in #54 and Android #501/#502.
-- Website PR CI requires owner authorization to start GitHub-hosted runners;
-  its existing workflow runs on PRs to `master` and deploys only after a production
-  merge. A draft PR also starts the hosted build. Local checks do not waive it.
-- After branding #501 merges, replace all required app guide/home screenshots,
-  including these transfer captures, from the integrated release candidate.
-- Reconcile version references with the eventual 1.2.0 release record; this work
-  does not publish release notes or change the live app version claim.
-- The exercise-library update #279 is integrated in Android dev. The bundled
-  453-row reference matches merged #505. Website production remains coordinated
-  with the app release; older apps may skip sets for the 74 new exercise UUIDs.
-- Extra UX choices in #500 remain a separate owner decision. No new Workbench
-  navigation item or Android layout changes are implied by this implementation.
+- [Claude follow-up review](https://github.com/maxilmarcus/maxil-website/pull/55#pullrequestreview-5607583310)
+  accepted the corrected implementation at `1831df3`. Reuse unchanged evidence;
+  reconcile any subsequent source changes in the same PR.
+- Isolated GitHub-hosted website CI and repository hardening were owner-approved
+  on 2026-10-19. [CI 39377937077](https://github.com/maxilmarcus/maxil-website/actions/runs/39377937077)
+  passed on that reviewed revision; changed revisions retain the normal PR gate.
+- Android #502 is integrated at `c86db4c8f95ec7f7905763225df55b3392b8709e`. The transfer fixture
+  pin now references that commit; every fixture and manifest matches canonical
+  Git bytes. The independent catalog source pin remains unchanged.
+- Branding #501 and polish #511 are merged into Android `dev`. Replace the app
+  guide/home screenshots, including transfer captures, from the integrated
+  release candidate. Phone/Windows delivery still needs its planned manual check.
+- Reconcile version references with the eventual 1.2.0 release record. Draft
+  notes during preparation, finalize against the approved candidate, and publish
+  availability claims only when the app is actually available.
+- The bundled 453-row reference matches merged Android #505; the combined
+  catalog decision and ODbL notice preservation are settled. Older apps may skip
+  sets for the 74 new exercise UUIDs.
+- UX04 Workbench discovery is already owner-approved and implemented below.
 - Production website merge/deployment waits for separate owner approval after
-  the app is live. No deployment or Play upload has occurred.
+  Android 1.2.0 is live on Google Play. The guide's Send to computer instructions
+  depend on that version. Keep the draft unpublished until then.
+- The existing meta-CSP/GitHub Pages framing limitation remains documented in
+  the follow-up review; no response-header framing protection is claimed.
 
 
 ## UX-120-01: Workbench discovery
@@ -182,7 +191,7 @@ now offer Workbench directly. The destination heading matches that purpose;
 Open my SwoLifts file / Try an example remain first, followed by the existing
 three transfer steps. Guides retains its import/export route, and Get SwoLifts
 remains the primary acquisition action. This is a development candidate; website
-hosted CI and production deployment still require their separate approvals.
+hosted CI is approved; production deployment still requires its separate approval.
 
 Validation: Node 24 build, 26 unit tests and 52 desktop/mobile browser cases
 passed. Two additional tablet checks passed at 821, 900 and 1050px, including
