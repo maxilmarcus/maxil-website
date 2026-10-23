@@ -192,3 +192,16 @@ for (const type of ["blank", "example"]) test(`published ${type} template opens 
     assert.equal(sha(archive.entries.find(entry => entry.name === "catalog/exercises.csv").bytes), source.catalog.sha256);
   }
 });
+
+test("corrected ZIP preserves private profile bodyweight bytes and excludes them from AI export", async () => {
+  const profile = "currentBodyweightLbs,currentBodyweightKg\n135.0,61.25\n";
+  const backup = await openBackup(await zip([
+    ["custom_exercises.csv", "name\nTest Lift\n"],
+    ["profile.csv", profile],
+  ]));
+  assert.deepEqual(errors(backup), []);
+  assert.equal(backup.files["profile.csv"], undefined);
+  const corrected = await openBackup(new File([await downloadZip(backup)], "corrected.zip"));
+  assert.equal(new TextDecoder().decode(corrected.entries.find(entry => entry.name === "profile.csv").bytes), profile);
+  assert.equal(aiExport(corrected).includes("61.25"), false);
+});
