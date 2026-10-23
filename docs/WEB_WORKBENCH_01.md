@@ -189,6 +189,10 @@ Font subsets and unrelated app UX changes are outside this workbench correction.
 - Reconcile version references with the eventual 1.2.0 release record. Draft
   notes during preparation, finalize against the approved candidate, and publish
   availability claims only when the app is actually available.
+- The draft support backup FAQ names both 1.1.x and 1.2.0 export controls and
+  explains that reinstall/device transfer resets theme, units, rest timer and
+  RIR preferences; an in-place update retains them. Publish this with 1.2.0,
+  not before its Play availability.
 - The bundled 453-row reference matches merged Android #505; the combined
   catalog decision and ODbL notice preservation are settled. Older apps may skip
   sets for the 74 new exercise UUIDs.
