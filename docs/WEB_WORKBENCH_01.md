@@ -4,7 +4,7 @@
 - Release: [SwoLifts #497 / RELEASE-120-01](https://github.com/maxilmarcus/SwoLifts/issues/497).
 - Android transfer: [#502 / TRANSFER-APP-01](https://github.com/maxilmarcus/SwoLifts/pull/502).
 - Required review: Claude; Data, Security/Privacy, Product/UX and Accessibility.
-- Status: Independent follow-up review accepted at `1831df3`; existing build, 26 unit tests and 54 browser tests passed. Integrated transfer source pin, final app screenshots and release-version reconciliation remain. Production deployment stays separately owner-gated after Android 1.2.0 is live.
+- Status: Independent follow-up review accepted at `1831df3`; existing build, 26 unit tests and 54 browser tests passed. Integrated transfer source pin and branded 1.2.0 candidate screenshots are prepared; final website validation and Android release approval remain. Production deployment stays separately owner-gated after Android 1.2.0 is live.
 
 ## Contract and behavior
 
@@ -67,10 +67,17 @@ Path traversal and encrypted archives are rejected.
 Quick Share instructions link to Google's
 [Windows download](https://www.android.com/quick-share/with-windows-pc/) and
 [transfer help](https://support.google.com/android/answer/13801258?hl=en).
-Current transfer pictures are synthetic emulator screenshots from Android #502.
-They show SwoLifts' share and import screens; they are not proof of Windows radio
-delivery. Real Windows Quick Share setup screenshots and a phone/PC round trip
-remain owner-assisted acceptance work. USB/file-picker instructions are retained.
+The transfer pictures are synthetic emulator captures from the Android 1.2.0
+preparation branch at `3a166fa921794f7e2f6fe4b7241cc015f6de4195` after #512 integration, using the disposable
+`.debug` package and the tracked `valid-wrapped-bom-exact-kg.zip` fixture. No
+owner data or phone capture is included. `send-to-computer.png` SHA-256 is
+`386a461b6ccca6032f2fb041bd05365e589392994c5d4e3b0327352175cff949`;
+`import-preview.png` SHA-256 is
+`77234ad6f85419fef8597a3ebf56491e1d050061fe288f00c4cdc6afe4601e97`.
+They show SwoLifts' Settings and pre-import confirmation; they are not proof of
+Windows radio delivery. The owner-assisted phone/Windows Quick Share round trip with a
+workbench-edited template passed in [Android #502's acceptance evidence](https://github.com/maxilmarcus/SwoLifts/pull/502#issuecomment-6357824699).
+USB/file-picker instructions are retained.
 
 ## Validation
 
@@ -125,6 +132,14 @@ CSP test blocks injected inline/foreign scripts and foreign connections.
 [Review receipt](workbench-2026-10-17/review-validation.json) identifies the logs,
 source file hashes and browser-produced fixture. Preview processes are stopped.
 
+2026-10-23 screenshot update: the integrated 1.2.0 candidate produced the two
+synthetic transfer captures identified in Dependencies and transfer instructions.
+Local `npm run build` passed and `npm test` passed all 26 unit and 54
+desktop/mobile browser cases, including links, image URL responses, privacy and
+CSP. This run used local Node 22.19.0; the PR's owner-approved hosted
+CI validates Node 24 after the updated revision is pushed. The existing local
+preview at port 4173 remains available for owner review and is not a deployment.
+
 ## Independent review corrections
 
 [Claude review](https://github.com/maxilmarcus/maxil-website/issues/54#issuecomment-6245376580)
@@ -166,9 +181,11 @@ Font subsets and unrelated app UX changes are outside this workbench correction.
 - Android #502 is integrated at `c86db4c8f95ec7f7905763225df55b3392b8709e`. The transfer fixture
   pin now references that commit; every fixture and manifest matches canonical
   Git bytes. The independent catalog source pin remains unchanged.
-- Branding #501 and polish #511 are merged into Android `dev`. Replace the app
-  guide/home screenshots, including transfer captures, from the integrated
-  release candidate. Phone/Windows delivery still needs its planned manual check.
+- Branding #501, polish #511 and next-set badge #512 are merged into Android
+  `dev`. Transfer guide captures now come from the integrated 1.2.0 preparation
+  branch as identified above. Reconcile other app guide/home media against the
+  final release candidate. Phone/Windows delivery passed the linked manual
+  round trip; do not repeat it on unchanged transfer code.
 - Reconcile version references with the eventual 1.2.0 release record. Draft
   notes during preparation, finalize against the approved candidate, and publish
   availability claims only when the app is actually available.
