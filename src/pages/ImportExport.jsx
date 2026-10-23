@@ -51,7 +51,7 @@ export default function ImportExport() {
             </ol>
             <div className="template-download-grid">
               <figure><img src="/assets/transfer/send-to-computer.png" alt="SwoLifts Settings with Send to computer and Export to file" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Choose Send to computer in Settings.</figcaption></figure>
-              <figure><img src="/assets/transfer/import-preview.png" alt="SwoLifts previews workouts and sets before the Import backup confirmation" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Review the file before importing it.</figcaption></figure>
+              <figure><img src="/assets/transfer/import-preview.png" alt="SwoLifts import preview lists custom exercises, workouts and sets, and warns that existing exercise merges can change links" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Review the file before importing it.</figcaption></figure>
             </div>
             <p><strong>USB fallback:</strong> use Export to file, connect the phone with a USB cable and select File transfer on the phone. Copy the ZIP between Downloads folders using Windows File Explorer. Open the returned ZIP with SwoLifts, or select it through Settings, then Import Workout Data.</p>
           </section>
