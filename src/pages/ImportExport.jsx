@@ -37,7 +37,7 @@ export default function ImportExport() {
           <div className="guide-intro">
             <p>
               {
-                "SwoLifts exports your data as a ZIP of CSV files. You can import the same format back into the app, or use the templates below to bulk migrate workouts, custom exercises, and workout templates from another tool."
+                "SwoLifts exports your data as a ZIP of CSV files that you can keep and import back into the app when needed. The workbench checks a copy of that backup and lets you correct CSV values. It does not convert files from other workout apps."
               }
             </p>
           </div>
@@ -58,10 +58,10 @@ export default function ImportExport() {
           <div className="template-download-grid">
             <article className="template-download-card">
               <span className="guide-kicker">{"Empty starter"}</span>
-              <h2>{"Blank CSV Template"}</h2>
+              <h2>{"Blank CSV Format"}</h2>
               <p>
                 {
-                  "Header-only CSV files at the ZIP root. Use this when you want to start clean and fill in your own data."
+                  "Header-only CSV files showing the SwoLifts backup format. Keep a separate original backup before editing any CSV."
                 }
               </p>
               <a
@@ -74,10 +74,10 @@ export default function ImportExport() {
             </article>
             <article className="template-download-card">
               <span className="guide-kicker">{"Worked example"}</span>
-              <h2>{"Example CSV Template"}</h2>
+              <h2>{"CSV Format Example"}</h2>
               <p>
                 {
-                  "Sample workouts, templates, and sets that match built-in SwoLifts exercises. Use it as a reference while editing."
+                  "Sample SwoLifts workouts, templates, and sets. Use it to understand the backup columns, not as an import from another app."
                 }
               </p>
               <a
@@ -106,8 +106,8 @@ export default function ImportExport() {
           <section className="guide-section" id="workflow">
             <div className="guide-section-header">
               <div>
-                <span className="guide-kicker">{"Migration workflow"}</span>
-                <h2>{"Edit on Desktop, Import on Android"}</h2>
+                <span className="guide-kicker">{"Backup workflow"}</span>
+                <h2>{"Check a Backup on Desktop, Restore on Android"}</h2>
               </div>
               <p>
                 {
@@ -116,7 +116,7 @@ export default function ImportExport() {
               </p>
             </div>
             <ol>
-              <li>{"Download the blank or example ZIP above."}</li>
+              <li>{"Export a ZIP from SwoLifts and keep the original unchanged. The blank and example ZIPs above are format references."}</li>
               <li>
                 {
                   "Extract it on your computer and edit the CSV files in Excel, Google Sheets, Numbers, or a text editor."

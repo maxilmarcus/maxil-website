@@ -6,6 +6,11 @@
 - Required review: Claude; Data, Security/Privacy, Product/UX and Accessibility.
 - Status: Independent follow-up review accepted at `1831df3`; existing build, 26 unit tests and 54 browser tests passed. Integrated transfer source pin and branded 1.2.0 candidate screenshots are prepared; final website validation and Android release approval remain. Production deployment stays separately owner-gated after Android 1.2.0 is live.
 
+Owner scope decision, 2026-10-25: present the workbench as a SwoLifts ZIP
+backup checker and restore aid, with optional local analysis. Blank and example
+CSVs remain format references. Do not advertise a guided historical import from
+another workout app in the 1.2.0 release; no such conversion flow is provided.
+
 ## Contract and behavior
 
 Android source is pinned to `c86db4c8f95ec7f7905763225df55b3392b8709e`:
