@@ -56,6 +56,10 @@ endpoint, file analytics, external scripts, persistent file storage or AI API.
 The only workbench fetch loads the public bundled example. AI export creates a
 local JSON download which the user can choose to share separately.
 
+The supported Android import workflow restores an original SwoLifts ZIP.
+Website edits and combined CSV files are analysis copies, not a supported
+edit-and-reimport workflow or a converter for another app's workout history.
+
 The archive reader uses pinned, BSD-licensed zip.js 2.24.0's native-stream entry
 point with workers disabled and CRC checks enabled. It bounds compressed bytes,
 actual decompressed bytes (including ignored entries), entry counts and CSV

@@ -28,15 +28,15 @@ test("shared backup opens, reports bad edit, focuses the field and downloads cor
   await page.getByLabel("CSV file", { exact: true }).selectOption("exercise_sets.csv");
   await expect(page.getByLabel("notes, row 2", { exact: true })).toHaveValue("First line\nSecond line");
   await page.getByLabel("weightKg, row 2", { exact: true }).fill("bad weight");
-  await expect(page.getByRole("button", { name: "Download corrected ZIP" })).toBeDisabled();
+  await expect(page.getByRole("button", { name: "Download analysis ZIP" })).toBeDisabled();
   await page.getByRole("button", { name: "exercise_sets.csv row 2", exact: true }).click();
   await expect(page.getByLabel("weightKg, row 2", { exact: true })).toBeFocused();
   await page.getByLabel("weightKg, row 2", { exact: true }).fill("0.06803893641534596");
   await expect(page.getByLabel("weightLbs, row 2", { exact: true })).toHaveValue("0.2");
   const pending = page.waitForEvent("download");
-  await page.getByRole("button", { name: "Download corrected ZIP" }).click();
+  await page.getByRole("button", { name: "Download analysis ZIP" }).click();
   const download = await pending;
-  expect(download.suggestedFilename()).toMatch(/^SwoLifts-corrected-\d{4}-\d{2}-\d{2}\.zip$/);
+  expect(download.suggestedFilename()).toMatch(/^SwoLifts-analysis-\d{4}-\d{2}-\d{2}\.zip$/);
   const corrected = await openBackup(new File([await readFile(await download.path())], "corrected.zip"));
   expect(corrected.files["exercise_sets.csv"].rows[1].slice(4, 7)).toEqual(["0.2", "0.06803893641534596", "First line\nSecond line"]);
   const golden = await openBackup(new File([await readFile(fixturePath("valid-browser-corrected-tie.zip"))], "golden.zip"));
@@ -101,7 +101,7 @@ test("headers are read-only and bulk edits can be undone without changing workou
   await page.getByLabel("Open a SwoLifts ZIP or CSV", { exact: true }).setInputFiles({ name: "workout_sessions.csv", mimeType: "text/csv", buffer: Buffer.from("id,name,startTime\n  s  ,  Original name  ,2026-01-02\n") });
   await expect(page.locator(".wb-summary")).toContainText("1 problems");
   await expect(page.locator(".wb-table thead input")).toHaveCount(0);
-  await page.getByText("Fix several rows at once", { exact: true }).click();
+  await page.getByText("Analysis copy tools", { exact: true }).click();
   await page.getByRole("button", { name: "Normalize ISO dates to UTC" }).click();
   await expect(page.getByLabel("startTime, row 2", { exact: true })).toHaveValue("2026-01-02T00:00:00Z");
   await page.getByRole("button", { name: "Undo last bulk change" }).click();
@@ -120,7 +120,7 @@ test("drag/drop, CSV additions and date bulk fix produce a valid download", asyn
   await page.locator("#workbench").dispatchEvent("drop", { dataTransfer });
   await dataTransfer.dispose();
   await expect(page.locator(".wb-summary")).toContainText("1 problems");
-  await page.getByText("Fix several rows at once", { exact: true }).click();
+  await page.getByText("Analysis copy tools", { exact: true }).click();
   await page.getByRole("button", { name: "Normalize ISO dates to UTC" }).click();
   await expect(page.getByLabel("startTime, row 2", { exact: true })).toHaveValue("2026-01-02T00:00:00Z");
   await page.getByLabel("Add a CSV file", { exact: true }).setInputFiles({ name: "exercise_sets.csv", mimeType: "text/csv", buffer: Buffer.from("sessionId,exerciseName,setNumber\ns,Known lift,1\n") });
@@ -128,7 +128,7 @@ test("drag/drop, CSV additions and date bulk fix produce a valid download", asyn
   await expect(page.locator(".wb-issues")).toContainText("Unknown exercise");
   await page.getByLabel("Add a CSV file", { exact: true }).setInputFiles({ name: "custom_exercises.csv", mimeType: "text/csv", buffer: Buffer.from("name\nKnown lift\n") });
   await expect(page.locator(".wb-summary")).toContainText("0 warnings");
-  await expect(page.getByRole("button", { name: "Download corrected ZIP" })).toBeEnabled();
+  await expect(page.getByRole("button", { name: "Download analysis ZIP" })).toBeEnabled();
 });
 
 test("invalid shared fixtures show errors and leave a previously opened backup intact", async ({ page }) => {

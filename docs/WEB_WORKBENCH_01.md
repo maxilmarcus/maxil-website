@@ -11,6 +11,14 @@ backup checker and restore aid, with optional local analysis. Blank and example
 CSVs remain format references. Do not advertise a guided historical import from
 another workout app in the 1.2.0 release; no such conversion flow is provided.
 
+Owner clarification, 2026-10-28: remove the duplicate Import & export link
+from Guides; Workbench is the main navigation destination. Website guidance,
+FAQs and downloadable README files must describe restoring the original,
+unchanged SwoLifts ZIP, not an edit-and-reimport workflow. Existing editing
+controls produce a separate analysis copy; their downloads are labeled as
+such. Making the website table read-only is an open owner choice, not yet
+implemented. It would not disable Android backup export or restore.
+
 ## Contract and behavior
 
 Android source is pinned to `c86db4c8f95ec7f7905763225df55b3392b8709e`:

@@ -78,7 +78,7 @@ export default function BackupWorkbench() {
   function change(next, bulk = false) { setUndo(bulk ? backup : null); setBackup(next); setDirty(true); setError(""); }
   async function download() {
     setBusy(true); setError("");
-    try { saveBlob(await downloadZip(backup), `SwoLifts-corrected-${today()}.zip`); setDirty(false); }
+    try { saveBlob(await downloadZip(backup), `SwoLifts-analysis-${today()}.zip`); setDirty(false); }
     catch (failure) { setError(failure.message); }
     finally { setBusy(false); }
   }
@@ -92,8 +92,9 @@ export default function BackupWorkbench() {
     onDrop={event => { event.preventDefault(); if (event.dataTransfer.files.length !== 1) setError("Open one ZIP or CSV at a time. Use Add CSV to combine files."); else load(event.dataTransfer.files[0]); }}>
     <div className="wb-intro">
       <span className="guide-kicker">Your files, on your computer</span>
-      <h2 id="workbench-title">Check. Fix. Take it back to the gym.</h2>
-      <p>Open a SwoLifts ZIP or CSV, check its contents and download your changes. Your file stays in this browser. There is no upload or account.</p>
+      <h2 id="workbench-title">Explore your backup.</h2>
+      <p>Open a SwoLifts ZIP or CSV to inspect your workout data privately. Your file stays in this browser. There is no upload or account.</p>
+      <p>To restore in the Android app, use your original, unchanged SwoLifts ZIP. This workbench does not convert other apps' history or create workouts for import.</p>
       <div className="wb-actions">
         <button className="wb-primary" onClick={choose} disabled={busy}>Open my SwoLifts file</button>
         <button onClick={example} disabled={busy}>Try an example</button>
@@ -109,7 +110,7 @@ export default function BackupWorkbench() {
       <div ref={summary} tabIndex={-1} className="wb-summary" aria-live="polite">
         <h3>{backup.filename}</h3>
         {checking ? <p role="status">Checking edits…</p> : <p>{report.rowCounts["exercise_sets.csv"] || 0} sets · {report.rowCounts["workout_sessions.csv"] || 0} workouts · {problems.length} problems · {warnings.length + backup.warnings.length} warnings</p>}
-        <p className="wb-small">These are file checks. The app still checks its existing data, duplicate identities and merge history before importing.</p>
+        <p className="wb-small">These checks describe the file; they do not guarantee a restore. The Android app checks the backup against data already on your phone.</p>
       </div>
       {!checking && (report.issues.length > 0 || backup.warnings.length > 0) && <details className="wb-issues" open>
         <summary>Review problems and warnings</summary>
@@ -147,7 +148,7 @@ export default function BackupWorkbench() {
       </div>}
       <div className="wb-actions"><button disabled={page === 0 || busy} onClick={() => setPage(page - 1)}>Previous rows</button>
         <span>Page {page + 1} of {pageCount}</span><button disabled={page + 1 >= pageCount || busy} onClick={() => setPage(page + 1)}>Next rows</button></div>
-      <details className="wb-fixes"><summary>Fix several rows at once</summary>
+      <details className="wb-fixes"><summary>Analysis copy tools</summary>
         <p>Review changes before downloading. Names, IDs, notes and descriptions keep their whitespace. Dates without a time become midnight UTC; ambiguous dates stay unchanged.</p>
         <div className="wb-actions">
           <button onClick={() => change(bulkFix(backup, "trim"), true)} disabled={busy}>Trim fields</button>
@@ -171,8 +172,9 @@ export default function BackupWorkbench() {
           }}>Map matching rows</button>
         </div>
       </details>
+      <p className="wb-small">Edits and combined CSV files are for a separate analysis copy. Restore the original SwoLifts ZIP in the app; edited downloads are not a supported backup-and-restore workflow.</p>
       <div className="wb-actions wb-downloads">
-        <button className="wb-primary" disabled={busy || checking || problems.length > 0} onClick={download}>Download corrected ZIP</button>
+        <button className="wb-primary" disabled={busy || checking || problems.length > 0} onClick={download}>Download analysis ZIP</button>
         <button disabled={busy || checking} onClick={() => saveBlob(new Blob([aiExport(backup)], { type: "application/json" }), `SwoLifts-for-AI-${today()}.json`)}>Download for AI</button>
       </div>
       <p className="wb-small">The AI download contains your workout dates, weights and notes, with units and file-check results. Nothing is sent to an AI automatically. Share it only with a service whose privacy settings you accept.</p>

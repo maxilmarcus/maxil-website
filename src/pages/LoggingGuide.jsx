@@ -421,10 +421,10 @@ export default function LoggingGuide() {
               <h3>{"Import and export notes"}</h3>
               <p>
                 {
-                  "Exports include workout timestamps, exercise load types, assistance weight, and template assistance targets when those fields are present. Imports preserve those fields when restoring or merging a SwoLifts backup. For CSV format examples and the backup transfer guide, see the "
+                  "Export a ZIP to back up your SwoLifts data or inspect a copy in external tools. Import restores a backup exported by SwoLifts; it does not convert another app's history or create workouts from a spreadsheet. Keep the original ZIP unchanged. For transfer and restore instructions, see the "
                 }
                 <a href="swolifts-import-export.html">
-                  {"Import & Export Guide"}
+                  {"Backup Workbench"}
                 </a>
                 {"."}
               </p>
