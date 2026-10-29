@@ -10,7 +10,7 @@
     "localFile": "catalog-source.csv",
     "commit": "4033f56e6fd9acfb2b2cc45aca38256ea6ddfa28",
     "version": 2,
-    "noticeSha256": "0e9e5e8ce8e30848c649251309b7e770488bc5ba47e174a7263753389791c214",
-    "noticeCommit": "22830ecdcc3977aa0c438c056b75f866ab046f85"
+    "noticeSha256": "7084f6ab557db4b11634de954e15f4fa8fadb8d1ba4556b3673e234b31b2faef",
+    "noticeCommit": "ee5d80e20454faea48406dd062aa68c1ee713fb8"
   }
 }

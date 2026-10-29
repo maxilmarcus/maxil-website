@@ -17,8 +17,9 @@ This includes the original 379 SwoLifts-curated rows: their internal_curated
 source/license fields retain historical provenance, not a separate database license.
 
 The accompanying exercises.csv is the complete machine-readable bundled catalog.
-In SwoLifts, Settings > About > Licenses & attribution > Exercise catalog provides this notice and a free
-offline export. Recipients may reuse the catalog under ODbL, including commercially.
+In SwoLifts, Settings > Export to file includes a free offline copy in the backup
+ZIP as catalog/exercises.csv and catalog/NOTICE.txt. Recipients may reuse the
+catalog under ODbL, including commercially.
 
 Application software has a separate license. This export contains no user
 workouts, custom exercises, accounts or other personal data. No affiliation with
