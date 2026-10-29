@@ -11,6 +11,8 @@ entries, separate from versioned Android notes; see [authoring updates](docs/UPD
 - Add an Updates index with individual Markdown pages for app and website notes.
   Preview the website redesign, including its new logo, as Unreleased until publication.
 - Simplify navigation with one Workbench link and a direct Guides link.
+- Add current app screenshots beside guide steps, with larger image viewing,
+  updated homepage captures and illustrated backup/restore instructions.
 - Document Quick Share and USB transfer, preserve the manual guide, and refresh
   templates with exact kilograms, Excel BOM support and exercise references.
 - Explain browser-memory processing and file privacy in the privacy policy.

@@ -1001,6 +1001,11 @@ main:focus {
   border-radius: 26px;
   box-shadow: var(--shadow-lg);
 }
+.guide-image-link { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; max-width: 100%; text-decoration: none !important; }
+.guide-image-link:focus-visible { outline: 3px solid var(--primary); outline-offset: 6px; border-radius: 26px; }
+.guide-enlarge { font-size: .75rem; font-weight: 600; color: var(--primary); }
+.guide-screenshot-note { font-size: .85rem; margin-block: 18px; }
+.guide-feature-step { border-top: 1px solid var(--border); padding-top: 30px; margin-top: 34px; }
 .guide-section-header {
   align-items: start;
 }

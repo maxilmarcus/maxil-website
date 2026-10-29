@@ -64,17 +64,17 @@ export default function ScreenshotViewer({ screens, initialIndex, onClose }) {
       <figure>
         <img src={`/assets/${current.image}`} alt={current.alt} width="412" height="917" />
         <figcaption aria-live="polite" aria-atomic="true">
-          {index + 1} / {screens.length} — {current.label}
+          {screens.length > 1 ? `${index + 1} / ${screens.length} — ` : ""}{current.label}
         </figcaption>
       </figure>
       <div className="viewer-controls">
-        <button className="icon-button viewer-previous" aria-label="Previous screenshot"
-          onClick={() => move(-1)}><Icon /></button>
+        {screens.length > 1 && <button className="icon-button viewer-previous" aria-label="Previous screenshot"
+          onClick={() => move(-1)}><Icon /></button>}
         <a href={`/assets/${current.image}`} target="_blank" rel="noopener noreferrer">
           Open full-size image <span className="sr-only">(opens in a new tab)</span>
         </a>
-        <button className="icon-button" aria-label="Next screenshot"
-          onClick={() => move(1)}><Icon /></button>
+        {screens.length > 1 && <button className="icon-button" aria-label="Next screenshot"
+          onClick={() => move(1)}><Icon /></button>}
       </div>
     </dialog>
   );

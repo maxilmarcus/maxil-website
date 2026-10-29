@@ -1,3 +1,5 @@
+import GuideScreenshot from "../components/GuideScreenshot";
+
 export default function LoggingGuide() {
   return (
     <>
@@ -18,6 +20,7 @@ export default function LoggingGuide() {
               }
             </p>
           </div>
+          <p className="guide-screenshot-note">Screens show the SwoLifts 1.2.0 preview. Select a screenshot to open a larger view; older app versions may look different.</p>
           <nav className="guide-tab-links" aria-label="Guide sections">
             <a href="#workout-tab">{"Workout"}</a>
             <a href="#exercises-tab">{"Exercises"}</a>
@@ -71,18 +74,44 @@ export default function LoggingGuide() {
                   </li>
                 </ol>
               </div>
-              <figure className="guide-visual">
-                <img
-                  className="guide-screenshot"
-                  src="assets/guide/workout-tab.png"
-                  alt="SwoLifts Workout tab showing start workout and template options"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  {"Workout tab: start, resume, or build from templates."}
-                </figcaption>
-              </figure>
+              <GuideScreenshot image="guide/workout-tab.png" label="Start a workout"
+                alt="SwoLifts Workout tab with Start Workout and Start from Template" caption="Open Workout, then choose Start Workout or Start from Template." />
+            </div>
+            <div className="guide-grid guide-feature-step">
+              <div>
+                <h3>Use a saved template</h3>
+                <p>From Workout, choose <strong>Start from Template</strong>. Choose <strong>Start</strong> below a template to use it, <strong>Edit</strong> to change its exercises and targets, or <strong>+ New</strong> to create one.</p>
+              </div>
+              <GuideScreenshot image="guide/templates.png" label="Start from a saved template"
+                alt="SwoLifts Templates screen with an Upper body example, Start and Edit buttons, and New template control"
+                caption="Templates save your exercise list and targets so the next workout starts with less setup." />
+            </div>
+            <div className="guide-grid guide-feature-step">
+              <div>
+                <h3>Enter a set, then mark it done</h3>
+                <ol>
+                  <li>Choose <strong>Add Exercise</strong> and select a movement.</li>
+                  <li>Enter the weight and reps, or the fields shown for that exercise.</li>
+                  <li>Select the <strong>Done</strong> checkbox when you complete the set. Use <strong>Add Set</strong> for another set.</li>
+                  <li>Select the note icon beside a set to save a cue or observation.</li>
+                </ol>
+              </div>
+              <GuideScreenshot image="guide/log-set.png" label="Log and complete a set"
+                alt="A SwoLifts workout with weight and reps fields, Done checkbox, note icon and Add Set button"
+                caption="Enter the set values, then select Done. The note icon belongs to that set." />
+            </div>
+            <div className="guide-grid guide-feature-step">
+              <div>
+                <h3>Rest between sets and finish your session</h3>
+                <ol>
+                  <li>The rest strip appears after a completed set when the rest timer is enabled.</li>
+                  <li>Use <strong>Skip</strong> to end the rest period, or the adjustment control to change it.</li>
+                  <li>Select <strong>Finish Workout</strong> when you are done, then review any confirmation the app shows.</li>
+                </ol>
+              </div>
+              <GuideScreenshot image="guide/rest-timer.png" label="Rest timer and finishing a workout"
+                alt="SwoLifts completed set with the blue rest timer strip, Skip control and Finish Workout button"
+                caption="The rest timer stays above your sets. Finish Workout saves the completed session to History." />
             </div>
             <div className="guide-callout">
               <h3>{"How SwoLifts tracks it"}</h3>
@@ -152,20 +181,17 @@ export default function LoggingGuide() {
                   </li>
                 </ol>
               </div>
-              <figure className="guide-visual">
-                <img
-                  className="guide-screenshot"
-                  src="assets/guide/exercises-tab.png"
-                  alt="SwoLifts Exercises tab showing search, filters, and exercise list"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  {
-                    "Exercises tab: search, filter, and manage custom exercises."
-                  }
-                </figcaption>
-              </figure>
+              <GuideScreenshot image="guide/exercises-tab.png" label="Find an exercise"
+                alt="SwoLifts exercise library with search, filter controls and Create exercise button" caption="Search by name or use Filters; select the add button to create a custom exercise." />
+            </div>
+            <div className="guide-grid guide-feature-step">
+              <div>
+                <h3>Create a custom exercise</h3>
+                <p>From Exercises, select the add button. Give the movement a name and choose its category, muscle group, equipment and logging type before saving. Choose the load type that matches what its weight field represents.</p>
+              </div>
+              <GuideScreenshot image="guide/create-exercise.png" label="Create a custom exercise"
+                alt="SwoLifts Create Exercise form with name, category, muscle group and equipment choices"
+                caption="Use Create Exercise for a movement missing from the library. Scroll through the form to review the remaining fields." />
             </div>
             <h3>{"Exercise Load Types"}</h3>
             <p>
@@ -263,18 +289,17 @@ export default function LoggingGuide() {
                   </li>
                 </ol>
               </div>
-              <figure className="guide-visual">
-                <img
-                  className="guide-screenshot"
-                  src="assets/guide/history-tab.png"
-                  alt="SwoLifts History tab showing completed workouts with stats and exercise chips"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  {"History tab: browse completed sessions and open details."}
-                </figcaption>
-              </figure>
+              <GuideScreenshot image="guide/history-tab.png" label="Review workout history"
+                alt="SwoLifts History tab with completed workouts and calendar control" caption="Open History and select a workout to see its sets, or switch to calendar view." />
+            </div>
+            <div className="guide-grid guide-feature-step">
+              <div>
+                <h3>Open a workout to review its sets</h3>
+                <p>Select a completed workout in History. Its detail screen shows the session and its exercises. Correct a weight or rep value here in SwoLifts, then export a fresh backup if you need one.</p>
+              </div>
+              <GuideScreenshot image="guide/session-detail.png" label="Review and edit a completed workout"
+                alt="SwoLifts Workout Detail screen with a completed session and editable set values"
+                caption="Make corrections in the workout detail screen rather than editing a backup CSV." />
             </div>
             <div className="guide-callout">
               <h3>{"How SwoLifts uses history data"}</h3>
@@ -321,18 +346,20 @@ export default function LoggingGuide() {
                   </li>
                 </ol>
               </div>
-              <figure className="guide-visual">
-                <img
-                  className="guide-screenshot"
-                  src="assets/guide/progress-tab.png"
-                  alt="SwoLifts Progress tab showing summary stats and personal records with estimated 1RM"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  {"Progress tab: charts, records, and training trends."}
-                </figcaption>
-              </figure>
+              <GuideScreenshot image="guide/progress-tab.png" label="Explore progress"
+                alt="SwoLifts Progress tab showing exercise statistics and chart controls" caption="Choose an exercise and chart metric to explore your completed workouts." />
+            </div>
+            <div className="guide-grid guide-feature-step">
+              <div>
+                <h3>Read an exercise chart</h3>
+                <ol>
+                  <li>Choose an exercise in <strong>Exercise Progress</strong>, then a chart metric and time range.</li>
+                  <li>Touch and drag across the chart to inspect a workout's date and value.</li>
+                </ol>
+              </div>
+              <GuideScreenshot image="guide/progress-chart.png" label="Inspect an exercise progress chart"
+                alt="SwoLifts Exercise Progress chart with exercise selection, metric chips and plotted workout values"
+                caption="Use the chart controls to choose what to compare, then drag across the line to inspect a point." />
             </div>
             <div className="guide-callout">
               <h3>{"Metric meanings"}</h3>
@@ -402,20 +429,22 @@ export default function LoggingGuide() {
                   </li>
                 </ol>
               </div>
-              <figure className="guide-visual">
-                <img
-                  className="guide-screenshot"
-                  src="assets/guide/settings.png"
-                  alt="SwoLifts Settings screen showing bodyweight, theme, rest timer, and RIR options"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  {
-                    "Settings: units, bodyweight, RIR, notifications, and data tools."
-                  }
-                </figcaption>
-              </figure>
+              <GuideScreenshot image="guide/settings.png" label="Adjust settings"
+                alt="SwoLifts Settings screen with weight units, theme, rest timer and RIR preferences" caption="Open the gear icon to choose units, rest duration and RIR tracking." />
+            </div>
+            <div className="guide-grid guide-feature-step">
+              <div>
+                <h3>Find your backup controls</h3>
+                <ol>
+                  <li>Open Settings and scroll to <strong>Data</strong>.</li>
+                  <li>Choose <strong>Export to file</strong> to save a ZIP, or <strong>Send to computer</strong> to share it.</li>
+                  <li>To restore, choose <strong>Import Workout Data</strong> and select the original SwoLifts backup.</li>
+                </ol>
+                <p><a href="/swolifts-import-export.html#quick-share">See the illustrated transfer and restore guide.</a></p>
+              </div>
+              <GuideScreenshot image="transfer/send-to-computer.png" label="Find backup and restore controls"
+                alt="SwoLifts Settings Data section with Send to computer, Export to file and Import Workout Data"
+                caption="Scroll down in Settings to find export, sharing and backup restore." height={2400} />
             </div>
             <div className="guide-callout">
               <h3>{"Import and export notes"}</h3>

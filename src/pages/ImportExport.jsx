@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import GuideScreenshot from "../components/GuideScreenshot";
 
 // Keep ZIP parsing and editor code out of the other seven pages. The initial
 // markup is identical for prerender and hydration; load only on this route.
@@ -50,8 +51,8 @@ export default function ImportExport() {
               <li><strong>Restore when needed.</strong> Send the original, unchanged SwoLifts ZIP to your phone using Quick Share. Open it with SwoLifts, review the preview and confirm Import backup. You do not need to edit or rebuild the ZIP.</li>
             </ol>
             <div className="template-download-grid">
-              <figure><img src="/assets/transfer/send-to-computer.png" alt="SwoLifts Settings with Send to computer and Export to file" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Choose Send to computer in Settings.</figcaption></figure>
-              <figure><img src="/assets/transfer/import-preview.png" alt="SwoLifts import preview lists custom exercises, workouts and sets, and warns that existing exercise merges can change links" loading="lazy" style={{maxWidth: "240px", width: "100%"}} /><figcaption>Review the file before importing it.</figcaption></figure>
+              <GuideScreenshot image="transfer/send-to-computer.png" label="Send a backup to your computer" alt="SwoLifts Settings with Send to computer, Export to file and Import Workout Data" caption="Open Settings, then choose Send to computer or Export to file." height={2400} />
+              <GuideScreenshot image="transfer/import-preview.png" label="Review a backup before restoring" alt="SwoLifts backup restore preview with record counts and an exercise merge warning" caption="Choose your original SwoLifts ZIP, read the preview and confirm only when it is the backup you intend to restore." height={2400} />
             </div>
             <p><strong>USB fallback:</strong> use Export to file, connect the phone with a USB cable and select File transfer on the phone. Copy the ZIP between Downloads folders using Windows File Explorer. Open the returned ZIP with SwoLifts, or select it through Settings, then Import Workout Data.</p>
           </section>

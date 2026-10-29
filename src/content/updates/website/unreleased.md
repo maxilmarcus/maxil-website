@@ -29,4 +29,9 @@
 - Follow Quick Share or USB instructions to save a backup on your computer.
 - Restore the original, unchanged SwoLifts ZIP in the Android app when needed. Importing another app's workout history is outside this workflow.
 
+[![SwoLifts 1.2.0 Settings showing Send to computer, Export to file and Import Workout Data](/assets/transfer/send-to-computer.png)](/assets/transfer/send-to-computer.png)
+
+Find these controls in Settings → Data. Select the screenshot to view it full-size,
+or follow the [illustrated backup and restore guide](/swolifts-import-export.html#quick-share).
+
 These website changes are being previewed before publication. Transfer instructions refer to SwoLifts 1.2.0; public availability will be confirmed when the app and website are released.
