@@ -131,10 +131,9 @@ test("keyboard and mobile navigation work", async ({ page, isMobile }) => {
     ).toBeHidden();
     await page.getByRole("button", { name: "Open menu" }).click();
   }
-  await page.locator(".nav-guides summary").click();
   await page
     .getByRole("navigation", { name: "Main navigation" })
-    .getByRole("link", { name: "Using SwoLifts" })
+    .getByRole("link", { name: "Guides", exact: true })
     .click();
   await expect(page).toHaveURL(/logging-guide.html/);
   if (isMobile)

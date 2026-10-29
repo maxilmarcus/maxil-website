@@ -12,7 +12,8 @@ CSVs remain format references. Do not advertise a guided historical import from
 another workout app in the 1.2.0 release; no such conversion flow is provided.
 
 Owner clarification, 2026-10-28: remove the duplicate Import & export link
-from Guides; Workbench is the main navigation destination. Website guidance,
+from Guides; Workbench is the main navigation destination. Guides links directly
+to Using SwoLifts while there is only one guide, without a dropdown. Website guidance,
 FAQs and downloadable README files must describe restoring the original,
 unchanged SwoLifts ZIP, not an edit-and-reimport workflow. Existing editing
 controls produce a separate analysis copy; their downloads are labeled as

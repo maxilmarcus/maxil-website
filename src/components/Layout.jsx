@@ -156,20 +156,7 @@ export function Header({ page }) {
           >
             <a href="/#product">Features</a>
             {link("swolifts-import-export", "Workbench")}
-            <details className="nav-guides">
-              <summary
-                className={
-                  page.includes("guide")
-                    ? "is-current"
-                    : ""
-                }
-              >
-                Guides <span aria-hidden="true">⌄</span>
-              </summary>
-              <div className="nav-dropdown">
-                {link("logging-guide", "Using SwoLifts")}
-              </div>
-            </details>
+            {link("logging-guide", "Guides")}
             {link("swolifts-release-history", "App updates")}
             {link("support", "Support")}
           </nav>
