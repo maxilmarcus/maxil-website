@@ -168,7 +168,6 @@ export function Header({ page }) {
               </summary>
               <div className="nav-dropdown">
                 {link("logging-guide", "Using SwoLifts")}
-                {link("swolifts-import-export", "Import & export")}
               </div>
             </details>
             {link("swolifts-release-history", "App updates")}

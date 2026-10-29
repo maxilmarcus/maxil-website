@@ -134,9 +134,9 @@ test("keyboard and mobile navigation work", async ({ page, isMobile }) => {
   await page.locator(".nav-guides summary").click();
   await page
     .getByRole("navigation", { name: "Main navigation" })
-    .getByRole("link", { name: "Import & export" })
+    .getByRole("link", { name: "Using SwoLifts" })
     .click();
-  await expect(page).toHaveURL(/swolifts-import-export.html/);
+  await expect(page).toHaveURL(/logging-guide.html/);
   if (isMobile)
     await expect(
       page.getByRole("navigation", { name: "Main navigation" }),
