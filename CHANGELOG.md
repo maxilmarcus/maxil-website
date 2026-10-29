@@ -13,6 +13,8 @@ entries, separate from versioned Android notes; see [authoring updates](docs/UPD
 - Simplify navigation with one Workbench link and a direct Guides link.
 - Add current app screenshots beside guide steps, with larger image viewing,
   updated homepage captures and illustrated backup/restore instructions.
+- Apply the selected theme before the main styles load, preventing white
+  flashes during dark-mode navigation and reloads, including update pages.
 - Document Quick Share and USB transfer, preserve the manual guide, and refresh
   templates with exact kilograms, Excel BOM support and exercise references.
 - Explain browser-memory processing and file privacy in the privacy policy.
