@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@zip.js/zip.js": "2.24.0",
+    "marked": "18.1.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

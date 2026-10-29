@@ -2,6 +2,9 @@ import SwoLifts from "./pages/SwoLifts";
 import LoggingGuide from "./pages/LoggingGuide";
 import ImportExport from "./pages/ImportExport";
 import Releases from "./pages/Releases";
+import UpdateDetail from "./pages/UpdateDetail";
+import { updates } from "./updates";
+export { updates } from "./updates";
 import Privacy from "./pages/Privacy";
 import Support from "./pages/Support";
 import { Header, Footer } from "./components/Layout";
@@ -15,6 +18,7 @@ export const pages = {
   support: Support,
   "privacy-policy": Privacy,
   404: NotFound,
+  ...Object.fromEntries(updates.map(update => [update.path, () => <UpdateDetail update={update} />])),
 };
 
 function NotFound() {
@@ -50,7 +54,7 @@ export default function App({ page = "index" }) {
   const Page = pages[page] || NotFound;
   return (
     <>
-      <Header page={page} />
+      <Header page={page.startsWith("updates/") ? "swolifts-release-history" : page} />
       <main id="main" tabIndex={-1} className={`page-${page}`}>
         <Page />
       </main>

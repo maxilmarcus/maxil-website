@@ -30,6 +30,8 @@ The build creates `dist/`, including complete HTML for each page. `scripts/prere
 - `assets/`: screenshots, vector logos, and the existing import/export ZIPs and CSVs.
 - `tests/`: desktop and mobile browser checks.
 - `src/workbench/`: local backup parsing, validation, edits and downloads.
+- `src/content/updates/`: one Markdown file per app or website update; see
+  [authoring and publishing notes](docs/UPDATES.md).
 - `css/`, `js/`, and standalone logo concept HTML files: retained for the historical design explorations, not loaded by the new React pages.
 
 Page copy belongs in the React components. SEO titles, descriptions, canonical links, and SwoLifts structured data belong in the corresponding root HTML entry. Keep `sitemap.xml` current when adding pages.

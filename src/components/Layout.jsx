@@ -157,7 +157,7 @@ export function Header({ page }) {
             <a href="/#product">Features</a>
             {link("swolifts-import-export", "Workbench")}
             {link("logging-guide", "Guides")}
-            {link("swolifts-release-history", "App updates")}
+            {link("swolifts-release-history", "Updates")}
             {link("support", "Support")}
           </nav>
           <div className="nav-actions">
@@ -209,7 +209,7 @@ export function Footer() {
             <a href="/#product">Explore the app</a>
             <a href="/logging-guide.html">Getting started</a>
             <a href="/swolifts-import-export.html">Backup workbench</a>
-            <a href="/swolifts-release-history.html">Android release history</a>
+            <a href="/swolifts-release-history.html">App and website updates</a>
           </div>
           <div>
             <h2>Help & information</h2>
