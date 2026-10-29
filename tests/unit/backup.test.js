@@ -2,6 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { BlobReader, BlobWriter, ZipWriter } from "@zip.js/zip.js/index-native.js";
 import { LIMITS, openBackup, parseCsv, writeCsv, inspectBackup, editCell, bulkFix, downloadZip, aiExport, addCsv, validDate, roundedPounds } from "../../src/workbench/backup.js";
 
@@ -26,7 +27,19 @@ test("shared Android manifest and limits stay pinned", () => {
 test("reference catalog source matches its canonical LF pin", async () => {
   assert.equal(sha(await readFile(new URL(source.catalog.localFile, root))), source.catalog.sha256);
   assert.equal(sha(await readFile(new URL("../../assets/swolifts-import-export/catalog/exercises.csv", import.meta.url))), source.catalog.sha256);
-  assert.equal(sha(await readFile(new URL("../../assets/swolifts-import-export/catalog/NOTICE.txt", import.meta.url))), source.catalog.noticeSha256);
+  // Snapshot extracted with git show, never from a Windows checkout's CRLF copy.
+  const androidNotice = await readFile(new URL(source.catalog.noticeLocalFile, root));
+  assert.equal(androidNotice.includes(13), false, "Android notice must retain canonical LF bytes");
+  assert.equal(sha(androidNotice), source.catalog.noticeSha256);
+  // Private Android repository is available locally, but not to public website CI.
+  if (process.env.SWOLIFTS_ANDROID_REPO) {
+    const committed = execFileSync("git", ["-C", process.env.SWOLIFTS_ANDROID_REPO,
+      "show", `${source.catalog.noticeCommit}:${source.catalog.noticePath}`]);
+    assert.deepEqual(androidNotice, committed, "snapshot must match the pinned Android commit");
+  }
+  for (const directory of ["catalog", "blank", "example"]) {
+    assert.deepEqual(await readFile(new URL(`../../assets/swolifts-import-export/${directory}/NOTICE.txt`, import.meta.url)), androidNotice);
+  }
 });
 for (const item of manifest.fixtures) test(`Android acceptance: ${item.file}`, async () => {
   const file = await fixture(item.file);

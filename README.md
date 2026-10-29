@@ -46,6 +46,13 @@ npm test
 
 Tests exercise the production build at port 4173: all page routes, prerendering and hydration, internal links and fragment targets, images and ZIP downloads, mobile navigation and Escape handling, persistent themes, FAQ search, screenshot selection, sample chart controls, 320px layouts, and essential content without JavaScript. Screenshots are written to ignored `.qa/` for visual inspection. CI installs the same Chromium browser.
 
+The catalog notice fixture is extracted from the Android Git blob at
+`noticeCommit` / `noticePath` in `tests/fixtures/transfer-v1/source.json`.
+When updating that pin, set `SWOLIFTS_ANDROID_REPO` to a local Android checkout
+and run `npm run test:unit`; this compares the snapshot directly with `git show`
+at the pinned commit. Public CI verifies the retained snapshot, LF bytes, hash,
+three published notices and ZIP notices without private-repository access.
+
 `npm run test:unit` runs the backup contract tests without a browser; `npm test`
 runs those tests followed by the browser suite. Workbench browser tests cover
 file opening, row errors, edits, ZIP/AI downloads, keyboard access, both themes,

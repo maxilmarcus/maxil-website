@@ -10,7 +10,9 @@
     "localFile": "catalog-source.csv",
     "commit": "4033f56e6fd9acfb2b2cc45aca38256ea6ddfa28",
     "version": 2,
-    "noticeSha256": "7084f6ab557db4b11634de954e15f4fa8fadb8d1ba4556b3673e234b31b2faef",
-    "noticeCommit": "ee5d80e20454faea48406dd062aa68c1ee713fb8"
+    "noticeSha256": "c6cae1100313d634eff0157eb30873c3b5d88b728f9cfe7f29875b3bfd8d57d8",
+    "noticeCommit": "ee5d80e20454faea48406dd062aa68c1ee713fb8",
+    "noticePath": "app/src/main/assets/exercise_catalog_notice.txt",
+    "noticeLocalFile": "android-catalog-NOTICE.txt"
   }
 }
