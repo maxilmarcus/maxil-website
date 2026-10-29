@@ -128,4 +128,7 @@ The interactive chart uses fixed, explicitly labeled sample data; it does not re
 
 The desktop download QR is a static SVG pointing directly to Google Play. If the listing URL changes, update `src/constants.js` and run `node scripts/generate-play-qr.mjs` to regenerate it. The QR generator is a development dependency and is not shipped to visitors.
 
-The public **Android release history** remains specific to SwoLifts app versions. Website changes go in `CHANGELOG.md` and Git history. This website migration does not change the Android version, app package, or Google Play listing.
+The public **Updates** index separates versioned Android notes from dated website
+notes, with one Markdown file and individual page per entry. `CHANGELOG.md`
+retains the website development summary. Website changes do not change the
+Android version, app package, or Google Play listing.
