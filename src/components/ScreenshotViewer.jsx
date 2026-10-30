@@ -26,7 +26,11 @@ export default function ScreenshotViewer({ screens, initialIndex, onClose }) {
       ref={dialog}
       className="screenshot-viewer"
       aria-labelledby="screenshot-title"
-      onClose={onClose}
+      onClose={(event) => {
+        // StrictMode cleanup queues a close event before the effect reopens
+        // this dialog. Only dismiss a viewer that is still actually closed.
+        if (!event.currentTarget.open) onClose();
+      }}
       onClick={(event) => {
         if (event.target === event.currentTarget) {
           const bounds = event.currentTarget.getBoundingClientRect();
