@@ -437,14 +437,14 @@ export default function LoggingGuide() {
                 <h3>Find your backup controls</h3>
                 <ol>
                   <li>Open Settings and scroll to <strong>Data</strong>.</li>
-                  <li>Choose <strong>Export to file</strong> to save a ZIP, or <strong>Send to computer</strong> to share it.</li>
+                  <li>Choose <strong>Export to file</strong> to save a ZIP, or <strong>Share backup</strong> to share it.</li>
                   <li>To restore, choose <strong>Import Workout Data</strong> and select the original SwoLifts backup.</li>
                 </ol>
                 <p><a href="/swolifts-import-export.html#quick-share">See the illustrated transfer and restore guide.</a></p>
               </div>
               <GuideScreenshot image="transfer/send-to-computer.png" label="Find backup and restore controls"
-                alt="SwoLifts Settings Data section with Send to computer, Export to file and Import Workout Data"
-                caption="Scroll down in Settings to find export, sharing and backup restore." height={2400} />
+                alt="SwoLifts Settings Data section with Share backup, Export to file and Import Workout Data"
+                caption="Scroll down in Settings to find export, sharing and backup restore." height={1920} />
             </div>
             <div className="guide-callout">
               <h3>{"Import and export notes"}</h3>

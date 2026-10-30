@@ -6,9 +6,10 @@ and SHA-256 values for the fifteen refreshed/new guide and homepage images.
 The captures use only synthetic bench/row workouts and a sample template.
 No owner data or physical-device package was used.
 
-The existing transfer captures retain their source/evidence in
-[WEB_WORKBENCH_01.md](../WEB_WORKBENCH_01.md). They are reused next to backup
-instructions and in the unreleased website update, without altering their bytes.
+The Settings transfer capture now shows **Share backup** and the destination-neutral
+**Export to file** description; [capture provenance](share-backup.json) records
+its Android source and APK/image hashes. The import-preview capture retains its
+source/evidence in [WEB_WORKBENCH_01.md](../WEB_WORKBENCH_01.md).
 
 Guide images use `GuideScreenshot`: text and image sit beside each other on
 desktop and stack on mobile. Selecting an image opens the shared viewer, with

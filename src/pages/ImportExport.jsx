@@ -47,11 +47,11 @@ export default function ImportExport() {
             <p>These phone actions use SwoLifts 1.2.0. Quick Share is provided by Android and Windows; SwoLifts itself does not connect to your computer.</p>
             <ol>
               <li><strong>Set up your PC.</strong> <a href="https://www.android.com/quick-share/with-windows-pc/" target="_blank" rel="noopener noreferrer">Get Quick Share for Windows from Google</a>. Follow its setup and visibility instructions, and keep the phone and PC nearby with Bluetooth and Wi-Fi enabled. <a href="https://support.google.com/android/answer/13801258?hl=en" target="_blank" rel="noopener noreferrer">Google's setup and troubleshooting guide</a> covers device compatibility.</li>
-              <li><strong>Send your backup.</strong> In SwoLifts, open Settings, then Send to computer, choose Quick Share, then choose your PC. Open the received ZIP in the workbench above.</li>
+              <li><strong>Send your backup.</strong> In SwoLifts, open Settings, then Share backup, choose Quick Share, then choose your PC. Open the received ZIP in the workbench above.</li>
               <li><strong>Restore when needed.</strong> Send the original, unchanged SwoLifts ZIP to your phone using Quick Share. Open it with SwoLifts, review the preview and confirm Import backup. You do not need to edit or rebuild the ZIP.</li>
             </ol>
             <div className="template-download-grid">
-              <GuideScreenshot image="transfer/send-to-computer.png" label="Send a backup to your computer" alt="SwoLifts Settings with Send to computer, Export to file and Import Workout Data" caption="Open Settings, then choose Send to computer or Export to file." height={2400} />
+              <GuideScreenshot image="transfer/send-to-computer.png" label="Send a backup to your computer" alt="SwoLifts Settings with Share backup, Export to file and Import Workout Data" caption="Open Settings, then choose Share backup or Export to file." height={1920} />
               <GuideScreenshot image="transfer/import-preview.png" label="Review a backup before restoring" alt="SwoLifts backup restore preview with record counts and an exercise merge warning" caption="Choose your original SwoLifts ZIP, read the preview and confirm only when it is the backup you intend to restore." height={2400} />
             </div>
             <p><strong>USB fallback:</strong> use Export to file, connect the phone with a USB cable and select File transfer on the phone. Copy the ZIP between Downloads folders using Windows File Explorer. Open the returned ZIP with SwoLifts, or select it through Settings, then Import Workout Data.</p>
