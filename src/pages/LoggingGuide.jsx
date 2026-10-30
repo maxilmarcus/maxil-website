@@ -421,7 +421,7 @@ export default function LoggingGuide() {
               <h3>{"Import and export notes"}</h3>
               <p>
                 {
-                  "Exports include workout timestamps, exercise load types, assistance weight, and template assistance targets when those fields are present. Imports preserve those fields when restoring or merging a SwoLifts backup. For CSV templates and a desktop migration walkthrough, see the "
+                  "Exports include workout timestamps, exercise load types, assistance weight, and template assistance targets when those fields are present. Imports preserve those fields when restoring or merging a SwoLifts backup. For CSV format examples and the backup guide, see the "
                 }
                 <a href="swolifts-import-export.html">
                   {"Import & Export Guide"}
