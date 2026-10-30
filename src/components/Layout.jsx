@@ -199,7 +199,7 @@ export function Footer() {
               <SwoLogo />
             </a>
             <p>
-              More lifting. Less friction.
+              Log your sets. Beat your best.
               <br />
               Your training, in your hands.
             </p>
