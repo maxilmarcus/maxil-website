@@ -17,10 +17,6 @@ Preserve these by keeping the original archive intact. The workbench checks
 files locally; it cannot inspect your phone or guarantee a successful restore.
 built_in_exercises.csv is reference data. Files in examples/ are not imported.
 
-Built-in exercise catalog: generation 2, 453 exercises, under ODbL-1.0.
-See NOTICE.txt for attribution and license terms. The full canonical catalog
-is included as catalog/exercises.csv and is available separately at:
-https://maxil.app/assets/swolifts-import-export/catalog/exercises.csv
-This catalog license does not cover your workouts, custom exercises or other personal data.
-Use SwoLifts 1.2.0 or newer for the 74 new built-in exercises; older versions
-may skip sets referencing their exercise UUIDs.
+Built-in exercise reference: generation 3, 421 exercises, matching SwoLifts 1.2.0.
+These templates illustrate the SwoLifts file format. For backup and restore,
+use an unchanged ZIP exported by SwoLifts. They do not convert another app's history.

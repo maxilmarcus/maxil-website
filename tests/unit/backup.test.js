@@ -27,18 +27,14 @@ test("shared Android manifest and limits stay pinned", () => {
 test("reference catalog source matches its canonical LF pin", async () => {
   assert.equal(sha(await readFile(new URL(source.catalog.localFile, root))), source.catalog.sha256);
   assert.equal(sha(await readFile(new URL("../../assets/swolifts-import-export/catalog/exercises.csv", import.meta.url))), source.catalog.sha256);
-  // Snapshot extracted with git show, never from a Windows checkout's CRLF copy.
-  const androidNotice = await readFile(new URL(source.catalog.noticeLocalFile, root));
-  assert.equal(androidNotice.includes(13), false, "Android notice must retain canonical LF bytes");
-  assert.equal(sha(androidNotice), source.catalog.noticeSha256);
-  // Private Android repository is available locally, but not to public website CI.
+  const catalog = await readFile(new URL(source.catalog.localFile, root));
+  assert.equal(catalog.includes(13), false, "catalog must retain canonical LF bytes");
+  assert.equal(catalog.toString().includes("ODbL-1.0"), false);
+  // The private Android checkout is optional in public website CI.
   if (process.env.SWOLIFTS_ANDROID_REPO) {
     const committed = execFileSync("git", ["-C", process.env.SWOLIFTS_ANDROID_REPO,
-      "show", `${source.catalog.noticeCommit}:${source.catalog.noticePath}`]);
-    assert.deepEqual(androidNotice, committed, "snapshot must match the pinned Android commit");
-  }
-  for (const directory of ["catalog", "blank", "example"]) {
-    assert.deepEqual(await readFile(new URL(`../../assets/swolifts-import-export/${directory}/NOTICE.txt`, import.meta.url)), androidNotice);
+      "show", `${source.catalog.commit}:${source.catalog.path}`]);
+    assert.deepEqual(catalog, committed, "catalog must match the pinned Android commit");
   }
 });
 for (const item of manifest.fixtures) test(`Android acceptance: ${item.file}`, async () => {
@@ -197,11 +193,10 @@ for (const type of ["blank", "example"]) test(`published ${type} template opens 
   const fields = ["name", "primary_muscle_group", "category", "equipment", "logging_type", "load_type", "exercise_uuid", "canonical_key"];
   assert.deepEqual(backup.files["built_in_exercises.csv"].rows.slice(1),
     canonical.slice(1).map(row => fields.map(field => row[canonical[0].indexOf(field)])));
-  // A corrected download must preserve attribution and the complete catalog,
-  // including source metadata omitted from the import reference columns.
+  // Downloads preserve the complete reference metadata, without the retired catalog notice.
   const corrected = await openBackup(new File([await downloadZip(backup)], "corrected.zip"));
   for (const archive of [backup, corrected]) {
-    assert.equal(sha(archive.entries.find(entry => entry.name === "NOTICE.txt").bytes), source.catalog.noticeSha256);
+    assert.equal(archive.entries.some(entry => entry.name.endsWith("NOTICE.txt")), false);
     assert.equal(sha(archive.entries.find(entry => entry.name === "catalog/exercises.csv").bytes), source.catalog.sha256);
   }
 });
