@@ -1,0 +1,14 @@
+{
+  "repository": "maxilmarcus/SwoLifts",
+  "commit": "c86db4c8f95ec7f7905763225df55b3392b8709e",
+  "path": "app/src/androidTest/assets/transfer-v1",
+  "manifestSha256": "28061146d70521cd70741745c871ee29e9413ee10a7e58530630b12c89b509db",
+  "catalog": {
+    "path": "app/src/main/assets/exercises.csv",
+    "sha256": "fad61eeda3952e2dfbebb2f7122b94376f0e25d7dc9f3d0e3ecff87e00e19fca",
+    "count": 421,
+    "localFile": "catalog-source.csv",
+    "commit": "35c1870e67feb426ac7324df05787c43cfa7c9e6",
+    "version": 3
+  }
+}

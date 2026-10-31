@@ -3,8 +3,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-frhkvCybWFkq4QbiEwkfurDK+hLnbNdp50rItfk7vfs='; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>SwoLifts Import &amp; Export Guide | SwoLifts</title>
+    <title>SwoLifts Backup Workbench &amp; Restore Guide | SwoLifts</title>
     <meta
       content="Learn how to export, inspect, and restore a SwoLifts ZIP backup in the Android app."
       name="description"
@@ -29,9 +30,14 @@
         } catch (error) {}
       })();
     </script>
+    <style id="theme-initial-paint">
+      html { color-scheme: light; background: #fcfcfa; color: #172338; }
+      html[data-theme="dark"] { color-scheme: dark; background: #101720; color: #eef3fa; }
+      body { margin: 0; background: inherit; }
+    </style>
     <link href="/assets/swolifts-face.svg" rel="icon" type="image/svg+xml" />
     <meta
-      content="SwoLifts Import &amp; Export Guide | SwoLifts"
+      content="SwoLifts Backup Workbench &amp; Restore Guide | SwoLifts"
       property="og:title"
     />
     <meta content="SwoLifts" property="og:site_name" />
@@ -82,10 +88,5 @@
   <body>
     <div id="root"><!--app-html--></div>
     <script src="/src/main.jsx" type="module"></script>
-    <script
-      data-cf-beacon='{"token":"99ba59a927b64f249836d4bcc7a75f57"}'
-      defer=""
-      src="https://static.cloudflareinsights.com/beacon.min.js"
-    ></script>
   </body>
 </html>

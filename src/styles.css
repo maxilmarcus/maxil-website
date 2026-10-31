@@ -1,8 +1,8 @@
 /* Shared design tokens. SwoLifts blue is taken from the supplied brand artwork. */
 :root {
   font-family: Inter, system-ui, sans-serif;
-  color: #172338;
-  background: #fcfcfa;
+  color: var(--text);
+  background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -1001,6 +1001,11 @@ main:focus {
   border-radius: 26px;
   box-shadow: var(--shadow-lg);
 }
+.guide-image-link { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; max-width: 100%; text-decoration: none !important; }
+.guide-image-link:focus-visible { outline: 3px solid var(--primary); outline-offset: 6px; border-radius: 26px; }
+.guide-enlarge { font-size: .75rem; font-weight: 600; color: var(--primary); }
+.guide-screenshot-note { font-size: .85rem; margin-block: 18px; }
+.guide-feature-step { border-top: 1px solid var(--border); padding-top: 30px; margin-top: 34px; }
 .guide-section-header {
   align-items: start;
 }
@@ -1098,6 +1103,32 @@ main:focus {
   padding: 18px 0;
   margin-bottom: 28px;
 }
+.updates-nav { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.updates-nav a { padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text); font-weight: 600; }
+.updates-nav a:hover { border-color: var(--primary); color: var(--primary); }
+.updates-index { padding-block: 60px 90px; }
+.updates-group { scroll-margin-top: 110px; }
+.updates-group + .updates-group { margin-top: 64px; }
+.updates-heading { margin-bottom: 24px; }
+.updates-heading h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 10px; }
+.updates-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 24px; }
+.update-card { padding: clamp(22px, 4vw, 34px); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); display: flex; flex-direction: column; gap: 18px; }
+.update-card h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); }
+.update-card h3 a { color: var(--text); }
+.update-card .text-link { margin-top: auto; align-self: flex-start; }
+.update-meta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; color: var(--text-secondary); font-size: .8rem; }
+.update-badge { background: var(--blue-soft); color: var(--primary); padding: 5px 12px; border-radius: 999px; font-weight: 600; }
+.update-hero .update-meta { margin-block: 24px 18px; }
+.update-hero h1 { max-width: 850px; }
+.update-article { max-width: 840px; padding-block: 44px 80px; }
+.update-preview { padding: 18px 22px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--soft); margin-bottom: 32px; }
+.update-content { margin-bottom: 44px; overflow-wrap: anywhere; }
+.update-content h2 { font-size: clamp(1.6rem, 3vw, 2rem); margin-block: 38px 18px; }
+.update-content h3 { margin-block: 28px 14px; }
+.update-content p, .update-content ul, .update-content ol { margin-block: 18px; }
+.update-content ul, .update-content ol { padding-left: 24px; }
+.update-content li { margin-block: 10px; color: var(--text-secondary); }
+.update-content img { display: block; max-width: min(100%, 280px); height: auto; background: #fff; padding: 24px; border-radius: var(--radius); border: 1px solid var(--border); }
 .support-content {
   padding: 55px 0 90px;
 }

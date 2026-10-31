@@ -1,0 +1,28 @@
+{
+  "package": "UX-120-01",
+  "scope": "UX04",
+  "baseline": "dc81b913608e6f77f60cd299ef741a6e673085bb",
+  "validation": {
+    "build": "passed",
+    "unit": 26,
+    "browserFull": 52,
+    "additionalTabletCases": 2,
+    "tabletWidths": [
+      821,
+      900,
+      1050
+    ]
+  },
+  "sourceSha256": {
+    "src/components/Layout.jsx": "7aee35a03c4a319e5df98c6e6e3269249836c8143eacbb0ba413fb2558463bed",
+    "src/pages/ImportExport.jsx": "4f8c7714bd70503987a878c524e66845809bc6cc196ebd2fcec22ecad4301009",
+    "tests/site.spec.js": "e960b8388089843f17e88b845c22bac99fc05a3062bf1bfcaf5691924a58b379"
+  },
+  "logs": {
+    ".qa/ux-120-build.log": "ea8b554f5d7619b64f4dff6fb27502a92f1a99192b6e63ed006c10c57c6f171d",
+    ".qa/ux-120-unit.log": "9cb83cc9f15b9afda8adeb4c19c5cab2c2557ac7180343172f88e901b7462ba8",
+    ".qa/ux-120-browser.log": "3dce8e529994355c453d14ba33b43ab6fcda2570292198eaff2f9bcbc975b052",
+    ".qa/ux-120-tablet.log": "c3ffe5b8a8c8d372e4b6e251fb5dc6c1108578e445eb38994e5685abf207e0d1"
+  },
+  "cleanup": "Playwright-owned preview/browser stopped; no hosted CI or deployment. Local reports and screenshots retained for review, dependency caches reused."
+}

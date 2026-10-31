@@ -54,18 +54,18 @@ export default function SwoLifts() {
               Your offline workout tracker for Android
             </span>
             <h1>
-              More lifting.
+              Log your sets.
               <br />
-              <span>Less friction.</span>
+              <span>Beat your best.</span>
             </h1>
             <p>
-              Your offline workout tracker. Log the work, see your progress, and
-              keep your training data yours.
+              Free workout tracking for Android. No account to create.
+              Open the app and start logging your first session.
             </p>
             <div className="button-row">
               <div className="hero-download">
                 <DownloadButton />
-                <span className="download-note">Free core features</span>
+                <span className="download-note">Free to download and use</span>
               </div>
               <a className="text-link" href="#product">
                 Take a look <span aria-hidden="true">↓</span>
@@ -74,7 +74,7 @@ export default function SwoLifts() {
             <ul className="check-list">
               <li>
                 <Icon name="check" />
-                No account required
+                No sign-up. Start straight away.
               </li>
               <li>
                 <Icon name="check" />
@@ -82,7 +82,7 @@ export default function SwoLifts() {
               </li>
               <li>
                 <Icon name="lock" />
-                <a href="/privacy-policy.html">Workout data stays on your device</a>
+                <a href="/privacy-policy.html">Your workouts stay on your device</a>
               </li>
             </ul>
             <a className="desktop-download-qr" href={PLAY_URL} target="_blank" rel="noopener noreferrer">
@@ -275,11 +275,12 @@ export default function SwoLifts() {
             </h2>
             <p>
               Your training belongs to you. SwoLifts stores your data locally on
-              your device, with no account or cloud connection required.
+              your device. Your workout history is not uploaded to our servers,
+              and you do not need an account or internet connection to log a session.
             </p>
             <p>
-              Export a portable ZIP to back it up, move devices, or work with
-              your CSV files on a computer.
+              You choose when your data leaves the app. Export or share a backup
+              to a destination you control, and keep a copy for restoring your history.
             </p>
             <a className="text-link" href="/swolifts-import-export.html">
               Meet your data tools <Icon />

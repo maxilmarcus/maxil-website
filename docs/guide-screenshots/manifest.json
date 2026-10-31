@@ -1,0 +1,116 @@
+{
+  "capturedUtc": "2026-10-29T04:34:32.518498+00:00",
+  "sourceCommit": "746228cb5d7b20507707030dcd835337c0e86501",
+  "debugApkSha256": "d2c22a00c4fec3f207b7b772858f331662dd32bac98b048f85dd4921a5e7c544",
+  "package": "com.swolifts.app.debug",
+  "api": 35,
+  "cloudEnabled": false,
+  "fixture": "Synthetic eight-week bench/row history and Upper body template; no owner data or protected phone package used.",
+  "files": [
+    {
+      "path": "assets/guide/create-exercise.png",
+      "sha256": "2e5dc3c482e7ed9b736eafa6710bbeaadf1cd1f19811bc153e5c7c33f7628574",
+      "bytes": 139036,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/exercises-tab.png",
+      "sha256": "6307f669293d7eab1d75ecba648309a9caeddcd32a7c398298a10bdaa2884db1",
+      "bytes": 186570,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/history-tab.png",
+      "sha256": "e8959e10a040b836662ba737a766b75907cc08be46a92c2d58dfb68873bd4c5d",
+      "bytes": 221442,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/log-set.png",
+      "sha256": "2d76eeb61c3448ddcc171705697d5972321510d70789e8eb2501be36c6b49893",
+      "bytes": 121752,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/progress-chart.png",
+      "sha256": "c094699bc9833f894f0bd7c65309d6f6479823cce8aa7248c255214037297b36",
+      "bytes": 146819,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/progress-tab.png",
+      "sha256": "d141366149c02e324cd68f3da4b1f83b9cb7b3ecdb898a947f4282d06669d7eb",
+      "bytes": 194201,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/rest-timer.png",
+      "sha256": "75c504168202b0f3877c35f755dbab57797a8fd948a2da532a18dd66f9bdfb68",
+      "bytes": 137644,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/session-detail.png",
+      "sha256": "c9b66f050e8467b3a492d516016b7c0ad44fd82566e08cf6cf97cde614865185",
+      "bytes": 139370,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/settings.png",
+      "sha256": "b02af94b042354e5f4dd75e28ff8d387a0436e11e0059834b2558e3d0c1ca2dd",
+      "bytes": 140790,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/templates.png",
+      "sha256": "a9dc5baeb32f3bbdd5b45afe33fae3bf94c63309334e375bbc24333a5bf68c22",
+      "bytes": 90064,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/guide/workout-tab.png",
+      "sha256": "131f1e974c97e2fc44e6bc29236a1cf723dfecc37a502b502710bbdac1ee7f2f",
+      "bytes": 104517,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/swolifts-history-calendar.png",
+      "sha256": "bb171a1de5deb656dc856af3358f4901ee6abfb0e8dbf32482755f3dc3aa3603",
+      "bytes": 123638,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/swolifts-plate-calculator.png",
+      "sha256": "507f7064d9138fbd24fed2b440b67bd8a3be73e7eeaa6bfa441d2be51ca6c897",
+      "bytes": 103019,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/swolifts-progress-chart.png",
+      "sha256": "c094699bc9833f894f0bd7c65309d6f6479823cce8aa7248c255214037297b36",
+      "bytes": 146819,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "path": "assets/swolifts-rest-timer.png",
+      "sha256": "75c504168202b0f3877c35f755dbab57797a8fd948a2da532a18dd66f9bdfb68",
+      "bytes": 137644,
+      "width": 1080,
+      "height": 1920
+    }
+  ]
+}
