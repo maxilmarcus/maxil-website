@@ -1,0 +1,33 @@
+.workbench { margin: 2rem 0 3rem; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.workbench h2 { margin: .5rem 0 1rem; font-family: "Barlow Condensed", Inter, sans-serif; }
+.workbench h3 { overflow-wrap: anywhere; }
+.workbench p { margin: .8rem 0; }
+.wb-intro { max-width: 850px; }
+.wb-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin: 1rem 0; }
+.workbench button, .workbench select, .workbench textarea, .workbench input:not([type=file]) { font: inherit; color: var(--text); background: var(--surface); border: 1px solid var(--text-secondary); border-radius: 8px; min-height: 44px; padding: .6rem .8rem; max-width: 100%; }
+.workbench button { cursor: pointer; font-weight: 600; }
+.workbench button:disabled { opacity: .55; cursor: not-allowed; }
+.workbench .wb-primary { background: #0067e6; color: #fff; border-color: #0067e6; }
+[data-theme=dark] .workbench .wb-primary { background: #80b8ff; color: #102b4f; border-color: #80b8ff; }
+.workbench :focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+.wb-file-input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.wb-summary { margin: 1.5rem 0; padding: 1rem; background: var(--blue-soft); border-radius: var(--radius-sm); }
+.workbench .wb-error { color: #a21d22; background: #fff0f0; border-left: 4px solid #a21d22; padding: 1rem; overflow-wrap: anywhere; }
+[data-theme=dark] .workbench .wb-error { color: #ffb4ab; background: #3a171b; border-color: #ffb4ab; }
+.wb-small { font-size: .875rem; }
+.wb-issues, .wb-fixes { margin: 1rem 0; padding: 1rem; background: var(--soft); border-radius: var(--radius-sm); }
+.workbench summary { cursor: pointer; font-weight: 600; min-height: 44px; display: list-item; }
+.wb-issues ul { padding-left: 1.2rem; }
+.wb-issues li { margin: .6rem 0; overflow-wrap: anywhere; }
+.workbench .wb-issue-link { border: 0; padding: 0; min-height: 24px; color: var(--primary); background: transparent; text-decoration: underline; text-align: left; }
+.wb-table-wrap { max-width: 100%; overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+.wb-table { border-collapse: collapse; width: 100%; }
+.wb-table caption { text-align: left; padding: 1rem; color: var(--text-secondary); font-size: .875rem; }
+.wb-table th, .wb-table td { padding: .4rem; border-bottom: 1px solid var(--border); text-align: left; }
+.wb-table th { background: var(--soft); }
+.wb-table input, .wb-table textarea { width: 180px; min-width: 150px; }
+.wb-table textarea { resize: vertical; }
+.wb-map { display: flex; flex-wrap: wrap; align-items: end; gap: .8rem; margin-top: 1rem; }
+.workbench label { display: flex; flex-direction: column; gap: .3rem; font-weight: 500; max-width: 100%; }
+.wb-downloads { margin-top: 1.5rem; }
+@media (max-width: 600px) { .workbench { padding: 1rem; } .wb-actions > button, .wb-actions > label, .wb-map > label, .wb-map > button { width: 100%; } }

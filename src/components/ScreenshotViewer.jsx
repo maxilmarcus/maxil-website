@@ -26,7 +26,11 @@ export default function ScreenshotViewer({ screens, initialIndex, onClose }) {
       ref={dialog}
       className="screenshot-viewer"
       aria-labelledby="screenshot-title"
-      onClose={onClose}
+      onClose={(event) => {
+        // StrictMode cleanup queues a close event before the effect reopens
+        // this dialog. Only dismiss a viewer that is still actually closed.
+        if (!event.currentTarget.open) onClose();
+      }}
       onClick={(event) => {
         if (event.target === event.currentTarget) {
           const bounds = event.currentTarget.getBoundingClientRect();
@@ -64,17 +68,17 @@ export default function ScreenshotViewer({ screens, initialIndex, onClose }) {
       <figure>
         <img src={`/assets/${current.image}`} alt={current.alt} width="412" height="917" />
         <figcaption aria-live="polite" aria-atomic="true">
-          {index + 1} / {screens.length} — {current.label}
+          {screens.length > 1 ? `${index + 1} / ${screens.length} — ` : ""}{current.label}
         </figcaption>
       </figure>
       <div className="viewer-controls">
-        <button className="icon-button viewer-previous" aria-label="Previous screenshot"
-          onClick={() => move(-1)}><Icon /></button>
+        {screens.length > 1 && <button className="icon-button viewer-previous" aria-label="Previous screenshot"
+          onClick={() => move(-1)}><Icon /></button>}
         <a href={`/assets/${current.image}`} target="_blank" rel="noopener noreferrer">
           Open full-size image <span className="sr-only">(opens in a new tab)</span>
         </a>
-        <button className="icon-button" aria-label="Next screenshot"
-          onClick={() => move(1)}><Icon /></button>
+        {screens.length > 1 && <button className="icon-button" aria-label="Next screenshot"
+          onClick={() => move(1)}><Icon /></button>}
       </div>
     </dialog>
   );

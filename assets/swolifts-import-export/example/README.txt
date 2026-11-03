@@ -1,8 +1,22 @@
-SwoLifts example import template
+SwoLifts backup format reference: example
 
-These CSVs demonstrate valid rows for custom exercises, workout templates, workout sessions, and sets.
+Sample SwoLifts data for exploring the workbench and understanding backup columns.
+These files are not a template for creating workout history to import.
 
-Edit the rows, keep the header rows unchanged, then zip the CSV files at the root of the archive.
+SwoLifts import restores backups exported by the app. It does not convert
+history from other apps or support spreadsheet-created workout sessions.
+Keep the original SwoLifts ZIP unchanged for restoring or moving phones.
+For analysis, use a separate copy. Make workout corrections in SwoLifts,
+then export a fresh backup instead of editing and re-importing CSV files.
 
-Full guide:
+Backup and restore guide:
 https://maxil.app/swolifts-import-export.html
+
+Backups contain app-generated IDs, links, timestamps and exact weight values.
+Preserve these by keeping the original archive intact. The workbench checks
+files locally; it cannot inspect your phone or guarantee a successful restore.
+built_in_exercises.csv is reference data. Files in examples/ are not imported.
+
+Built-in exercise reference: generation 3, 421 exercises, matching SwoLifts 1.2.0.
+These templates illustrate the SwoLifts file format. For backup and restore,
+use an unchanged ZIP exported by SwoLifts. They do not convert another app's history.

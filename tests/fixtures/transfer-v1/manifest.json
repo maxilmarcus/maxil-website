@@ -1,0 +1,48 @@
+{
+  "contract": "TRANSFER-APP-01-v1",
+  "limits": {
+    "compressedBytes": 33554432,
+    "expandedBytes": 67108864,
+    "entries": 128,
+    "rows": 100000,
+    "columns": 64,
+    "cellCharacters": 65536,
+    "cells": 1000000
+  },
+  "fixtures": [
+    {
+      "file": "valid-wrapped-bom-exact-kg.zip",
+      "sha256": "24ba8d9843c7edbf7c10cd6c0cc076244a38d035116020389c9e78c5dd950a92",
+      "previewAccepted": true
+    },
+    {
+      "file": "valid-first-duplicate.zip",
+      "sha256": "713f331d39022745cee8f6567856934c753dc8debf3daa44453f7d206eae52ba",
+      "previewAccepted": true
+    },
+    {
+      "file": "invalid-no-data.zip",
+      "sha256": "fbe5e6e473e7c05e653b4d93e271cee38ed60708b0d6d927a22db2a37c046209",
+      "previewAccepted": false
+    },
+    {
+      "file": "invalid-large-cell.zip",
+      "sha256": "07d1670ba97a5b423e944906a73cb0cfdf8bdef9067f6b4d36545f9e6bd2efdd",
+      "previewAccepted": false
+    },
+    {
+      "file": "invalid-not-zip.zip",
+      "sha256": "8e50345ecefe59daa32bac18d7ac6d7190519b80117568db47c9977797f21638",
+      "previewAccepted": false
+    },
+    {
+      "file": "valid-browser-corrected-tie.zip",
+      "sha256": "0ef7bf2ae7815d053c613a5d84bb469867882e0bf3ac43d8dac4f90cc7113b89",
+      "previewAccepted": true
+    }
+  ],
+  "rounding": {
+    "file": "weight-rounding.json",
+    "sha256": "2d36593f15ce46c99c2d9c852e20b48b5d5ebc892bf02063d99d941cf535f1b1"
+  }
+}

@@ -9,7 +9,7 @@
   },
   {
     "question": "How do I back up my data?",
-    "answer": "Go to Settings and tap \"Export Workout Data.\" This creates a ZIP file containing your workouts, custom exercises, and templates as CSV files. You can save this file anywhere and import it back into SwoLifts when needed. The Import & Export Guide has SwoLifts CSV format examples; it does not convert files from other workout apps."
+    "answer": "In SwoLifts 1.2.0, open Settings and choose Export to file to save a ZIP of your workouts, custom exercises, templates, and current profile bodyweight, or Share backup to share it. In 1.1.x, choose Export Workout Data. Keep the original ZIP unchanged and import it from Settings when you need to restore or move phones. Import is for SwoLifts backups, not spreadsheet-created workouts or history from other apps. A 1.2.0 ZIP restores current profile bodyweight if the receiving profile is empty; it leaves an existing value alone. Older ZIPs do not contain that current value, so re-enter it after restoring one. An in-place update keeps your other settings, but reinstalling or moving phones resets theme, units, rest timer, and RIR preferences; set those again. The Dynamic Colors wallpaper option is removed in 1.2.0. The Backup Workbench lets you inspect a copy and explains how to restore your original backup."
   },
   {
     "question": "Can I switch between kilograms and pounds?",

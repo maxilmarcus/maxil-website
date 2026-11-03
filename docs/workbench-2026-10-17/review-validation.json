@@ -1,0 +1,41 @@
+{
+  "androidSource": "394d58a9f9469f8eddca925a775cc521266c7667",
+  "build": "passed",
+  "unit": 26,
+  "fullBrowser": 50,
+  "focusedBrowser": 2,
+  "logs": {
+    "review-build.log": "26f4f95abd17fc564b6da6b3fdea0075961de4e921f6d6d210eaaedf885c5fd9",
+    "review-tests.log": "407d87c6e4d4c9f0267f0150283398360f40f2fd35f996a4d6283638a5706d79",
+    "review-fixtures-unit.log": "ffa9ea3b1838edde95a568813eceea5a686de1eae4f3e652752323bf030a0f49",
+    "review-rounding-browser.log": "3632d927f8553f4ffcce5ed2f483b0849d3d23dadf38c33c654fcee53f7b7fac",
+    "review-final-pin-unit.log": "38e88bff82e0b669fd4dfe80d34d39e6e722da5c8504f1e3edcee2d74bee140a"
+  },
+  "browserFixture": {
+    "generator": "Actual Chromium workbench UI download",
+    "browser": "156.0.8078.4",
+    "node": "v24.22.0",
+    "sourceContract": "TRANSFER-APP-01-v1",
+    "kg": 0.06803893641534596,
+    "roundedLbs": "0.2",
+    "sha256": "0ef7bf2ae7815d053c613a5d84bb469867882e0bf3ac43d8dac4f90cc7113b89",
+    "bytes": 947,
+    "serverPid": 35016
+  },
+  "sourceFiles": {
+    "docs/WEB_WORKBENCH_01.md": "0d18defbe26b4d327a4747f163a073c010a55f9c73ae84272e3466e20aad390c",
+    "src/components/BackupWorkbench.jsx": "483b1a6f34a03166dfb830cb4d9615eb94c75bbfd616e45f1b4f7a96d7d78ae8",
+    "src/pages/ImportExport.jsx": "e38618b310c1df6af3c0d7c6cf538cc2f9975b2c6c07ecd07978ceaea1bef945",
+    "src/workbench/backup.js": "a2a8e4f4380b42901c1a79549bb56ed6c88e95c58abab06c03c5cfc574fb194b",
+    "swolifts-import-export.html": "9f7d02926c03426ba92b1a8f605d00201ebaf416447ec36ffad1401fd3edeef3",
+    "tests/fixtures/transfer-v1/manifest.json": "28061146d70521cd70741745c871ee29e9413ee10a7e58530630b12c89b509db",
+    "tests/fixtures/transfer-v1/source.json": "13f5f8edfac36d6e119d7c1e37ac74b58c00fe6c548033650521ab0ee1c374f0",
+    "tests/unit/backup.test.js": "d005f8e4ee7b2e8a105cf47899ce99820d53c96197e9a273bb0b5e46cce0ccf0",
+    "tests/workbench.spec.js": "60e5102738667b5e5dfde657798e45894331500955dbe5cd98b237e11734e91c",
+    ".gitattributes": "3d87b93f75f5ade9d9f4304eb12b2d612f66b1539294f5a5eb3f7c213dd17e32",
+    "tests/fixtures/transfer-v1/catalog-source.csv": "8ca93b9ba1b4cfb04e94a919282d611e525351608980dbf13796ef645c490d76",
+    "tests/fixtures/transfer-v1/valid-browser-corrected-tie.zip": "0ef7bf2ae7815d053c613a5d84bb469867882e0bf3ac43d8dac4f90cc7113b89",
+    "tests/fixtures/transfer-v1/weight-rounding.json": "2d36593f15ce46c99c2d9c852e20b48b5d5ebc892bf02063d99d941cf535f1b1"
+  },
+  "previewPortClosed": true
+}

@@ -1,1 +1,1 @@
-sessionId,exerciseName,setNumber,reps,weightLbs,assistanceWeightLbs,durationSeconds,distanceMeters,rir,completedAt,notes
+sessionId,exerciseName,setNumber,reps,weightLbs,assistanceWeightLbs,durationSeconds,distanceMeters,rir,completedAt,notes,weightKg,assistanceWeightKg

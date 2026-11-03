@@ -1,0 +1,16 @@
+{
+  "sourceCommit": "59483961a8684fd77b64bbca7e0b61736d2a03fe",
+  "package": "com.swolifts.app.debug",
+  "api": 35,
+  "apkSha256": "696d139f12f7ea3739a17f01a22dbd08b3e3694b567b9696d910c9b43c65db75",
+  "screenshot": "assets/transfer/send-to-computer.png",
+  "sha256": "ab29aedc1223b42e49bb827855487bfb612ee5b9d0ccfed6c5f2f2f88010eecd",
+  "device": "Disposable emulator only; no owner data",
+  "checks": [
+    "Share backup visible",
+    "Export destination description visible",
+    "Old sharing label absent"
+  ],
+  "width": 1080,
+  "height": 1920
+}

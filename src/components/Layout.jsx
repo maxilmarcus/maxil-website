@@ -155,22 +155,9 @@ export function Header({ page }) {
             }}
           >
             <a href="/#product">Features</a>
-            <details className="nav-guides">
-              <summary
-                className={
-                  page.includes("guide") || page.includes("import")
-                    ? "is-current"
-                    : ""
-                }
-              >
-                Guides <span aria-hidden="true">⌄</span>
-              </summary>
-              <div className="nav-dropdown">
-                {link("logging-guide", "Using SwoLifts")}
-                {link("swolifts-import-export", "Import & export")}
-              </div>
-            </details>
-            {link("swolifts-release-history", "App updates")}
+            {link("swolifts-import-export", "Workbench")}
+            {link("logging-guide", "Guides")}
+            {link("swolifts-release-history", "Updates")}
             {link("support", "Support")}
           </nav>
           <div className="nav-actions">
@@ -212,7 +199,7 @@ export function Footer() {
               <SwoLogo />
             </a>
             <p>
-              More lifting. Less friction.
+              Log your sets. Beat your best.
               <br />
               Your training, in your hands.
             </p>
@@ -221,8 +208,8 @@ export function Footer() {
             <h2>SwoLifts</h2>
             <a href="/#product">Explore the app</a>
             <a href="/logging-guide.html">Getting started</a>
-            <a href="/swolifts-import-export.html">Import & export</a>
-            <a href="/swolifts-release-history.html">Android release history</a>
+            <a href="/swolifts-import-export.html">Backup workbench</a>
+            <a href="/swolifts-release-history.html">App and website updates</a>
           </div>
           <div>
             <h2>Help & information</h2>
