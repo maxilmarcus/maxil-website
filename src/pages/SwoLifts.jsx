@@ -66,6 +66,7 @@ export default function SwoLifts() {
               <div className="hero-download">
                 <DownloadButton />
                 <span className="download-note">Free to download and use</span>
+                <a className="download-note" href="/updates/app-1.2.0.html">1.2.0 is rolling out gradually</a>
               </div>
               <a className="text-link" href="#product">
                 Take a look <span aria-hidden="true">↓</span>

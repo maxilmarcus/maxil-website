@@ -44,7 +44,7 @@ export default function ImportExport() {
           </div>
           <section className="guide-section" id="quick-share">
             <h2>Save a backup on your computer</h2>
-            <p>These phone actions use SwoLifts 1.2.0. Quick Share is provided by Android and Windows; SwoLifts itself does not connect to your computer.</p>
+            <p>These phone actions require SwoLifts 1.2.0 or later. Version 1.2.0 is rolling out gradually on Google Play; if you do not see the update yet, keep your original backup and check again later. Quick Share is provided by Android and Windows; SwoLifts itself does not connect to your computer.</p>
             <ol>
               <li><strong>Set up your PC.</strong> <a href="https://www.android.com/quick-share/with-windows-pc/" target="_blank" rel="noopener noreferrer">Get Quick Share for Windows from Google</a>. Follow its setup and visibility instructions, and keep the phone and PC nearby with Bluetooth and Wi-Fi enabled. <a href="https://support.google.com/android/answer/13801258?hl=en" target="_blank" rel="noopener noreferrer">Google's setup and troubleshooting guide</a> covers device compatibility.</li>
               <li><strong>Send your backup.</strong> In SwoLifts, open Settings, then Share backup, choose Quick Share, then choose your PC. Open the received ZIP in the workbench above.</li>

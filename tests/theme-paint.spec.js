@@ -14,7 +14,7 @@ for (const mode of [
     // Simulate navigation while the bundles are unavailable. The document itself
     // must paint the saved theme; waiting for React or an external CSS file flashes.
     await page.route(/\.(?:css|js)(?:\?|$)/, route => route.abort());
-    for (const path of ['/', '/swolifts.html', '/logging-guide.html', '/swolifts-release-history.html', '/updates/website-unreleased.html', '/swolifts-import-export.html', '/support.html', '/privacy-policy.html', '/404.html']) {
+    for (const path of ['/', '/swolifts.html', '/logging-guide.html', '/swolifts-release-history.html', '/updates/website-2026-11-02.html', '/swolifts-import-export.html', '/support.html', '/privacy-policy.html', '/404.html']) {
       await page.goto(path);
       await expect(page.locator('html')).toHaveAttribute('data-theme', mode.theme);
       await expect.poll(() => page.evaluate(() => getComputedStyle(document.documentElement).backgroundColor)).toBe(mode.background);

@@ -20,7 +20,7 @@ export default function LoggingGuide() {
               }
             </p>
           </div>
-          <p className="guide-screenshot-note">Screens show the SwoLifts 1.2.0 preview. Select a screenshot to open a larger view; older app versions may look different.</p>
+          <p className="guide-screenshot-note">Screens show SwoLifts 1.2.0, rolling out gradually on Google Play. Select a screenshot to open a larger view; older app versions may look different.</p>
           <nav className="guide-tab-links" aria-label="Guide sections">
             <a href="#workout-tab">{"Workout"}</a>
             <a href="#exercises-tab">{"Exercises"}</a>

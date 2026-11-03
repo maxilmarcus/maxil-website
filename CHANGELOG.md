@@ -3,13 +3,13 @@
 This log covers maxil.app development. Public website updates are dated Markdown
 entries, separate from versioned Android notes; see [authoring updates](docs/UPDATES.md).
 
-## Unreleased
+## 2026-11-02
 
 - Add an on-device backup workbench to Import & Export: local ZIP/CSV checks,
   inspection, separate analysis copies and AI-readable JSON downloads. Restore
   original SwoLifts ZIPs in Android; do not promote an edit-and-reimport workflow.
 - Add an Updates index with individual Markdown pages for app and website notes.
-  Preview the website redesign, including its new logo, as Unreleased until publication.
+  Publish the website redesign and Android 1.2.0 notes with their dates and gradual-rollout wording.
 - Simplify navigation with one Workbench link and a direct Guides link.
 - Add current app screenshots beside guide steps, with larger image viewing,
   updated homepage captures and illustrated backup/restore instructions.
