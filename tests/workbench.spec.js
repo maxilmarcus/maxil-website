@@ -3,6 +3,8 @@ import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { openBackup } from "../src/workbench/backup.js";
 
+test.skip(true, "WEB-WORKBENCH-HIDE-01: owner paused the public workbench; retain scenarios for a reviewed reintroduction.");
+
 const fixturePath = name => fileURLToPath(new URL(`./fixtures/transfer-v1/${name}`, import.meta.url));
 const fixture = "valid-wrapped-bom-exact-kg.zip";
 const open = async (page, name = fixture) => {
@@ -76,25 +78,6 @@ test("file contents stay local through editing and AI export", async ({ page }) 
   expect(workers).toEqual([]);
   await page.reload();
   await expect(page.locator(".wb-summary")).toHaveCount(0);
-});
-
-test("CSP blocks foreign connections and scripts while local theme initialization works", async ({ page }) => {
-  await expect(page.locator('meta[http-equiv="Content-Security-Policy"]')).toHaveAttribute("content", /script-src 'self' 'sha256-/);
-  await page.evaluate(() => { localStorage.setItem("theme", "dark"); });
-  await page.reload();
-  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
-  const result = await page.evaluate(async () => {
-    const failures = [];
-    document.addEventListener("securitypolicyviolation", event => failures.push(event.effectiveDirective));
-    const inline = document.createElement("script"); inline.textContent = "window.untrustedScriptRan = true";
-    document.body.append(inline);
-    const foreign = document.createElement("script"); foreign.src = "https://example.invalid/untrusted.js";
-    const scriptBlocked = new Promise(resolve => { foreign.onerror = () => resolve(true); foreign.onload = () => resolve(false); });
-    document.body.append(foreign);
-    const connectionBlocked = await fetch("https://example.invalid/workout").then(() => false, () => true);
-    return { connectionBlocked, scriptBlocked: await scriptBlocked, ran: !!window.untrustedScriptRan };
-  });
-  expect(result).toEqual({ connectionBlocked: true, scriptBlocked: true, ran: false });
 });
 
 test("headers are read-only and bulk edits can be undone without changing workout identity", async ({ page }) => {

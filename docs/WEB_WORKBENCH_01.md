@@ -1,5 +1,23 @@
 # WEB-WORKBENCH-01: offline file workbench
 
+## WEB-WORKBENCH-HIDE-01: owner-requested pause
+
+The owner requested hiding the workbench until import scope is developed further.
+The new change removes the interactive component, its loader and top-level tab.
+The existing URL remains a backup/restore guide; footer, FAQ, privacy and app-note
+copy reflect that purpose. Reference-template controls are hidden; historical
+asset URLs remain valid. Source, fixtures and parser unit tests are retained.
+Workbench UI scenarios are explicitly skipped while their product is unavailable;
+the public browser suite checks that the controls are absent and guides still work.
+
+State: local validation complete; awaiting independent review and hosted CI. Production merge remains the
+owner's action. Track this package in website #54 and its implementation PR.
+Do not restore the feature with a browser preference or query parameter: agree
+its purpose and review the source change first. No Android import behavior changes.
+
+The sections below retain the original implementation and validation history.
+
+
 - Tracking: [website #54](https://github.com/maxilmarcus/maxil-website/issues/54).
 - Release: [SwoLifts #497 / RELEASE-120-01](https://github.com/maxilmarcus/SwoLifts/issues/497).
 - Android transfer: [#502 / TRANSFER-APP-01](https://github.com/maxilmarcus/SwoLifts/pull/502).

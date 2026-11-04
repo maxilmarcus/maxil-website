@@ -453,7 +453,7 @@ export default function LoggingGuide() {
                   "Export a ZIP to back up your SwoLifts data or inspect a copy in external tools. Import restores a backup exported by SwoLifts; it does not convert another app's history or create workouts from a spreadsheet. Keep the original ZIP unchanged. For transfer and restore instructions, see the "
                 }
                 <a href="swolifts-import-export.html">
-                  {"Backup Workbench"}
+                  {"backup and restore guide"}
                 </a>
                 {"."}
               </p>

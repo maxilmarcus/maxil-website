@@ -3,6 +3,12 @@
 This log covers maxil.app development. Public website updates are dated Markdown
 entries, separate from versioned Android notes; see [authoring updates](docs/UPDATES.md).
 
+## Unreleased
+
+- Pause the browser backup workbench and remove its navigation tab and file
+  controls. Keep the existing URL as a backup/restore guide and retain the
+  implementation for a future scope review (WEB-WORKBENCH-HIDE-01).
+
 ## 2026-11-02
 
 - Add an on-device backup workbench to Import & Export: local ZIP/CSV checks,
