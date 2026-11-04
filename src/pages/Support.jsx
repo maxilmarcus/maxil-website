@@ -73,7 +73,7 @@ export default function Support() {
                         className="text-link"
                         href="/swolifts-import-export.html"
                       >
-                        Open the backup workbench and restore guide <Icon />
+                        Read the backup and restore guide <Icon />
                       </a>
                     )}
                   </div>

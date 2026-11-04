@@ -1,40 +1,20 @@
-import { useEffect, useState } from "react";
 import GuideScreenshot from "../components/GuideScreenshot";
-
-// Keep ZIP parsing and editor code out of the other seven pages. The initial
-// markup is identical for prerender and hydration; load only on this route.
-function WorkbenchLoader() {
-  const [Workbench, setWorkbench] = useState(null);
-  const [failed, setFailed] = useState(false);
-  useEffect(() => {
-    let active = true;
-    import("../components/BackupWorkbench").then(module => {
-      if (active) setWorkbench(() => module.default);
-    }).catch(() => { if (active) setFailed(true); });
-    return () => { active = false; };
-  }, []);
-  return Workbench ? <Workbench /> : <section id="workbench" className="guide-section">
-    <h2>Backup workbench</h2>
-    <p role="status">{failed ? "The workbench could not load. Reload this page to retry, or use the backup guide below." : "The workbench uses JavaScript to inspect your backup locally. The backup guide and format references below also work without JavaScript."}</p>
-  </section>;
-}
 
 export default function ImportExport() {
   return (
     <>
       <section className="page-header">
         <div className="container">
-          <h1>{"SwoLifts Backup Workbench"}</h1>
+          <h1>{"SwoLifts Backup & Restore"}</h1>
           <p>
             {
-              "Inspect your SwoLifts backup privately, explore your data, and learn how to restore your original ZIP."
+              "Save a backup, move it between devices, and restore your original SwoLifts ZIP in the Android app."
             }
           </p>
         </div>
       </section>
       <section className="content-page">
         <div className="container guide-content">
-          <WorkbenchLoader />
           <div className="guide-intro">
             <p>
               {
@@ -47,7 +27,7 @@ export default function ImportExport() {
             <p>These phone actions require SwoLifts 1.2.0 or later. Version 1.2.0 is rolling out gradually on Google Play; if you do not see the update yet, keep your original backup and check again later. Quick Share is provided by Android and Windows; SwoLifts itself does not connect to your computer.</p>
             <ol>
               <li><strong>Set up your PC.</strong> <a href="https://www.android.com/quick-share/with-windows-pc/" target="_blank" rel="noopener noreferrer">Get Quick Share for Windows from Google</a>. Follow its setup and visibility instructions, and keep the phone and PC nearby with Bluetooth and Wi-Fi enabled. <a href="https://support.google.com/android/answer/13801258?hl=en" target="_blank" rel="noopener noreferrer">Google's setup and troubleshooting guide</a> covers device compatibility.</li>
-              <li><strong>Send your backup.</strong> In SwoLifts, open Settings, then Share backup, choose Quick Share, then choose your PC. Open the received ZIP in the workbench above.</li>
+              <li><strong>Send your backup.</strong> In SwoLifts, open Settings, then Share backup, choose Quick Share, then choose your PC. Keep the received ZIP unchanged in a safe location.</li>
               <li><strong>Restore when needed.</strong> Send the original, unchanged SwoLifts ZIP to your phone using Quick Share. Open it with SwoLifts, review the preview and confirm Import backup. You do not need to edit or rebuild the ZIP.</li>
             </ol>
             <div className="template-download-grid">
@@ -56,46 +36,6 @@ export default function ImportExport() {
             </div>
             <p><strong>USB fallback:</strong> use Export to file, connect the phone with a USB cable and select File transfer on the phone. Copy the ZIP between Downloads folders using Windows File Explorer. Open the returned ZIP with SwoLifts, or select it through Settings, then Import Workout Data.</p>
           </section>
-          <div className="template-download-grid">
-            <article className="template-download-card">
-              <span className="guide-kicker">{"Format reference"}</span>
-              <h2>{"Blank CSV Format"}</h2>
-              <p>
-                {
-                  "Header-only files for understanding backup columns. These are not a template for creating workouts to import. Create and log workouts in the app."
-                }
-              </p>
-              <a
-                className="btn btn-primary"
-                href="assets/swolifts-import-export/swolifts-blank-import-template.zip"
-                download
-              >
-                {"Download Blank ZIP"}
-              </a>
-            </article>
-            <article className="template-download-card">
-              <span className="guide-kicker">{"Worked example"}</span>
-              <h2>{"CSV Format Example"}</h2>
-              <p>
-                {
-                  "Sample data for exploring the workbench and understanding backup columns. It is not your backup or a way to convert another app's history."
-                }
-              </p>
-              <a
-                className="btn btn-outline"
-                href="assets/swolifts-import-export/swolifts-example-import-template.zip"
-                download
-              >
-                {"Download Example ZIP"}
-              </a>
-            </article>
-          </div>
-          <p>
-            The reference files match the 421 exercises in SwoLifts 1.2.0.
-            {" "}<a href="/assets/swolifts-import-export/catalog/exercises.csv" download>Download the exercise reference</a>.
-            {" "}For backup and restore, use an unchanged ZIP exported by SwoLifts.
-            {" "}These examples do not convert another app's workout history.
-          </p>
           <nav className="guide-tab-links" aria-label="Import guide sections">
             <a href="#workflow">{"Workflow"}</a>
             <a href="#rules">{"Rules"}</a>
@@ -115,10 +55,10 @@ export default function ImportExport() {
               </p>
             </div>
             <ol>
-              <li>{"Export a ZIP from SwoLifts and keep the original unchanged. The blank and example ZIPs above are format references."}</li>
+              <li>{"Export a ZIP from SwoLifts and keep the original unchanged."}</li>
               <li>
                 {
-                  "Open the backup here to inspect its contents. For spreadsheet analysis, extract a separate copy and keep the original ZIP safe."
+                  "For spreadsheet analysis, extract a separate copy and keep the original ZIP safe."
                 }
               </li>
               <li>
@@ -153,8 +93,8 @@ export default function ImportExport() {
           </section>
           <section className="guide-section" id="exact-values">
             <h2>Keep exact values and identities</h2>
-            <p>A backup contains exact weights, timestamps, record IDs and links between workouts, sets and exercises. Keep these values intact by restoring the original SwoLifts ZIP. The workbench does not generate the records and relationships needed to import history from other apps.</p>
-            <p>File checks cannot guarantee a restore: the browser cannot inspect data already on your phone. Review the app's import preview. If a backup reports a problem, export a fresh copy from SwoLifts or contact support.</p>
+            <p>A backup contains exact weights, timestamps, record IDs and links between workouts, sets and exercises. Keep these values intact by restoring the original SwoLifts ZIP. Import restores SwoLifts backups; it does not convert history from other apps.</p>
+            <p>Review the app's import preview before confirming a restore. If a backup reports a problem, export a fresh copy from SwoLifts or contact support.</p>
           </section>
           <section className="guide-section" id="rules">
             <div className="guide-section-header">

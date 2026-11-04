@@ -62,7 +62,17 @@ runs those tests followed by the browser suite. Workbench browser tests cover
 file opening, row errors, edits, ZIP/AI downloads, keyboard access, both themes,
 320px layouts and the absence of file-bearing network requests.
 
-## Local backup workbench
+## Local backup workbench (currently hidden)
+
+WEB-WORKBENCH-HIDE-01: the owner paused this feature. Public pages do not mount
+`BackupWorkbench` or offer file-opening, editing or reference-template controls.
+The old URL remains a backup/restore guide, and historical download URLs stay
+valid. Source and fixtures are retained; no query-string or browser-storage
+switch enables it. Reintroduction requires a reviewed product scope and PR.
+Its browser interaction tests are explicitly skipped while it is unavailable;
+parser unit tests and public guide/navigation checks still run.
+
+The following describes the retained implementation, not the current website.
 
 The Import & Export page reads ZIP/CSV files in browser memory. It has no upload
 endpoint, file analytics, external scripts, persistent file storage or AI API.

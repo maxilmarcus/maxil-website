@@ -61,11 +61,9 @@ export default function Privacy() {
               "SwoLifts includes a data export feature that allows you to save your data as a ZIP file containing CSV files. This file is saved to your device's storage. You are responsible for the security of any exported data files. The import feature allows you to restore data from previously exported files."
             }
           </p>
-          <h2>{"Browser Workbench"}</h2>
-          <p>The import/export workbench reads files you select or drop directly in your browser. File contents are not uploaded to Maxil or sent in analytics, requests or beacons. The page uses locally hosted code and fonts, with no third-party scripts. The website host still receives normal requests to load the website and public example files.</p>
-          <p>Your opened files and edits remain in browser memory until you clear, reload or close the page. They are not saved in local storage. Downloaded ZIP and AI-readable files are saved by your browser to the destination you choose. Theme preferences may be saved separately; they contain no workout data.</p>
+          <h2>{"Backup and sharing"}</h2>
+          <p>The website provides backup and restore instructions. It does not open or upload your workout files.</p>
           <p>Sending a backup through the Android share sheet gives the selected receiving app access to that file. Temporary app-owned sharing copies expire after 24 hours and are removed on the next app process launch. Received import copies are removed after completion or cancellation; crash leftovers follow the same expiry. Copies you save or deliver elsewhere remain under your control.</p>
-          <p>The AI download includes workout information such as dates, weights and notes. SwoLifts does not contact an AI provider. If you choose to upload that file to another service, that service handles it under its own privacy policy and settings.</p>
           <h2>{"Third Party Services"}</h2>
           <p>
             {

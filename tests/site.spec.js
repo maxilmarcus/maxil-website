@@ -163,7 +163,7 @@ test("narrow screens and dark mode remain readable without page overflow", async
   }
 });
 
-test("documentation, FAQs and downloads work with JavaScript disabled", async ({
+test("documentation and FAQs work with JavaScript disabled", async ({
   browser,
 }) => {
   const context = await browser.newContext({ javaScriptEnabled: false });
@@ -177,28 +177,30 @@ test("documentation, FAQs and downloads work with JavaScript disabled", async ({
   await expect(page.locator(".faq-answer").first()).toBeVisible();
   await page.goto("http://127.0.0.1:4173/swolifts-import-export.html");
   await expect(
-    page.getByRole("link", { name: "Download Blank ZIP" }),
+    page.getByRole("heading", { name: "SwoLifts Backup & Restore", exact: true }),
   ).toBeVisible();
   await context.close();
 });
 
 
-test("workbench is discoverable from main navigation", async ({ page, isMobile }) => {
+test("workbench is hidden while the existing URL remains a restore guide", async ({ page, isMobile }) => {
+  const requests = [];
+  page.on("request", request => requests.push(request.url()));
   await page.goto("/");
   if (isMobile) await page.getByRole("button", { name: "Open menu" }).click();
-  await page.getByRole("navigation", { name: "Main navigation" })
-    .getByRole("link", { name: "Workbench", exact: true }).click();
-  await expect(page).toHaveURL(/swolifts-import-export.html/);
-  await expect(page.getByRole("heading", { name: "SwoLifts Backup Workbench" })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Open my SwoLifts file", exact: true })).toBeVisible();
-  await expect(page.getByRole("button", { name: "Try an example", exact: true })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Main navigation" })
+    .getByRole("link", { name: "Workbench", exact: true })).toHaveCount(0);
+  await page.goto("/swolifts-import-export.html");
+  await expect(page.getByRole("heading", { name: "SwoLifts Backup & Restore", exact: true })).toBeVisible();
+  await expect(page.locator('input[type="file"], #workbench')).toHaveCount(0);
+  await expect(page.getByRole("button", { name: /Open my SwoLifts file|Try an example/ })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: /Download (Blank|Example) ZIP/ })).toHaveCount(0);
   await expect(page.locator("#quick-share ol li")).toHaveCount(3);
-  await expect(page.locator("header .nav-download")).toHaveAttribute("href", /play.google.com/);
-  if (isMobile) await expect(page.getByRole("navigation", { name: "Main navigation" })).toBeHidden();
+  expect(requests.some(url => /BackupWorkbench|zip-native/.test(url))).toBe(false);
 });
 
 
-test("workbench navigation fits tablet widths", async ({ page }, testInfo) => {
+test("guide navigation fits tablet widths", async ({ page }, testInfo) => {
   for (const width of [821, 900, 1050]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto("/swolifts-import-export.html");
@@ -212,4 +214,24 @@ test("workbench navigation fits tablet widths", async ({ page }, testInfo) => {
     expect(header).toBe(true);
     await page.screenshot({ path: `.qa/ux-120-${testInfo.project.name}-${width}.png` });
   }
+});
+
+test("CSP blocks foreign connections and scripts while local theme initialization works", async ({ page }) => {
+  await page.goto("/swolifts-import-export.html");
+  await expect(page.locator('meta[http-equiv="Content-Security-Policy"]')).toHaveAttribute("content", /script-src 'self' 'sha256-/);
+  await page.evaluate(() => { localStorage.setItem("theme", "dark"); });
+  await page.reload();
+  await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+  const result = await page.evaluate(async () => {
+    const failures = [];
+    document.addEventListener("securitypolicyviolation", event => failures.push(event.effectiveDirective));
+    const inline = document.createElement("script"); inline.textContent = "window.untrustedScriptRan = true";
+    document.body.append(inline);
+    const foreign = document.createElement("script"); foreign.src = "https://example.invalid/untrusted.js";
+    const scriptBlocked = new Promise(resolve => { foreign.onerror = () => resolve(true); foreign.onload = () => resolve(false); });
+    document.body.append(foreign);
+    const connectionBlocked = await fetch("https://example.invalid/workout").then(() => false, () => true);
+    return { connectionBlocked, scriptBlocked: await scriptBlocked, ran: !!window.untrustedScriptRan };
+  });
+  expect(result).toEqual({ connectionBlocked: true, scriptBlocked: true, ran: false });
 });
