@@ -6,6 +6,7 @@ const urls = [
   "/logging-guide.html",
   "/swolifts-import-export.html",
   "/swolifts-release-history.html",
+  "/updates/app-1.3.0.html",
   "/updates/app-1.2.0.html",
   "/updates/app-1.1.1.html",
   "/updates/app-1.0.html",
@@ -38,6 +39,14 @@ for (const url of urls) {
     ).toBeVisible();
     await page.getByRole("button", { name: "Switch to dark theme" }).click();
     await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+    if (url === "/updates/app-1.3.0.html") {
+      for (const image of await page.locator(".update-content img").all()) {
+        await image.scrollIntoViewIfNeeded();
+        await image.evaluate(element => element.decode());
+      }
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.screenshot({ path: `.qa/${testInfo.project.name}-app-1.3.0-dark.png`, fullPage: true });
+    }
     await page.getByRole("button", { name: "Switch to light theme" }).click();
     expect(
       await page.evaluate(

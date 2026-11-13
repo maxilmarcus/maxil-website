@@ -1,13 +1,13 @@
 import { test, expect } from "@playwright/test";
 
-test("updates link to dated app and website notes with gradual rollout wording", async ({ page, isMobile }) => {
+test("updates link to published app and website notes", async ({ page, isMobile }) => {
   await page.goto("/");
   if (isMobile) await page.getByRole("button", { name: "Open menu" }).click();
   await page.getByRole("navigation", { name: "Main navigation" }).getByRole("link", { name: "Updates", exact: true }).click();
   await expect(page.getByRole("heading", { name: "SwoLifts updates", exact: true })).toBeVisible();
   await expect(page.locator("#app-updates article").first()).toContainText("SwoLifts 1.3.0");
-  await expect(page.locator("#app-updates article").first()).toContainText("Unreleased preview");
-  await expect(page.locator("#release-1-2-0")).toContainText("Rolling out gradually");
+  await expect(page.locator("#app-updates article").first().locator("time")).toHaveAttribute("datetime", "2026-11-11");
+  await expect(page.locator("#app-updates article").first()).not.toContainText("Unreleased preview");
   await expect(page.locator("#website-updates time")).toHaveAttribute("datetime", "2026-11-02");
   await page.getByRole("link", { name: "Read A fresh look for SwoLifts", exact: true }).click();
   await expect(page).toHaveURL(/\/updates\/website-2026-11-02.html$/);
@@ -28,7 +28,7 @@ test("individual Markdown notes are readable without JavaScript and have their o
   const page = await context.newPage();
   await page.goto("http://127.0.0.1:4173/updates/app-1.2.0.html");
   await expect(page.getByRole("heading", { name: "SwoLifts 1.2.0", exact: true })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Rolling out gradually", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Release availability", exact: true })).toBeVisible();
   await expect(page.locator("main time")).toHaveAttribute("datetime", "2026-11-02");
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://maxil.app/updates/app-1.2.0.html");
   await expect(page).toHaveTitle("SwoLifts 1.2.0 | SwoLifts updates");
@@ -40,17 +40,21 @@ test("individual Markdown notes are readable without JavaScript and have their o
   await context.close();
 });
 
-test("1.3 preview stays unreleased and its sample screenshots open", async ({ page, request }) => {
+test("1.3 release shows app locations, opens sample screenshots and is indexable", async ({ page, request }) => {
   await page.goto("/updates/app-1.3.0.html");
   await expect(page.getByRole("heading", { name: "SwoLifts 1.3.0", exact: true })).toBeVisible();
-  await expect(page.getByText("Unreleased preview", { exact: true })).toBeVisible();
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", "noindex");
-  await expect(page.locator(".update-content")).toContainText("not yet available on Google Play");
+  await expect(page.locator("main time")).toHaveAttribute("datetime", "2026-11-11");
+  await expect(page.locator('meta[name="robots"][content="noindex"]')).toHaveCount(0);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://maxil.app/updates/app-1.3.0.html");
+  await expect(page.getByRole("heading", { name: "Available on Google Play", exact: true })).toBeVisible();
+  for (const location of ["Find it: Progress → Muscles.", "Find it: Progress → Volume.", "Find it: History.", "Find it: History → a completed workout,"]) {
+    await expect(page.getByText(location, { exact: false })).toBeVisible();
+  }
   await expect(page.locator(".update-content img")).toHaveCount(4);
   for (const img of await page.locator(".update-content img").all()) {
     await expect.poll(() => img.evaluate(el => el.complete && el.naturalWidth > 0)).toBe(true);
     const href = await img.locator("..").getAttribute("href");
     expect((await request.get(href)).ok()).toBe(true);
   }
-  expect(await (await request.get("/sitemap.xml")).text()).not.toContain("app-1.3.0.html");
+  expect(await (await request.get("/sitemap.xml")).text()).toContain("https://maxil.app/updates/app-1.3.0.html");
 });
